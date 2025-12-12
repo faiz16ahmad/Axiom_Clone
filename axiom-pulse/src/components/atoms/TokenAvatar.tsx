@@ -33,14 +33,14 @@ export function TokenAvatar({ src, alt, showBadge = true, borderColor = 'pink' }
   const [isHovered, setIsHovered] = useState(false);
   const [imgError, setImgError] = useState(false);
 
-  const fallbackSrc = `https://ui-avatars.com/api/?name=${encodeURIComponent(alt)}&background=random&size=80`;
+  const fallbackSrc = `https://ui-avatars.com/api/?name=${encodeURIComponent(alt)}&background=random&size=100`;
 
   return (
     <Dialog>
       <DialogTrigger asChild>
         <button
           className={cn(
-            'relative w-[80px] h-[80px] flex-shrink-0 cursor-pointer rounded-lg',
+            'relative w-[100px] h-[100px] flex-shrink-0 cursor-pointer rounded-lg',
             'ring-2',
             borderColorClasses[borderColor]
           )}
@@ -51,8 +51,8 @@ export function TokenAvatar({ src, alt, showBadge = true, borderColor = 'pink' }
             <Image
               src={imgError ? fallbackSrc : src}
               alt={alt}
-              width={80}
-              height={80}
+              width={100}
+              height={100}
               className="object-cover w-full h-full"
               onError={() => setImgError(true)}
             />

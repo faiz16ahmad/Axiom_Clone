@@ -82,10 +82,10 @@
     @apply border-border;
   }
   body {
-    @apply bg-[#09090b] text-zinc-100;
+    @apply bg-[#06070B] text-zinc-100;
   }
   html {
-    @apply bg-[#09090b];
+    @apply bg-[#06070B];
   }
 }
 
@@ -123,14 +123,14 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #09090b;
+  background: #101114;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #27272a;
+  background: #5B6075;
   border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #3f3f46;
+  background: #6B7085;
 }

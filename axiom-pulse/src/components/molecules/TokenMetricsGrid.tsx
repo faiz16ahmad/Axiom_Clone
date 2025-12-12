@@ -28,12 +28,12 @@ export function TokenMetricsGrid({
   const redPercent = 100 - greenPercent;
 
   return (
-    <div className="flex flex-col gap-0 items-end text-right">
+    <div className="flex flex-col gap-0.5 items-end text-right">
       {/* Row 1: MC - Green value */}
-      <div className="flex items-center gap-1">
-        <span className="text-[10px] text-gray-500">MC</span>
+      <div className="flex items-center gap-1.5">
+        <span className="text-xs text-gray-500">MC</span>
         <span className={cn(
-          'text-sm font-semibold tabular-nums text-pulse-green',
+          'text-base font-semibold tabular-nums text-pulse-green',
           flashState === 'green' && 'animate-flash-green',
           flashState === 'red' && 'animate-flash-red'
         )}>
@@ -42,20 +42,20 @@ export function TokenMetricsGrid({
       </div>
       
       {/* Row 2: Volume - Blue/Indigo value */}
-      <div className="flex items-center gap-1">
-        <span className="text-[10px] text-gray-500">V</span>
-        <span className="text-sm font-bold tabular-nums text-indigo-400">
+      <div className="flex items-center gap-1.5">
+        <span className="text-xs text-gray-500">V</span>
+        <span className="text-base font-bold tabular-nums text-indigo-400">
           ${formatCompactNumber(volume)}
         </span>
       </div>
       
       {/* Row 3: F + Solana + Price + TX + Progress Bar */}
-      <div className="flex items-center justify-end gap-1.5 text-[10px] whitespace-nowrap">
+      <div className="flex items-center justify-end gap-2 text-xs whitespace-nowrap">
         {/* F label */}
         <span className="text-gray-500">F</span>
         
         {/* Solana Icon */}
-        <SolanaIcon size="sm" className="w-3 h-3" />
+        <SolanaIcon size="sm" className="w-4 h-4" />
         
         {/* Price value - white */}
         <span className="text-white tabular-nums">
@@ -69,7 +69,7 @@ export function TokenMetricsGrid({
         </span>
         
         {/* Progress bar - Green + Red split */}
-        <div className="w-10 h-1.5 rounded-full overflow-hidden flex flex-shrink-0">
+        <div className="w-12 h-2 rounded-full overflow-hidden flex flex-shrink-0">
           {/* Green portion (left) */}
           <div 
             className="h-full bg-emerald-500" 

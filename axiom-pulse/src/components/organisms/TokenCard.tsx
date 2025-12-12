@@ -26,9 +26,9 @@ function TokenCardComponent({ token }: TokenCardProps) {
     <div
       className={cn(
         'group relative',
-        'bg-[#0a0a0a] border border-zinc-800/50 rounded-lg p-1.5',
+        'bg-[#101114] border-b border-zinc-800/50 rounded-none pt-3.5 pr-7 pb-2.5 pl-0',
         'hover:bg-zinc-900/50 transition-colors duration-150',
-        'flex flex-col gap-1'
+        'flex flex-col gap-1.5'
       )}
     >
       {/* Hover: Bonding Badge */}
@@ -41,34 +41,34 @@ function TokenCardComponent({ token }: TokenCardProps) {
       </div>
 
       {/* Main Row */}
-      <div className="flex gap-2">
+      <div className="flex gap-3">
         {/* LEFT: Avatar + Contract */}
         <div className="flex flex-col items-center flex-shrink-0">
           <div className="flex items-start gap-0">
             {/* Hover: Quick Actions */}
             <div className="flex flex-col gap-0 opacity-0 group-hover:opacity-100 transition-opacity duration-150 z-10">
-              <button className="w-4 h-5 bg-zinc-900 border border-zinc-700 border-r-0 rounded-tl flex items-center justify-center hover:bg-zinc-800">
-                <EyeOff className="w-2.5 h-2.5 text-gray-500" />
+              <button className="w-5 h-6 bg-zinc-900 border border-zinc-700 border-r-0 rounded-tl flex items-center justify-center hover:bg-zinc-800">
+                <EyeOff className="w-3 h-3 text-gray-500" />
               </button>
-              <button className="w-4 h-5 bg-zinc-900 border border-zinc-700 border-r-0 border-t-0 flex items-center justify-center hover:bg-zinc-800">
-                <Ban className="w-2.5 h-2.5 text-gray-500" />
+              <button className="w-5 h-6 bg-zinc-900 border border-zinc-700 border-r-0 border-t-0 flex items-center justify-center hover:bg-zinc-800">
+                <Ban className="w-3 h-3 text-gray-500" />
               </button>
-              <button className="w-4 h-5 bg-zinc-900 border border-zinc-700 border-r-0 border-t-0 rounded-bl flex items-center justify-center hover:bg-zinc-800">
-                <Flag className="w-2.5 h-2.5 text-gray-500" />
+              <button className="w-5 h-6 bg-zinc-900 border border-zinc-700 border-r-0 border-t-0 rounded-bl flex items-center justify-center hover:bg-zinc-800">
+                <Flag className="w-3 h-3 text-gray-500" />
               </button>
             </div>
-            <TokenAvatar 
-              src={token.avatarUrl} 
-              alt={token.name} 
+            <TokenAvatar
+              src={token.avatarUrl}
+              alt={token.name}
               showBadge={true}
               borderColor={borderColor}
             />
           </div>
-          <span className="text-[11px] text-gray-500 mt-1 tracking-wide ml-4">
+          <span className="text-xs text-gray-500 mt-1.5 tracking-wide ml-5">
             {token.id.slice(0, 5)}...{token.id.slice(-5)}
           </span>
         </div>
-        
+
         {/* RIGHT: Content + Footer Pills */}
         <div className="flex-1 min-w-0 flex flex-col gap-1">
           {/* Top row: Header + Metrics */}
@@ -87,7 +87,7 @@ function TokenCardComponent({ token }: TokenCardProps) {
               />
             </div>
           </div>
-          
+
           {/* Footer Pills - aligned with content, not avatar */}
           <div className="relative flex items-center">
             <TokenFooterPills

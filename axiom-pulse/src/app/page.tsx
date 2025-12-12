@@ -1,7 +1,11 @@
 'use client';
 
 import { useEffect } from 'react';
+import { Header } from '@/components/organisms/Header';
+import { ToolbarRow } from '@/components/organisms/ToolbarRow';
+import { SubHeader } from '@/components/organisms/SubHeader';
 import { DashboardBoard } from '@/components/organisms/DashboardBoard';
+import { GlobalStatusBar } from '@/components/organisms/GlobalStatusBar';
 import { useTokenSocketMock } from '@/hooks/useTokenSocketMock';
 
 export default function Home() {
@@ -11,5 +15,15 @@ export default function Home() {
     console.log('Page - Tokens received:', tokens.length);
   }, [tokens]);
 
-  return <DashboardBoard tokens={tokens} />;
+  return (
+    <>
+      <Header />
+      <main className="pt-24 pb-16">
+        <ToolbarRow />
+        <SubHeader />
+        <DashboardBoard tokens={tokens} />
+      </main>
+      <GlobalStatusBar />
+    </>
+  );
 }

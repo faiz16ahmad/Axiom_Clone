@@ -24,34 +24,34 @@ export function ColumnHeader({ title, count }: ColumnHeaderProps) {
     };
 
     return (
-        <div className="flex items-center justify-between px-3 py-2 border-b border-zinc-800">
+        <div className="flex items-center justify-between px-4 py-3 border-b border-zinc-800">
             {/* Left: Title */}
-            <h2 className="text-sm font-semibold text-white">{title}</h2>
+            <h2 className="text-2xl font-semibold text-white">{title}</h2>
 
             {/* Right: Control Toolbar + Filter */}
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-3">
                 {/* Control Container */}
-                <div className="flex items-center gap-2 bg-zinc-900 rounded-full px-3 py-1">
+                <div className="flex items-center gap-3 bg-zinc-900 rounded-none px-4 py-1.5">
                     {/* Lightning Badge */}
-                    <div className="flex items-center gap-1">
-                        <Zap className="w-3.5 h-3.5 text-yellow-400" />
-                        <span className="text-xs text-gray-400 tabular-nums">{count}</span>
+                    <div className="flex items-center gap-1.5">
+                        <Zap className="w-4 h-4 text-yellow-400" />
+                        <span className="text-sm text-gray-400 tabular-nums">{count}</span>
                     </div>
 
                     {/* Solana Icon */}
-                    <SolanaIcon size="sm" />
+                    <SolanaIcon size="md" />
 
                     {/* Divider */}
-                    <div className="w-px h-4 bg-zinc-700" />
+                    <div className="w-px h-5 bg-zinc-700" />
 
                     {/* Preset Tabs */}
-                    <div className="flex items-center gap-1">
+                    <div className="flex items-center gap-2">
                         {presets.map((preset) => (
                             <button
                                 key={preset}
                                 onClick={() => handlePresetClick(preset)}
                                 className={cn(
-                                    'text-xs font-medium px-1.5 py-0.5 rounded transition-colors',
+                                    'text-sm font-medium px-2 py-1 rounded transition-colors',
                                     activePreset === preset
                                         ? 'text-blue-400'
                                         : 'text-gray-500 hover:text-gray-300'
@@ -64,8 +64,8 @@ export function ColumnHeader({ title, count }: ColumnHeaderProps) {
                 </div>
 
                 {/* Filter Button */}
-                <button className="p-1.5 rounded-lg hover:bg-zinc-800 transition-colors">
-                    <SlidersHorizontal className="w-4 h-4 text-gray-400 hover:text-white" />
+                <button className="p-2 rounded-none hover:bg-zinc-800 transition-colors">
+                    <SlidersHorizontal className="w-5 h-5 text-gray-400 hover:text-white" />
                 </button>
             </div>
         </div>
