@@ -23,7 +23,7 @@ interface PillProps {
 
 function Pill({ icon, value, iconColor, tooltip }: PillProps) {
   const pill = (
-    <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-zinc-900 border border-zinc-800 text-xs">
+    <div className="flex items-center gap-1 px-2 py-1 rounded-full bg-zinc-900 border border-zinc-800 text-[10px] flex-shrink-0">
       <span className={iconColor}>{icon}</span>
       <span className="text-white tabular-nums font-medium">{value}</span>
     </div>
@@ -57,34 +57,34 @@ export function TokenFooterPills({
   const getBondingColor = (val: number) => val >= 80 ? 'text-emerald-400' : val >= 50 ? 'text-yellow-400' : 'text-emerald-400';
 
   return (
-    <div className="flex items-center gap-2 overflow-x-auto scrollbar-hide">
+    <div className="flex items-center gap-1.5 overflow-x-auto scrollbar-hide pr-16">
       <Pill
-        icon={<User className="w-4 h-4" />}
+        icon={<User className="w-3 h-3" />}
         value={`${userPercentage}%`}
         iconColor={getUserColor(userPercentage)}
       />
       <Pill
-        icon={<ChefHat className="w-4 h-4" />}
+        icon={<ChefHat className="w-3 h-3" />}
         value={`${chefPercentage}%`}
         iconColor={getChefColor(chefPercentage)}
       />
       <Pill
-        icon={<Clock className="w-4 h-4" />}
+        icon={<Clock className="w-3 h-3" />}
         value={timeStr}
         iconColor="text-gray-400"
       />
       <Pill
-        icon={<Target className="w-4 h-4" />}
+        icon={<Target className="w-3 h-3" />}
         value={`${bondingCurve}%`}
         iconColor={getBondingColor(bondingCurve)}
       />
       <Pill
-        icon={<Users className="w-4 h-4" />}
+        icon={<Users className="w-3 h-3" />}
         value="0%"
         iconColor="text-red-400"
       />
       <Pill
-        icon={<Coins className="w-4 h-4" />}
+        icon={<Coins className="w-3 h-3" />}
         value="0%"
         iconColor="text-gray-400"
       />
