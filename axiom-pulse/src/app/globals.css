@@ -89,42 +89,116 @@
   }
 }
 
-/* Flash animations for price updates - GPU accelerated */
+/* Flash animations for price updates - GPU accelerated with wave effect */
 @keyframes flash-green {
-  0%, 100% {
-    opacity: 1;
+  0% {
+    color: inherit;
+    text-shadow: none;
+    transform: scale(1);
   }
-  50% {
-    opacity: 0.7;
-    background-color: rgba(34, 197, 94, 0.3);
+  10% {
+    color: #4ade80;
+    text-shadow: 0 0 12px rgba(74, 222, 128, 0.8);
+    transform: scale(1.08);
+  }
+  30% {
+    color: #22c55e;
+    text-shadow: 0 0 6px rgba(34, 197, 94, 0.5);
+  }
+  100% {
+    color: inherit;
+    text-shadow: none;
+    transform: scale(1);
   }
 }
 
 @keyframes flash-red {
-  0%, 100% {
-    opacity: 1;
+  0% {
+    color: inherit;
+    text-shadow: none;
+    transform: scale(1);
   }
-  50% {
-    opacity: 0.7;
-    background-color: rgba(239, 68, 68, 0.3);
+  10% {
+    color: #f87171;
+    text-shadow: 0 0 12px rgba(248, 113, 113, 0.8);
+    transform: scale(1.08);
+  }
+  30% {
+    color: #ef4444;
+    text-shadow: 0 0 6px rgba(239, 68, 68, 0.5);
+  }
+  100% {
+    color: inherit;
+    text-shadow: none;
+    transform: scale(1);
+  }
+}
+
+/* Background pulse effect for card - solid color fade */
+@keyframes bg-pulse-green {
+  0% {
+    background-color: #101114;
+    box-shadow: inset 0 0 0 0 rgba(34, 197, 94, 0);
+  }
+  15% {
+    background-color: rgba(34, 197, 94, 0.2);
+    box-shadow: inset 0 0 20px 0 rgba(34, 197, 94, 0.3);
+  }
+  100% {
+    background-color: #101114;
+    box-shadow: inset 0 0 0 0 rgba(34, 197, 94, 0);
+  }
+}
+
+@keyframes bg-pulse-red {
+  0% {
+    background-color: #101114;
+    box-shadow: inset 0 0 0 0 rgba(239, 68, 68, 0);
+  }
+  15% {
+    background-color: rgba(239, 68, 68, 0.2);
+    box-shadow: inset 0 0 20px 0 rgba(239, 68, 68, 0.3);
+  }
+  100% {
+    background-color: #101114;
+    box-shadow: inset 0 0 0 0 rgba(239, 68, 68, 0);
   }
 }
 
 .animate-flash-green {
-  animation: flash-green 0.6s ease-out;
-  will-change: opacity;
+  animation: flash-green 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: color, text-shadow, transform;
 }
 
 .animate-flash-red {
-  animation: flash-red 0.6s ease-out;
-  will-change: opacity;
+  animation: flash-red 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: color, text-shadow, transform;
 }
 
-/* Reduce animations on mobile for better performance */
+.animate-bg-pulse-green {
+  animation: bg-pulse-green 1.4s ease-out !important;
+  will-change: background-color, box-shadow;
+}
+
+.animate-bg-pulse-red {
+  animation: bg-pulse-red 1.4s ease-out !important;
+  will-change: background-color, box-shadow;
+}
+
+/* Smooth number transition base class */
+.price-transition {
+  transition: color 0.3s ease-out, text-shadow 0.3s ease-out;
+}
+
+/* Slightly faster on mobile but still visible */
 @media (max-width: 768px) {
   .animate-flash-green,
   .animate-flash-red {
-    animation-duration: 0.3s;
+    animation-duration: 0.8s;
+  }
+  .animate-bg-pulse-green,
+  .animate-bg-pulse-red {
+    animation-duration: 1s;
   }
 }
 

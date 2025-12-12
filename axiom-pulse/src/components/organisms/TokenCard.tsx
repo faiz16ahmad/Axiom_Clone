@@ -27,8 +27,10 @@ function TokenCardComponent({ token }: TokenCardProps) {
       className={cn(
         'group relative',
         'bg-[#101114] border-b border-zinc-800/50 rounded-none pt-3.5 pr-7 pb-2.5 pl-0',
-        'hover:bg-zinc-900/50 transition-colors duration-150',
-        'flex flex-col gap-1.5'
+        'hover:bg-zinc-900/50 transition-colors duration-200',
+        'flex flex-col gap-1.5',
+        token.flashState === 'green' && 'animate-bg-pulse-green',
+        token.flashState === 'red' && 'animate-bg-pulse-red'
       )}
     >
       {/* Hover: Bonding Badge */}

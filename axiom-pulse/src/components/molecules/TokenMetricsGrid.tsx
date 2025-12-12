@@ -4,6 +4,7 @@ import { cn } from '@/lib/utils';
 import { formatCompactNumber, formatPrice } from '@/lib/formatters';
 import { FlashState } from '@/types/token';
 import { SolanaIcon } from '@/components/atoms/SolanaIcon';
+import { memo, useMemo } from 'react';
 
 interface TokenMetricsGridProps {
   price: number;
@@ -16,24 +17,26 @@ interface TokenMetricsGridProps {
   flashState?: FlashState;
 }
 
-export function TokenMetricsGrid({
+function TokenMetricsGridComponent({
   price,
   marketCap,
   transactions,
   volume,
   flashState,
 }: TokenMetricsGridProps) {
-  // Calculate green/red ratio for progress bar (simulated buy/sell ratio)
-  const greenPercent = Math.min(100, Math.max(0, 50 + (Math.random() - 0.5) * 60));
-  const redPercent = 100 - greenPercent;
+  // Memoize the progress bar ratio to prevent recalculation on every render
+  const { greenPercent, redPercent } = useMemo(() => {
+    const green = Math.min(100, Math.max(0, 50 + (Math.random() - 0.5) * 60));
+    return { greenPercent: green, redPercent: 100 - green };
+  }, []);
 
   return (
     <div className="flex flex-col gap-0.5 items-end text-right">
-      {/* Row 1: MC - Green value */}
+      {/* Row 1: MC - Green value with smooth flash */}
       <div className="flex items-center gap-1.5">
         <span className="text-xs text-gray-400">MC</span>
         <span className={cn(
-          'text-base font-semibold tabular-nums text-pulse-green',
+          'text-base font-semibold tabular-nums text-pulse-green price-transition',
           flashState === 'green' && 'animate-flash-green',
           flashState === 'red' && 'animate-flash-red'
         )}>
@@ -68,16 +71,16 @@ export function TokenMetricsGrid({
           {formatCompactNumber(transactions)}
         </span>
         
-        {/* Progress bar - Green + Red split */}
+        {/* Progress bar - Green + Red split with smooth transition */}
         <div className="w-12 h-2 rounded-full overflow-hidden flex flex-shrink-0">
           {/* Green portion (left) */}
           <div 
-            className="h-full bg-emerald-500" 
+            className="h-full bg-emerald-500 transition-all duration-300" 
             style={{ width: `${greenPercent}%` }}
           />
           {/* Red portion (right) */}
           <div 
-            className="h-full bg-red-500" 
+            className="h-full bg-red-500 transition-all duration-300" 
             style={{ width: `${redPercent}%` }}
           />
         </div>
@@ -85,3 +88,6 @@ export function TokenMetricsGrid({
     </div>
   );
 }
+
+export const TokenMetricsGrid = memo(TokenMetricsGridComponent);
+TokenMetricsGrid.displayName = 'TokenMetricsGrid';
