@@ -1,6 +1,6 @@
 'use client';
 
-import { useMemo } from 'react';
+import { useMemo, memo } from 'react';
 import { Token, TokenCategory } from '@/types/token';
 import { TokenCard } from './TokenCard';
 import { ColumnHeader } from '@/components/molecules/ColumnHeader';
@@ -11,7 +11,11 @@ interface ColumnSectionProps {
   category: TokenCategory;
 }
 
-export function ColumnSection({ title, tokens, category }: ColumnSectionProps) {
+// Limit visible tokens on mobile for performance
+const MOBILE_TOKEN_LIMIT = 15;
+const DESKTOP_TOKEN_LIMIT = 50;
+
+function ColumnSectionComponent({ title, tokens, category }: ColumnSectionProps) {
   const sortedTokens = useMemo(() => {
     const filtered = tokens.filter((t) => t.category === category);
     
@@ -33,14 +37,21 @@ export function ColumnSection({ title, tokens, category }: ColumnSectionProps) {
     }
   }, [tokens, category]);
 
+  // Limit tokens for better performance - detect mobile via window width
+  const visibleTokens = useMemo(() => {
+    const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
+    const limit = isMobile ? MOBILE_TOKEN_LIMIT : DESKTOP_TOKEN_LIMIT;
+    return sortedTokens.slice(0, limit);
+  }, [sortedTokens]);
+
   return (
     <div className="flex flex-col h-full">
       {/* Header with Controls */}
       <ColumnHeader title={title} count={sortedTokens.length} />
       
-      {/* Token List */}
-      <div className="flex-1 overflow-y-auto p-1 space-y-1">
-        {sortedTokens.map((token) => (
+      {/* Token List - use content-visibility for better paint performance */}
+      <div className="flex-1 overflow-y-auto p-1 space-y-1" style={{ contentVisibility: 'auto' }}>
+        {visibleTokens.map((token) => (
           <TokenCard key={token.id} token={token} />
         ))}
         
@@ -53,3 +64,6 @@ export function ColumnSection({ title, tokens, category }: ColumnSectionProps) {
     </div>
   );
 }
+
+export const ColumnSection = memo(ColumnSectionComponent);
+ColumnSection.displayName = 'ColumnSection';

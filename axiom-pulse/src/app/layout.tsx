@@ -17,6 +17,11 @@ const geistMono = localFont({
 export const metadata: Metadata = {
   title: "Axiom Pulse - Token Discovery",
   description: "Real-time crypto token discovery dashboard",
+  viewport: {
+    width: "device-width",
+    initialScale: 1,
+    maximumScale: 5,
+  },
 };
 
 export default function RootLayout({
@@ -31,7 +36,7 @@ export default function RootLayout({
       >
         <Providers>{children}</Providers>
         <div className="fixed bottom-2 right-2 text-[10px] text-zinc-600 font-mono opacity-50 hover:opacity-100 transition-opacity z-50">
-          v1.0.1
+          v1.0.2
         </div>
       </body>
     </html>

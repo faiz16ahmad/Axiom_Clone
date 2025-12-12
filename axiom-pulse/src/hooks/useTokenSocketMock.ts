@@ -18,16 +18,22 @@ export function useTokenSocketMock() {
     }
   }, []);
 
-  // Price updates every 1000ms - only run after initialization
+  // Price updates - slower on mobile for better performance
   useEffect(() => {
     if (tokens.length === 0) return;
+
+    // Detect mobile and use slower update interval
+    const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
+    const updateInterval = isMobile ? 2000 : 1000; // 2s on mobile, 1s on desktop
 
     const interval = setInterval(() => {
       setTokens((prev) => {
         if (prev.length === 0) return prev;
         
         const updated = [...prev];
-        const updateCount = Math.min(Math.floor(Math.random() * 3) + 3, updated.length);
+        // Fewer updates on mobile
+        const maxUpdates = isMobile ? 2 : 5;
+        const updateCount = Math.min(Math.floor(Math.random() * 3) + 1, maxUpdates, updated.length);
         
         for (let i = 0; i < updateCount; i++) {
           const idx = Math.floor(Math.random() * updated.length);
@@ -48,13 +54,13 @@ export function useTokenSocketMock() {
         return updated;
       });
 
-      // Clear flash states after 1000ms
+      // Clear flash states after animation
       setTimeout(() => {
         setTokens((prev) =>
           prev.map((t) => ({ ...t, flashState: null }))
         );
       }, 1000);
-    }, 1000);
+    }, updateInterval);
 
     return () => clearInterval(interval);
   }, [tokens.length > 0]); // Re-run when tokens become available
