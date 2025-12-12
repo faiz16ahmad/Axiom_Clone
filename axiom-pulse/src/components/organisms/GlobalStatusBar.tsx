@@ -118,66 +118,66 @@ function PresetIcon({ className }: { className?: string }) {
 }
 
 function Divider() {
-    return <div className="h-7 w-[2px] bg-gray-700 mx-2" />;
+    return <div className="h-5 w-[1px] bg-gray-700 mx-1 flex-shrink-0" />;
 }
 
 export function GlobalStatusBar() {
     return (
-        <footer className="fixed bottom-0 left-0 w-full z-50 h-[54px] bg-black border-t border-gray-800 overflow-x-auto scrollbar-hide">
-            <div className="h-full flex items-center px-9 text-sm font-medium gap-3 min-w-max">
+        <footer className="fixed bottom-0 left-0 w-full z-50 h-[42px] bg-black border-t border-gray-800 overflow-x-auto scrollbar-hide">
+            <div className="h-full flex items-center px-4 text-xs font-medium gap-2">
                 {/* PRESET 1 */}
-                <button className="flex items-center gap-2 bg-[#151C3C] text-[#526FFF] rounded px-3 py-1 hover:bg-[#1a2248] transition-colors">
-                    <PresetIcon className="w-7 h-7" />
-                    <span className="text-xl font-semibold">PRESET 1</span>
+                <button className="flex items-center gap-1.5 bg-[#151C3C] text-[#526FFF] rounded px-2 py-0.5 hover:bg-[#1a2248] transition-colors flex-shrink-0">
+                    <PresetIcon className="w-5 h-5" />
+                    <span className="text-sm font-semibold">PRESET 1</span>
                 </button>
 
                 {/* Layout 1=0 */}
-                <div className="flex items-center gap-1.5 text-gray-300 rounded-full border border-[#22242D] bg-transparent px-4 py-1.5">
-                    <FolderOpen className="w-5 h-5" />
-                    <span className="text-base">1</span>
-                    <SolanaIcon size="md" />
-                    <span className="text-base">0</span>
-                    <ChevronDown className="w-5 h-5" />
+                <div className="flex items-center gap-1 text-gray-300 rounded-full border border-[#22242D] bg-transparent px-2 py-0.5 flex-shrink-0">
+                    <FolderOpen className="w-4 h-4" />
+                    <span className="text-xs">1</span>
+                    <SolanaIcon size="sm" />
+                    <span className="text-xs">0</span>
+                    <ChevronDown className="w-4 h-4" />
                 </div>
 
                 <Divider />
 
                 {/* Settings Icon */}
-                <button className="text-[#777A8C] hover:text-white transition-colors px-0">
-                    <Settings className="w-6 h-6" />
+                <button className="text-[#777A8C] hover:text-white transition-colors flex-shrink-0">
+                    <Settings className="w-4 h-4" />
                 </button>
 
                 {/* Wallet */}
-                <button className="relative flex items-center gap-1.5 hover:text-white transition-colors px-1.5">
-                    <WalletIcon className="w-6 h-6 text-[#777A8C]" />
-                    <span className="text-[#C8C9D1] text-lg">Wallet</span>
+                <button className="relative flex items-center gap-1 hover:text-white transition-colors px-1 flex-shrink-0">
+                    <WalletIcon className="w-4 h-4 text-[#777A8C]" />
+                    <span className="text-[#C8C9D1] text-xs">Wallet</span>
                     <NotificationDot />
                 </button>
 
                 {/* Twitter */}
-                <button className="flex items-center gap-1.5 hover:text-white transition-colors px-1.5">
-                    <TwitterIcon className="w-6 h-6 text-[#777A8C]" />
-                    <span className="text-[#C8C9D1] text-lg">Twitter</span>
+                <button className="flex items-center gap-1 hover:text-white transition-colors px-1 flex-shrink-0">
+                    <TwitterIcon className="w-4 h-4 text-[#777A8C]" />
+                    <span className="text-[#C8C9D1] text-xs">Twitter</span>
                 </button>
 
                 {/* Discover */}
-                <button className="relative flex items-center gap-1.5 hover:text-white transition-colors px-1.5">
-                    <Compass className="w-6 h-6 text-[#777A8C]" />
-                    <span className="text-[#C8C9D1] text-lg">Discover</span>
+                <button className="relative flex items-center gap-1 hover:text-white transition-colors px-1 flex-shrink-0">
+                    <Compass className="w-4 h-4 text-[#777A8C]" />
+                    <span className="text-[#C8C9D1] text-xs">Discover</span>
                     <NotificationDot />
                 </button>
 
                 {/* Pulse */}
-                <button className="relative flex items-center gap-1.5 hover:text-white transition-colors px-1.5">
-                    <Activity className="w-6 h-6 text-[#777A8C]" />
-                    <span className="text-[#C8C9D1] text-lg">Pulse</span>
+                <button className="relative flex items-center gap-1 hover:text-white transition-colors px-1 flex-shrink-0">
+                    <Activity className="w-4 h-4 text-[#777A8C]" />
+                    <span className="text-[#C8C9D1] text-xs">Pulse</span>
                     <NotificationDot />
                 </button>
 
                 {/* PnL */}
-                <button className="flex items-center gap-1.5 hover:text-white transition-colors px-1.5">
-                    <BarChart3 className="w-6 h-6 text-[#777A8C]" />
-                    <span className="text-[#C8C9D1] text-lg">PnL</span>
+                <button className="flex items-center gap-1 hover:text-white transition-colors px-1 flex-shrink-0">
+                    <BarChart3 className="w-4 h-4 text-[#777A8C]" />
+                    <span className="text-[#C8C9D1] text-xs">PnL</span>
                 </button>
 
                 <Divider />
@@ -186,73 +186,73 @@ export function GlobalStatusBar() {
                 {/* <div className="flex-1" /> */}
 
                 {/* 3-Icon Pill with gradient border */}
-                <div className="relative flex items-center rounded-full px-3 py-1">
+                <div className="relative flex items-center rounded-full px-2 py-0.5 flex-shrink-0">
                     {/* Gradient border */}
-                    <div className="absolute inset-0 rounded-full bg-gradient-to-r from-[#1E4431] via-[#473011] to-[#1E3D42] p-[2px]">
+                    <div className="absolute inset-0 rounded-full bg-gradient-to-r from-[#1E4431] via-[#473011] to-[#1E3D42] p-[1px]">
                         <div className="w-full h-full rounded-full bg-[#18181B]" />
                     </div>
                     {/* Icons */}
                     <div className="relative flex items-center gap-0">
-                        <CapsuleIcon className="w-6 h-6" />
-                        <ShibaIcon className="w-6 h-6" />
-                        <HexagonRIcon className="w-6 h-6" />
+                        <CapsuleIcon className="w-4 h-4" />
+                        <ShibaIcon className="w-4 h-4" />
+                        <HexagonRIcon className="w-4 h-4" />
                     </div>
                 </div>
 
                 <Divider />
 
                 {/* Solana + Price */}
-                <div className="flex items-center gap-1.5">
-                    <SolanaIcon size="md" />
-                    <span className="text-emerald-400 text-lg" >$139.6</span>
+                <div className="flex items-center gap-1 flex-shrink-0">
+                    <SolanaIcon size="sm" />
+                    <span className="text-emerald-400 text-xs">$139.6</span>
                 </div>
 
                 {/* Connection Status */}
-                <div className="flex items-center gap-2 bg-[#092923] rounded-lg px-4 py-1.5">
+                <div className="flex items-center gap-1.5 bg-[#092923] rounded-md px-2 py-0.5 flex-shrink-0">
                     <div className="relative">
-                        <span className="w-5 h-5 bg-[#12AF80] rounded-full block" />
-                        <span className="absolute inset-0 w-5 h-5 rounded-full border-2 border-[#0B4436]" />
+                        <span className="w-3 h-3 bg-[#12AF80] rounded-full block" />
+                        <span className="absolute inset-0 w-3 h-3 rounded-full border border-[#0B4436]" />
                     </div>
-                    <span className="text-[#12AF80] text-lg">Connection is stable</span>
+                    <span className="text-[#12AF80] text-xs">Connected</span>
                 </div>
 
                 {/* GLOBAL */}
-                <button className="flex items-center gap-1.5 text-[#C8C9D1]hover:text-white transition-colors px-1.5">
-                    <span className="text-[#F4F4F5] text-lg" >GLOBAL</span>
-                    <ChevronDown className="w-5 h-5" />
+                <button className="flex items-center gap-1 text-[#C8C9D1] hover:text-white transition-colors px-1 flex-shrink-0">
+                    <span className="text-[#F4F4F5] text-xs">GLOBAL</span>
+                    <ChevronDown className="w-3 h-3" />
                 </button>
 
                 <Divider />
 
                 {/* Right side icons */}
-                <button className="text-[#F4F4F5] hover:text-white transition-colors px-1.5">
-                    <Square className="w-5 h-5" />
+                <button className="text-[#F4F4F5] hover:text-white transition-colors px-0.5 flex-shrink-0">
+                    <Square className="w-3.5 h-3.5" />
                 </button>
 
-                <button className="text-[#F4F4F5] hover:text-white transition-colors px-1.5">
-                    <Bell className="w-5 h-5" />
+                <button className="text-[#F4F4F5] hover:text-white transition-colors px-0.5 flex-shrink-0">
+                    <Bell className="w-3.5 h-3.5" />
                 </button>
 
-                <button className="text-[#F4F4F5] hover:text-white transition-colors px-1.5">
-                    <Palette className="w-4 h-4" />
+                <button className="text-[#F4F4F5] hover:text-white transition-colors px-0.5 flex-shrink-0">
+                    <Palette className="w-3.5 h-3.5" />
                 </button>
 
                 <Divider />
 
                 {/* Discord */}
-                <button className="text-[#F4F4F5] hover:text-white transition-colors px-1.5">
-                    <DiscordIcon className="w-4 h-4" />
+                <button className="text-[#F4F4F5] hover:text-white transition-colors px-0.5 flex-shrink-0">
+                    <DiscordIcon className="w-3.5 h-3.5" />
                 </button>
 
                 {/* X/Twitter */}
-                <button className="text-[#F4F4F5] hover:text-white transition-colors px-1.5">
-                    <TwitterIcon className="w-4 h-4" />
+                <button className="text-[#F4F4F5] hover:text-white transition-colors px-0.5 flex-shrink-0">
+                    <TwitterIcon className="w-3.5 h-3.5" />
                 </button>
 
                 {/* Docs */}
-                <button className="flex items-center gap-1.5 text-[#F4F4F5] hover:text-white transition-colors px-1.5">
-                    <FileText className="w-4 h-4" />
-                    <span>Docs</span>
+                <button className="flex items-center gap-1 text-[#F4F4F5] hover:text-white transition-colors px-0.5 flex-shrink-0">
+                    <FileText className="w-3.5 h-3.5" />
+                    <span className="text-xs">Docs</span>
                 </button>
             </div>
         </footer>

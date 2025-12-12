@@ -10,13 +10,13 @@ interface DashboardBoardProps {
 
 function DashboardBoardComponent({ tokens }: DashboardBoardProps) {
   return (
-    <div className="bg-[#06070B] px-[2%]">
-      {/* Unified terminal container - 70% height (reduced by 30%), scrollable columns */}
-      <div className="h-[62vh] bg-[#101114] rounded-sm border border-zinc-800 overflow-hidden">
-        {/* Desktop: 3-column grid with NO gaps, Mobile: vertical stack */}
-        <div className="h-full flex flex-col md:grid md:grid-cols-3 gap-0">
-          {/* New Pairs - with right border divider */}
-          <div className="flex-1 md:flex-none bg-[#101114] rounded-none border-r border-zinc-800 overflow-hidden">
+    <div className="bg-[#06070B] px-[1%]">
+      {/* Unified terminal container - flexible height, scrollable columns */}
+      <div className="h-[calc(100vh-140px)] bg-[#101114] rounded-sm border border-zinc-800 overflow-hidden">
+        {/* Desktop: 3-column flex with equal distribution, Mobile: vertical stack */}
+        <div className="h-full flex flex-col md:flex-row">
+          {/* New Pairs - flex-1 to share space equally */}
+          <div className="flex-1 min-w-0 bg-[#101114] rounded-none border-r border-zinc-800 overflow-hidden">
             <ColumnSection
               title="New Pairs"
               tokens={tokens}
@@ -24,8 +24,8 @@ function DashboardBoardComponent({ tokens }: DashboardBoardProps) {
             />
           </div>
 
-          {/* Final Stretch - with right border divider */}
-          <div className="flex-1 md:flex-none bg-[#101114] rounded-none border-r border-zinc-800 overflow-hidden">
+          {/* Final Stretch - flex-1 to share space equally */}
+          <div className="flex-1 min-w-0 bg-[#101114] rounded-none border-r border-zinc-800 overflow-hidden">
             <ColumnSection
               title="Final Stretch"
               tokens={tokens}
@@ -33,8 +33,8 @@ function DashboardBoardComponent({ tokens }: DashboardBoardProps) {
             />
           </div>
 
-          {/* Migrated - no right border (last column) */}
-          <div className="flex-1 md:flex-none bg-[#101114] rounded-none overflow-hidden">
+          {/* Migrated - flex-1 to share space equally */}
+          <div className="flex-1 min-w-0 bg-[#101114] rounded-none overflow-hidden">
             <ColumnSection
               title="Migrated"
               tokens={tokens}
