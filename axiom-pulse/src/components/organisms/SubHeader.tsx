@@ -47,12 +47,12 @@ export function SubHeader() {
         {/* Right Side: Global Controls */}
         <div className="flex items-center gap-1 lg:gap-2 xl:gap-3">
           {/* Help Icon */}
-          <button className="p-2 text-gray-500 hover:text-white transition-colors">
+          <button aria-label="Help" className="p-2 text-gray-500 hover:text-white transition-colors">
             <HelpCircle className="w-4 h-4" />
           </button>
 
           {/* Display Button */}
-          <button className="flex items-center gap-1.5 px-3 py-1.5 bg-zinc-800 hover:bg-zinc-700 rounded-full text-sm text-gray-300 transition-colors border border-zinc-700">
+          <button aria-label="Display options" className="flex items-center gap-1.5 px-3 py-1.5 bg-zinc-800 hover:bg-zinc-700 rounded-full text-sm text-gray-300 transition-colors border border-zinc-700">
             <Menu className="w-4 h-4" />
             <span>Display</span>
             <ChevronDown className="w-4 h-4 text-gray-500" />
@@ -60,16 +60,16 @@ export function SubHeader() {
 
           {/* Tool Icons */}
           <div className="flex items-center gap-1">
-            <button className="p-2 text-gray-500 hover:text-white transition-colors">
+            <button aria-label="Bookmarks" className="p-2 text-gray-500 hover:text-white transition-colors">
               <Bookmark className="w-4 h-4" />
             </button>
-            <button className="p-2 text-gray-500 hover:text-white transition-colors">
+            <button aria-label="Grid view" className="p-2 text-gray-500 hover:text-white transition-colors">
               <LayoutGrid className="w-4 h-4" />
             </button>
-            <button className="p-2 text-gray-500 hover:text-white transition-colors">
+            <button aria-label="Sound" className="p-2 text-gray-500 hover:text-white transition-colors">
               <Volume2 className="w-4 h-4" />
             </button>
-            <button className="p-2 text-gray-500 hover:text-white transition-colors">
+            <button aria-label="Settings" className="p-2 text-gray-500 hover:text-white transition-colors">
               <Settings2 className="w-4 h-4" />
             </button>
           </div>

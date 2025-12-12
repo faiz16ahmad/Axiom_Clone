@@ -1,0 +1,2408 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - banner [ref=e3]:
+      - generic [ref=e4]:
+        - generic [ref=e5]:
+          - link [ref=e6] [cursor=pointer]:
+            - /url: "#"
+            - img [ref=e7]
+          - navigation [ref=e13]:
+            - link "Discover" [ref=e14] [cursor=pointer]:
+              - /url: "#"
+            - link "Pulse" [ref=e15] [cursor=pointer]:
+              - /url: "#"
+            - link "Trackers" [ref=e16] [cursor=pointer]:
+              - /url: "#"
+            - link "Perpetuals" [ref=e17] [cursor=pointer]:
+              - /url: "#"
+            - link "Yield" [ref=e18] [cursor=pointer]:
+              - /url: "#"
+            - link "Vision" [ref=e19] [cursor=pointer]:
+              - /url: "#"
+            - link "Portfolio" [ref=e20] [cursor=pointer]:
+              - /url: "#"
+            - link "Rewards" [ref=e21] [cursor=pointer]:
+              - /url: "#"
+        - generic [ref=e22]:
+          - button [ref=e23] [cursor=pointer]:
+            - img [ref=e24]
+          - button "SOL" [ref=e27] [cursor=pointer]:
+            - img [ref=e28]
+            - generic [ref=e30]: SOL
+            - img [ref=e31]
+          - button "Deposit" [ref=e33] [cursor=pointer]
+          - button [ref=e34] [cursor=pointer]:
+            - img [ref=e35]
+          - button [ref=e37] [cursor=pointer]:
+            - img [ref=e38]
+          - generic [ref=e41]:
+            - img [ref=e42]
+            - img [ref=e45]
+            - generic [ref=e47]: "0"
+            - generic [ref=e50]: "0"
+            - img [ref=e51]
+          - button [ref=e53] [cursor=pointer]:
+            - img [ref=e54]
+            - img [ref=e57]
+    - main [ref=e60]:
+      - generic [ref=e62]:
+        - button [ref=e63] [cursor=pointer]:
+          - img [ref=e64]
+        - button [ref=e68] [cursor=pointer]:
+          - img [ref=e69]
+        - button [ref=e71] [cursor=pointer]:
+          - img [ref=e72]
+      - generic [ref=e77]:
+        - generic [ref=e78]:
+          - heading "Pulse" [level=1] [ref=e79]
+          - generic [ref=e80]:
+            - img [ref=e82]
+            - img [ref=e84]
+        - generic [ref=e89]:
+          - button [ref=e90] [cursor=pointer]:
+            - img [ref=e91]
+          - button "Display" [ref=e94] [cursor=pointer]:
+            - img [ref=e95]
+            - generic [ref=e96]: Display
+            - img [ref=e97]
+          - generic [ref=e99]:
+            - button [ref=e100] [cursor=pointer]:
+              - img [ref=e101]
+            - button [ref=e103] [cursor=pointer]:
+              - img [ref=e104]
+            - button [ref=e109] [cursor=pointer]:
+              - img [ref=e110]
+            - button [ref=e114] [cursor=pointer]:
+              - img [ref=e115]
+          - button "1 ≡ 0" [ref=e118] [cursor=pointer]:
+            - img [ref=e119]
+            - generic [ref=e121]: "1"
+            - generic [ref=e122]: ≡ 0
+            - img [ref=e123]
+      - generic [ref=e127]:
+        - generic [ref=e129]:
+          - generic [ref=e130]:
+            - heading "New Pairs" [level=2] [ref=e131]
+            - generic [ref=e132]:
+              - generic [ref=e133]:
+                - generic [ref=e134]:
+                  - img [ref=e135]
+                  - generic [ref=e137]: "10"
+                - img [ref=e138]
+                - generic [ref=e141]:
+                  - button "P1" [ref=e142] [cursor=pointer]
+                  - button "P2" [ref=e143] [cursor=pointer]
+                  - button "P3" [ref=e144] [cursor=pointer]
+              - button [ref=e145] [cursor=pointer]:
+                - img [ref=e146]
+          - generic [ref=e147]:
+            - generic [ref=e148]:
+              - generic [ref=e151]: "Bonding: 78.00%"
+              - generic [ref=e152]:
+                - generic [ref=e153]:
+                  - generic [ref=e154]:
+                    - generic [ref=e155]:
+                      - button [ref=e156] [cursor=pointer]:
+                        - img [ref=e157]
+                      - button [ref=e162] [cursor=pointer]:
+                        - img [ref=e163]
+                      - button [ref=e166] [cursor=pointer]:
+                        - img [ref=e167]
+                    - button "Cuban Peso" [ref=e169] [cursor=pointer]:
+                      - img "Cuban Peso" [ref=e171]
+                      - img [ref=e175]
+                  - generic [ref=e178]: e5644...44bc8
+                - generic [ref=e179]:
+                  - generic [ref=e180]:
+                    - generic [ref=e181]:
+                      - generic [ref=e182]:
+                        - generic [ref=e183]: Cuban Peso
+                        - generic [ref=e184]: XOF
+                        - img [ref=e185] [cursor=pointer]
+                      - generic [ref=e188]:
+                        - generic [ref=e189]: 11s
+                        - img [ref=e190] [cursor=pointer]
+                        - img [ref=e193] [cursor=pointer]
+                        - img [ref=e196] [cursor=pointer]
+                        - img [ref=e199] [cursor=pointer]
+                        - generic [ref=e202]:
+                          - img [ref=e203]
+                          - generic [ref=e208]: 6.9K
+                        - generic [ref=e209]:
+                          - img [ref=e210]
+                          - generic [ref=e213]: "0"
+                        - generic [ref=e214]:
+                          - img [ref=e215]
+                          - generic [ref=e221]: "0"
+                    - generic [ref=e223]:
+                      - generic [ref=e224]:
+                        - generic [ref=e225]: MC
+                        - generic [ref=e226]: $5.3M
+                      - generic [ref=e227]:
+                        - generic [ref=e228]: V
+                        - generic [ref=e229]: $3.4M
+                      - generic [ref=e230]:
+                        - generic [ref=e231]: F
+                        - img [ref=e232]
+                        - generic [ref=e234]: "13.22"
+                        - generic [ref=e235]: TX
+                        - generic [ref=e236]: 25.3K
+                  - generic [ref=e240]:
+                    - generic [ref=e241]:
+                      - generic [ref=e242]:
+                        - img [ref=e244]
+                        - generic [ref=e247]: 54%
+                      - generic [ref=e248]:
+                        - img [ref=e250]
+                        - generic [ref=e252]: 39%
+                      - generic [ref=e253]:
+                        - img [ref=e255]
+                        - generic [ref=e258]: 0m
+                      - generic [ref=e259]:
+                        - img [ref=e261]
+                        - generic [ref=e265]: 78%
+                      - generic [ref=e266]:
+                        - img [ref=e268]
+                        - generic [ref=e273]: 0%
+                      - generic [ref=e274]:
+                        - img [ref=e276]
+                        - generic [ref=e281]: 0%
+                    - button "0 SOL" [ref=e283] [cursor=pointer]:
+                      - img [ref=e284]
+                      - generic [ref=e286]: 0 SOL
+            - generic [ref=e287]:
+              - generic [ref=e290]: "Bonding: 30.00%"
+              - generic [ref=e291]:
+                - generic [ref=e292]:
+                  - generic [ref=e293]:
+                    - generic [ref=e294]:
+                      - button [ref=e295] [cursor=pointer]:
+                        - img [ref=e296]
+                      - button [ref=e301] [cursor=pointer]:
+                        - img [ref=e302]
+                      - button [ref=e305] [cursor=pointer]:
+                        - img [ref=e306]
+                    - button "Lek" [ref=e308] [cursor=pointer]:
+                      - img "Lek" [ref=e310]
+                      - img [ref=e314]
+                  - generic [ref=e317]: fae96...eec91
+                - generic [ref=e318]:
+                  - generic [ref=e319]:
+                    - generic [ref=e320]:
+                      - generic [ref=e321]:
+                        - generic [ref=e322]: Lek
+                        - generic [ref=e323]: YER
+                        - img [ref=e324] [cursor=pointer]
+                      - generic [ref=e327]:
+                        - generic [ref=e328]: 11s
+                        - img [ref=e329] [cursor=pointer]
+                        - img [ref=e332] [cursor=pointer]
+                        - img [ref=e335] [cursor=pointer]
+                        - img [ref=e338] [cursor=pointer]
+                        - generic [ref=e341]:
+                          - img [ref=e342]
+                          - generic [ref=e347]: 6.4K
+                        - generic [ref=e348]:
+                          - img [ref=e349]
+                          - generic [ref=e352]: "0"
+                        - generic [ref=e353]:
+                          - img [ref=e354]
+                          - generic [ref=e360]: "0"
+                    - generic [ref=e362]:
+                      - generic [ref=e363]:
+                        - generic [ref=e364]: MC
+                        - generic [ref=e365]: $2.3M
+                      - generic [ref=e366]:
+                        - generic [ref=e367]: V
+                        - generic [ref=e368]: $4.9M
+                      - generic [ref=e369]:
+                        - generic [ref=e370]: F
+                        - img [ref=e371]
+                        - generic [ref=e373]: "35.13"
+                        - generic [ref=e374]: TX
+                        - generic [ref=e375]: 36.0K
+                  - generic [ref=e379]:
+                    - generic [ref=e380]:
+                      - generic [ref=e381]:
+                        - img [ref=e383]
+                        - generic [ref=e386]: 71%
+                      - generic [ref=e387]:
+                        - img [ref=e389]
+                        - generic [ref=e391]: 15%
+                      - generic [ref=e392]:
+                        - img [ref=e394]
+                        - generic [ref=e397]: 0m
+                      - generic [ref=e398]:
+                        - img [ref=e400]
+                        - generic [ref=e404]: 30%
+                      - generic [ref=e405]:
+                        - img [ref=e407]
+                        - generic [ref=e412]: 0%
+                      - generic [ref=e413]:
+                        - img [ref=e415]
+                        - generic [ref=e420]: 0%
+                    - button "0 SOL" [ref=e422] [cursor=pointer]:
+                      - img [ref=e423]
+                      - generic [ref=e425]: 0 SOL
+            - generic [ref=e426]:
+              - generic [ref=e429]: "Bonding: 22.00%"
+              - generic [ref=e430]:
+                - generic [ref=e431]:
+                  - generic [ref=e432]:
+                    - generic [ref=e433]:
+                      - button [ref=e434] [cursor=pointer]:
+                        - img [ref=e435]
+                      - button [ref=e440] [cursor=pointer]:
+                        - img [ref=e441]
+                      - button [ref=e444] [cursor=pointer]:
+                        - img [ref=e445]
+                    - button "Azerbaijanian Manat" [ref=e447] [cursor=pointer]:
+                      - img "Azerbaijanian Manat" [ref=e449]
+                      - img [ref=e453]
+                  - generic [ref=e456]: 69611...63b30
+                - generic [ref=e457]:
+                  - generic [ref=e458]:
+                    - generic [ref=e459]:
+                      - generic [ref=e460]:
+                        - generic [ref=e461]: Azerbaijanian Manat
+                        - generic [ref=e462]: TWD
+                        - img [ref=e463] [cursor=pointer]
+                      - generic [ref=e466]:
+                        - generic [ref=e467]: 13s
+                        - img [ref=e468] [cursor=pointer]
+                        - img [ref=e471] [cursor=pointer]
+                        - img [ref=e474] [cursor=pointer]
+                        - img [ref=e477] [cursor=pointer]
+                        - generic [ref=e480]:
+                          - img [ref=e481]
+                          - generic [ref=e486]: 8.7K
+                        - generic [ref=e487]:
+                          - img [ref=e488]
+                          - generic [ref=e491]: "0"
+                        - generic [ref=e492]:
+                          - img [ref=e493]
+                          - generic [ref=e499]: "0"
+                    - generic [ref=e501]:
+                      - generic [ref=e502]:
+                        - generic [ref=e503]: MC
+                        - generic [ref=e504]: $4.7M
+                      - generic [ref=e505]:
+                        - generic [ref=e506]: V
+                        - generic [ref=e507]: $2.1M
+                      - generic [ref=e508]:
+                        - generic [ref=e509]: F
+                        - img [ref=e510]
+                        - generic [ref=e512]: "35.39"
+                        - generic [ref=e513]: TX
+                        - generic [ref=e514]: 42.8K
+                  - generic [ref=e518]:
+                    - generic [ref=e519]:
+                      - generic [ref=e520]:
+                        - img [ref=e522]
+                        - generic [ref=e525]: 55%
+                      - generic [ref=e526]:
+                        - img [ref=e528]
+                        - generic [ref=e530]: 89%
+                      - generic [ref=e531]:
+                        - img [ref=e533]
+                        - generic [ref=e536]: 0m
+                      - generic [ref=e537]:
+                        - img [ref=e539]
+                        - generic [ref=e543]: 22%
+                      - generic [ref=e544]:
+                        - img [ref=e546]
+                        - generic [ref=e551]: 0%
+                      - generic [ref=e552]:
+                        - img [ref=e554]
+                        - generic [ref=e559]: 0%
+                    - button "0 SOL" [ref=e561] [cursor=pointer]:
+                      - img [ref=e562]
+                      - generic [ref=e564]: 0 SOL
+            - generic [ref=e565]:
+              - generic [ref=e568]: "Bonding: 44.00%"
+              - generic [ref=e569]:
+                - generic [ref=e570]:
+                  - generic [ref=e571]:
+                    - generic [ref=e572]:
+                      - button [ref=e573] [cursor=pointer]:
+                        - img [ref=e574]
+                      - button [ref=e579] [cursor=pointer]:
+                        - img [ref=e580]
+                      - button [ref=e583] [cursor=pointer]:
+                        - img [ref=e584]
+                    - button "Tunisian Dinar" [ref=e586] [cursor=pointer]:
+                      - img "Tunisian Dinar" [ref=e588]
+                      - img [ref=e592]
+                  - generic [ref=e595]: 5b049...b00c8
+                - generic [ref=e596]:
+                  - generic [ref=e597]:
+                    - generic [ref=e598]:
+                      - generic [ref=e599]:
+                        - generic [ref=e600]: Tunisian Dinar
+                        - generic [ref=e601]: LSL
+                        - img [ref=e602] [cursor=pointer]
+                      - generic [ref=e605]:
+                        - generic [ref=e606]: 17s
+                        - img [ref=e607] [cursor=pointer]
+                        - img [ref=e610] [cursor=pointer]
+                        - img [ref=e613] [cursor=pointer]
+                        - img [ref=e616] [cursor=pointer]
+                        - generic [ref=e619]:
+                          - img [ref=e620]
+                          - generic [ref=e625]: 2.0K
+                        - generic [ref=e626]:
+                          - img [ref=e627]
+                          - generic [ref=e630]: "0"
+                        - generic [ref=e631]:
+                          - img [ref=e632]
+                          - generic [ref=e638]: "0"
+                    - generic [ref=e640]:
+                      - generic [ref=e641]:
+                        - generic [ref=e642]: MC
+                        - generic [ref=e643]: $9.8M
+                      - generic [ref=e644]:
+                        - generic [ref=e645]: V
+                        - generic [ref=e646]: $3.4M
+                      - generic [ref=e647]:
+                        - generic [ref=e648]: F
+                        - img [ref=e649]
+                        - generic [ref=e651]: "24.33"
+                        - generic [ref=e652]: TX
+                        - generic [ref=e653]: 22.1K
+                  - generic [ref=e657]:
+                    - generic [ref=e658]:
+                      - generic [ref=e659]:
+                        - img [ref=e661]
+                        - generic [ref=e664]: 23%
+                      - generic [ref=e665]:
+                        - img [ref=e667]
+                        - generic [ref=e669]: 31%
+                      - generic [ref=e670]:
+                        - img [ref=e672]
+                        - generic [ref=e675]: 0m
+                      - generic [ref=e676]:
+                        - img [ref=e678]
+                        - generic [ref=e682]: 44%
+                      - generic [ref=e683]:
+                        - img [ref=e685]
+                        - generic [ref=e690]: 0%
+                      - generic [ref=e691]:
+                        - img [ref=e693]
+                        - generic [ref=e698]: 0%
+                    - button "0 SOL" [ref=e700] [cursor=pointer]:
+                      - img [ref=e701]
+                      - generic [ref=e703]: 0 SOL
+            - generic [ref=e704]:
+              - generic [ref=e707]: "Bonding: 35.00%"
+              - generic [ref=e708]:
+                - generic [ref=e709]:
+                  - generic [ref=e710]:
+                    - generic [ref=e711]:
+                      - button [ref=e712] [cursor=pointer]:
+                        - img [ref=e713]
+                      - button [ref=e718] [cursor=pointer]:
+                        - img [ref=e719]
+                      - button [ref=e722] [cursor=pointer]:
+                        - img [ref=e723]
+                    - button "Uganda Shilling" [ref=e725] [cursor=pointer]:
+                      - img "Uganda Shilling" [ref=e727]
+                      - img [ref=e731]
+                  - generic [ref=e734]: ea87a...f5a0b
+                - generic [ref=e735]:
+                  - generic [ref=e736]:
+                    - generic [ref=e737]:
+                      - generic [ref=e738]:
+                        - generic [ref=e739]: Uganda Shilling
+                        - generic [ref=e740]: IDR
+                        - img [ref=e741] [cursor=pointer]
+                      - generic [ref=e744]:
+                        - generic [ref=e745]: 34s
+                        - img [ref=e746] [cursor=pointer]
+                        - img [ref=e749] [cursor=pointer]
+                        - img [ref=e752] [cursor=pointer]
+                        - img [ref=e755] [cursor=pointer]
+                        - generic [ref=e758]:
+                          - img [ref=e759]
+                          - generic [ref=e764]: 2.5K
+                        - generic [ref=e765]:
+                          - img [ref=e766]
+                          - generic [ref=e769]: "0"
+                        - generic [ref=e770]:
+                          - img [ref=e771]
+                          - generic [ref=e777]: "0"
+                    - generic [ref=e779]:
+                      - generic [ref=e780]:
+                        - generic [ref=e781]: MC
+                        - generic [ref=e782]: $6.1M
+                      - generic [ref=e783]:
+                        - generic [ref=e784]: V
+                        - generic [ref=e785]: $4.6M
+                      - generic [ref=e786]:
+                        - generic [ref=e787]: F
+                        - img [ref=e788]
+                        - generic [ref=e790]: "4.10"
+                        - generic [ref=e791]: TX
+                        - generic [ref=e792]: 26.9K
+                  - generic [ref=e796]:
+                    - generic [ref=e797]:
+                      - generic [ref=e798]:
+                        - img [ref=e800]
+                        - generic [ref=e803]: 65%
+                      - generic [ref=e804]:
+                        - img [ref=e806]
+                        - generic [ref=e808]: 52%
+                      - generic [ref=e809]:
+                        - img [ref=e811]
+                        - generic [ref=e814]: 0m
+                      - generic [ref=e815]:
+                        - img [ref=e817]
+                        - generic [ref=e821]: 35%
+                      - generic [ref=e822]:
+                        - img [ref=e824]
+                        - generic [ref=e829]: 0%
+                      - generic [ref=e830]:
+                        - img [ref=e832]
+                        - generic [ref=e837]: 0%
+                    - button "0 SOL" [ref=e839] [cursor=pointer]:
+                      - img [ref=e840]
+                      - generic [ref=e842]: 0 SOL
+            - generic [ref=e843]:
+              - generic [ref=e846]: "Bonding: 65.00%"
+              - generic [ref=e847]:
+                - generic [ref=e848]:
+                  - generic [ref=e849]:
+                    - generic [ref=e850]:
+                      - button [ref=e851] [cursor=pointer]:
+                        - img [ref=e852]
+                      - button [ref=e857] [cursor=pointer]:
+                        - img [ref=e858]
+                      - button [ref=e861] [cursor=pointer]:
+                        - img [ref=e862]
+                    - button "Brunei Dollar" [ref=e864] [cursor=pointer]:
+                      - img "Brunei Dollar" [ref=e866]
+                      - img [ref=e870]
+                  - generic [ref=e873]: 7f164...b02e5
+                - generic [ref=e874]:
+                  - generic [ref=e875]:
+                    - generic [ref=e876]:
+                      - generic [ref=e877]:
+                        - generic [ref=e878]: Brunei Dollar
+                        - generic [ref=e879]: MXN
+                        - img [ref=e880] [cursor=pointer]
+                      - generic [ref=e883]:
+                        - generic [ref=e884]: 37s
+                        - img [ref=e885] [cursor=pointer]
+                        - img [ref=e888] [cursor=pointer]
+                        - img [ref=e891] [cursor=pointer]
+                        - img [ref=e894] [cursor=pointer]
+                        - generic [ref=e897]:
+                          - img [ref=e898]
+                          - generic [ref=e903]: 2.6K
+                        - generic [ref=e904]:
+                          - img [ref=e905]
+                          - generic [ref=e908]: "0"
+                        - generic [ref=e909]:
+                          - img [ref=e910]
+                          - generic [ref=e916]: "0"
+                    - generic [ref=e918]:
+                      - generic [ref=e919]:
+                        - generic [ref=e920]: MC
+                        - generic [ref=e921]: $5.7M
+                      - generic [ref=e922]:
+                        - generic [ref=e923]: V
+                        - generic [ref=e924]: $4.0M
+                      - generic [ref=e925]:
+                        - generic [ref=e926]: F
+                        - img [ref=e927]
+                        - generic [ref=e929]: "95.09"
+                        - generic [ref=e930]: TX
+                        - generic [ref=e931]: 5.4K
+                  - generic [ref=e935]:
+                    - generic [ref=e936]:
+                      - generic [ref=e937]:
+                        - img [ref=e939]
+                        - generic [ref=e942]: 28%
+                      - generic [ref=e943]:
+                        - img [ref=e945]
+                        - generic [ref=e947]: 3%
+                      - generic [ref=e948]:
+                        - img [ref=e950]
+                        - generic [ref=e953]: 0m
+                      - generic [ref=e954]:
+                        - img [ref=e956]
+                        - generic [ref=e960]: 65%
+                      - generic [ref=e961]:
+                        - img [ref=e963]
+                        - generic [ref=e968]: 0%
+                      - generic [ref=e969]:
+                        - img [ref=e971]
+                        - generic [ref=e976]: 0%
+                    - button "0 SOL" [ref=e978] [cursor=pointer]:
+                      - img [ref=e979]
+                      - generic [ref=e981]: 0 SOL
+            - generic [ref=e982]:
+              - generic [ref=e985]: "Bonding: 41.00%"
+              - generic [ref=e986]:
+                - generic [ref=e987]:
+                  - generic [ref=e988]:
+                    - generic [ref=e989]:
+                      - button [ref=e990] [cursor=pointer]:
+                        - img [ref=e991]
+                      - button [ref=e996] [cursor=pointer]:
+                        - img [ref=e997]
+                      - button [ref=e1000] [cursor=pointer]:
+                        - img [ref=e1001]
+                    - button "Som" [ref=e1003] [cursor=pointer]:
+                      - img "Som" [ref=e1005]
+                      - img [ref=e1009]
+                  - generic [ref=e1012]: bcdbe...8318a
+                - generic [ref=e1013]:
+                  - generic [ref=e1014]:
+                    - generic [ref=e1015]:
+                      - generic [ref=e1016]:
+                        - generic [ref=e1017]: Som
+                        - generic [ref=e1018]: PHP
+                        - img [ref=e1019] [cursor=pointer]
+                      - generic [ref=e1022]:
+                        - generic [ref=e1023]: 42s
+                        - img [ref=e1024] [cursor=pointer]
+                        - img [ref=e1027] [cursor=pointer]
+                        - img [ref=e1030] [cursor=pointer]
+                        - img [ref=e1033] [cursor=pointer]
+                        - generic [ref=e1036]:
+                          - img [ref=e1037]
+                          - generic [ref=e1042]: 3.4K
+                        - generic [ref=e1043]:
+                          - img [ref=e1044]
+                          - generic [ref=e1047]: "0"
+                        - generic [ref=e1048]:
+                          - img [ref=e1049]
+                          - generic [ref=e1055]: "0"
+                    - generic [ref=e1057]:
+                      - generic [ref=e1058]:
+                        - generic [ref=e1059]: MC
+                        - generic [ref=e1060]: $5.9M
+                      - generic [ref=e1061]:
+                        - generic [ref=e1062]: V
+                        - generic [ref=e1063]: $4.3M
+                      - generic [ref=e1064]:
+                        - generic [ref=e1065]: F
+                        - img [ref=e1066]
+                        - generic [ref=e1068]: "25.77"
+                        - generic [ref=e1069]: TX
+                        - generic [ref=e1070]: 29.8K
+                  - generic [ref=e1074]:
+                    - generic [ref=e1075]:
+                      - generic [ref=e1076]:
+                        - img [ref=e1078]
+                        - generic [ref=e1081]: 50%
+                      - generic [ref=e1082]:
+                        - img [ref=e1084]
+                        - generic [ref=e1086]: 78%
+                      - generic [ref=e1087]:
+                        - img [ref=e1089]
+                        - generic [ref=e1092]: 0m
+                      - generic [ref=e1093]:
+                        - img [ref=e1095]
+                        - generic [ref=e1099]: 41%
+                      - generic [ref=e1100]:
+                        - img [ref=e1102]
+                        - generic [ref=e1107]: 0%
+                      - generic [ref=e1108]:
+                        - img [ref=e1110]
+                        - generic [ref=e1115]: 0%
+                    - button "0 SOL" [ref=e1117] [cursor=pointer]:
+                      - img [ref=e1118]
+                      - generic [ref=e1120]: 0 SOL
+            - generic [ref=e1121]:
+              - generic [ref=e1124]: "Bonding: 64.00%"
+              - generic [ref=e1125]:
+                - generic [ref=e1126]:
+                  - generic [ref=e1127]:
+                    - generic [ref=e1128]:
+                      - button [ref=e1129] [cursor=pointer]:
+                        - img [ref=e1130]
+                      - button [ref=e1135] [cursor=pointer]:
+                        - img [ref=e1136]
+                      - button [ref=e1139] [cursor=pointer]:
+                        - img [ref=e1140]
+                    - button "Zimbabwe Dollar" [ref=e1142] [cursor=pointer]:
+                      - img "Zimbabwe Dollar" [ref=e1144]
+                      - img [ref=e1148]
+                  - generic [ref=e1151]: 39fef...339f9
+                - generic [ref=e1152]:
+                  - generic [ref=e1153]:
+                    - generic [ref=e1154]:
+                      - generic [ref=e1155]:
+                        - generic [ref=e1156]: Zimbabwe Dollar
+                        - generic [ref=e1157]: EUR
+                        - img [ref=e1158] [cursor=pointer]
+                      - generic [ref=e1161]:
+                        - generic [ref=e1162]: 46s
+                        - img [ref=e1163] [cursor=pointer]
+                        - img [ref=e1166] [cursor=pointer]
+                        - img [ref=e1169] [cursor=pointer]
+                        - img [ref=e1172] [cursor=pointer]
+                        - generic [ref=e1175]:
+                          - img [ref=e1176]
+                          - generic [ref=e1181]: 9.3K
+                        - generic [ref=e1182]:
+                          - img [ref=e1183]
+                          - generic [ref=e1186]: "0"
+                        - generic [ref=e1187]:
+                          - img [ref=e1188]
+                          - generic [ref=e1194]: "0"
+                    - generic [ref=e1196]:
+                      - generic [ref=e1197]:
+                        - generic [ref=e1198]: MC
+                        - generic [ref=e1199]: $1.6M
+                      - generic [ref=e1200]:
+                        - generic [ref=e1201]: V
+                        - generic [ref=e1202]: $3.3M
+                      - generic [ref=e1203]:
+                        - generic [ref=e1204]: F
+                        - img [ref=e1205]
+                        - generic [ref=e1207]: "69.66"
+                        - generic [ref=e1208]: TX
+                        - generic [ref=e1209]: 36.2K
+                  - generic [ref=e1213]:
+                    - generic [ref=e1214]:
+                      - generic [ref=e1215]:
+                        - img [ref=e1217]
+                        - generic [ref=e1220]: 10%
+                      - generic [ref=e1221]:
+                        - img [ref=e1223]
+                        - generic [ref=e1225]: 45%
+                      - generic [ref=e1226]:
+                        - img [ref=e1228]
+                        - generic [ref=e1231]: 0m
+                      - generic [ref=e1232]:
+                        - img [ref=e1234]
+                        - generic [ref=e1238]: 64%
+                      - generic [ref=e1239]:
+                        - img [ref=e1241]
+                        - generic [ref=e1246]: 0%
+                      - generic [ref=e1247]:
+                        - img [ref=e1249]
+                        - generic [ref=e1254]: 0%
+                    - button "0 SOL" [ref=e1256] [cursor=pointer]:
+                      - img [ref=e1257]
+                      - generic [ref=e1259]: 0 SOL
+            - generic [ref=e1260]:
+              - generic [ref=e1263]: "Bonding: 13.00%"
+              - generic [ref=e1264]:
+                - generic [ref=e1265]:
+                  - generic [ref=e1266]:
+                    - generic [ref=e1267]:
+                      - button [ref=e1268] [cursor=pointer]:
+                        - img [ref=e1269]
+                      - button [ref=e1274] [cursor=pointer]:
+                        - img [ref=e1275]
+                      - button [ref=e1278] [cursor=pointer]:
+                        - img [ref=e1279]
+                    - button "Cuban Peso" [ref=e1281] [cursor=pointer]:
+                      - img "Cuban Peso" [ref=e1283]
+                      - img [ref=e1287]
+                  - generic [ref=e1290]: 72c68...b6f79
+                - generic [ref=e1291]:
+                  - generic [ref=e1292]:
+                    - generic [ref=e1293]:
+                      - generic [ref=e1294]:
+                        - generic [ref=e1295]: Cuban Peso
+                        - generic [ref=e1296]: BAM
+                        - img [ref=e1297] [cursor=pointer]
+                      - generic [ref=e1300]:
+                        - generic [ref=e1301]: 48s
+                        - img [ref=e1302] [cursor=pointer]
+                        - img [ref=e1305] [cursor=pointer]
+                        - img [ref=e1308] [cursor=pointer]
+                        - img [ref=e1311] [cursor=pointer]
+                        - generic [ref=e1314]:
+                          - img [ref=e1315]
+                          - generic [ref=e1320]: 8.5K
+                        - generic [ref=e1321]:
+                          - img [ref=e1322]
+                          - generic [ref=e1325]: "0"
+                        - generic [ref=e1326]:
+                          - img [ref=e1327]
+                          - generic [ref=e1333]: "0"
+                    - generic [ref=e1335]:
+                      - generic [ref=e1336]:
+                        - generic [ref=e1337]: MC
+                        - generic [ref=e1338]: $4.6M
+                      - generic [ref=e1339]:
+                        - generic [ref=e1340]: V
+                        - generic [ref=e1341]: $4.6M
+                      - generic [ref=e1342]:
+                        - generic [ref=e1343]: F
+                        - img [ref=e1344]
+                        - generic [ref=e1346]: "54.83"
+                        - generic [ref=e1347]: TX
+                        - generic [ref=e1348]: 33.7K
+                  - generic [ref=e1352]:
+                    - generic [ref=e1353]:
+                      - generic [ref=e1354]:
+                        - img [ref=e1356]
+                        - generic [ref=e1359]: 1%
+                      - generic [ref=e1360]:
+                        - img [ref=e1362]
+                        - generic [ref=e1364]: 19%
+                      - generic [ref=e1365]:
+                        - img [ref=e1367]
+                        - generic [ref=e1370]: 0m
+                      - generic [ref=e1371]:
+                        - img [ref=e1373]
+                        - generic [ref=e1377]: 13%
+                      - generic [ref=e1378]:
+                        - img [ref=e1380]
+                        - generic [ref=e1385]: 0%
+                      - generic [ref=e1386]:
+                        - img [ref=e1388]
+                        - generic [ref=e1393]: 0%
+                    - button "0 SOL" [ref=e1395] [cursor=pointer]:
+                      - img [ref=e1396]
+                      - generic [ref=e1398]: 0 SOL
+            - generic [ref=e1399]:
+              - generic [ref=e1402]: "Bonding: 3.00%"
+              - generic [ref=e1403]:
+                - generic [ref=e1404]:
+                  - generic [ref=e1405]:
+                    - generic [ref=e1406]:
+                      - button [ref=e1407] [cursor=pointer]:
+                        - img [ref=e1408]
+                      - button [ref=e1413] [cursor=pointer]:
+                        - img [ref=e1414]
+                      - button [ref=e1417] [cursor=pointer]:
+                        - img [ref=e1418]
+                    - button "Rufiyaa" [ref=e1420] [cursor=pointer]:
+                      - img "Rufiyaa" [ref=e1422]
+                      - img [ref=e1426]
+                  - generic [ref=e1429]: 1a7a2...14b41
+                - generic [ref=e1430]:
+                  - generic [ref=e1431]:
+                    - generic [ref=e1432]:
+                      - generic [ref=e1433]:
+                        - generic [ref=e1434]: Rufiyaa
+                        - generic [ref=e1435]: AMD
+                        - img [ref=e1436] [cursor=pointer]
+                      - generic [ref=e1439]:
+                        - generic [ref=e1440]: 52s
+                        - img [ref=e1441] [cursor=pointer]
+                        - img [ref=e1444] [cursor=pointer]
+                        - img [ref=e1447] [cursor=pointer]
+                        - img [ref=e1450] [cursor=pointer]
+                        - generic [ref=e1453]:
+                          - img [ref=e1454]
+                          - generic [ref=e1459]: 8.4K
+                        - generic [ref=e1460]:
+                          - img [ref=e1461]
+                          - generic [ref=e1464]: "0"
+                        - generic [ref=e1465]:
+                          - img [ref=e1466]
+                          - generic [ref=e1472]: "0"
+                    - generic [ref=e1474]:
+                      - generic [ref=e1475]:
+                        - generic [ref=e1476]: MC
+                        - generic [ref=e1477]: $4.1M
+                      - generic [ref=e1478]:
+                        - generic [ref=e1479]: V
+                        - generic [ref=e1480]: $1.1M
+                      - generic [ref=e1481]:
+                        - generic [ref=e1482]: F
+                        - img [ref=e1483]
+                        - generic [ref=e1485]: "67.00"
+                        - generic [ref=e1486]: TX
+                        - generic [ref=e1487]: 40.8K
+                  - generic [ref=e1491]:
+                    - generic [ref=e1492]:
+                      - generic [ref=e1493]:
+                        - img [ref=e1495]
+                        - generic [ref=e1498]: 83%
+                      - generic [ref=e1499]:
+                        - img [ref=e1501]
+                        - generic [ref=e1503]: 55%
+                      - generic [ref=e1504]:
+                        - img [ref=e1506]
+                        - generic [ref=e1509]: 0m
+                      - generic [ref=e1510]:
+                        - img [ref=e1512]
+                        - generic [ref=e1516]: 3%
+                      - generic [ref=e1517]:
+                        - img [ref=e1519]
+                        - generic [ref=e1524]: 0%
+                      - generic [ref=e1525]:
+                        - img [ref=e1527]
+                        - generic [ref=e1532]: 0%
+                    - button "0 SOL" [ref=e1534] [cursor=pointer]:
+                      - img [ref=e1535]
+                      - generic [ref=e1537]: 0 SOL
+        - generic [ref=e1539]:
+          - generic [ref=e1540]:
+            - heading "Final Stretch" [level=2] [ref=e1541]
+            - generic [ref=e1542]:
+              - generic [ref=e1543]:
+                - generic [ref=e1544]:
+                  - img [ref=e1545]
+                  - generic [ref=e1547]: "10"
+                - img [ref=e1548]
+                - generic [ref=e1551]:
+                  - button "P1" [ref=e1552] [cursor=pointer]
+                  - button "P2" [ref=e1553] [cursor=pointer]
+                  - button "P3" [ref=e1554] [cursor=pointer]
+              - button [ref=e1555] [cursor=pointer]:
+                - img [ref=e1556]
+          - generic [ref=e1557]:
+            - generic [ref=e1558]:
+              - generic [ref=e1561]: "Bonding: 99.00%"
+              - generic [ref=e1562]:
+                - generic [ref=e1563]:
+                  - generic [ref=e1564]:
+                    - generic [ref=e1565]:
+                      - button [ref=e1566] [cursor=pointer]:
+                        - img [ref=e1567]
+                      - button [ref=e1572] [cursor=pointer]:
+                        - img [ref=e1573]
+                      - button [ref=e1576] [cursor=pointer]:
+                        - img [ref=e1577]
+                    - button "Rwanda Franc" [ref=e1579] [cursor=pointer]:
+                      - img "Rwanda Franc" [ref=e1581]
+                      - img [ref=e1585]
+                  - generic [ref=e1588]: bf849...6ac0e
+                - generic [ref=e1589]:
+                  - generic [ref=e1590]:
+                    - generic [ref=e1591]:
+                      - generic [ref=e1592]:
+                        - generic [ref=e1593]: Rwanda Franc
+                        - generic [ref=e1594]: MUR
+                        - img [ref=e1595] [cursor=pointer]
+                      - generic [ref=e1598]:
+                        - generic [ref=e1599]: 2d
+                        - img [ref=e1600] [cursor=pointer]
+                        - img [ref=e1603] [cursor=pointer]
+                        - img [ref=e1606] [cursor=pointer]
+                        - img [ref=e1609] [cursor=pointer]
+                        - generic [ref=e1612]:
+                          - img [ref=e1613]
+                          - generic [ref=e1618]: "635"
+                        - generic [ref=e1619]:
+                          - img [ref=e1620]
+                          - generic [ref=e1623]: "0"
+                        - generic [ref=e1624]:
+                          - img [ref=e1625]
+                          - generic [ref=e1631]: "0"
+                    - generic [ref=e1633]:
+                      - generic [ref=e1634]:
+                        - generic [ref=e1635]: MC
+                        - generic [ref=e1636]: $2.1M
+                      - generic [ref=e1637]:
+                        - generic [ref=e1638]: V
+                        - generic [ref=e1639]: $425.1K
+                      - generic [ref=e1640]:
+                        - generic [ref=e1641]: F
+                        - img [ref=e1642]
+                        - generic [ref=e1644]: "42.98"
+                        - generic [ref=e1645]: TX
+                        - generic [ref=e1646]: 21.1K
+                  - generic [ref=e1650]:
+                    - generic [ref=e1651]:
+                      - generic [ref=e1652]:
+                        - img [ref=e1654]
+                        - generic [ref=e1657]: 4%
+                      - generic [ref=e1658]:
+                        - img [ref=e1660]
+                        - generic [ref=e1662]: 36%
+                      - generic [ref=e1663]:
+                        - img [ref=e1665]
+                        - generic [ref=e1668]: 2d
+                      - generic [ref=e1669]:
+                        - img [ref=e1671]
+                        - generic [ref=e1675]: 99%
+                      - generic [ref=e1676]:
+                        - img [ref=e1678]
+                        - generic [ref=e1683]: 0%
+                      - generic [ref=e1684]:
+                        - img [ref=e1686]
+                        - generic [ref=e1691]: 0%
+                    - button "0 SOL" [ref=e1693] [cursor=pointer]:
+                      - img [ref=e1694]
+                      - generic [ref=e1696]: 0 SOL
+            - generic [ref=e1697]:
+              - generic [ref=e1700]: "Bonding: 96.00%"
+              - generic [ref=e1701]:
+                - generic [ref=e1702]:
+                  - generic [ref=e1703]:
+                    - generic [ref=e1704]:
+                      - button [ref=e1705] [cursor=pointer]:
+                        - img [ref=e1706]
+                      - button [ref=e1711] [cursor=pointer]:
+                        - img [ref=e1712]
+                      - button [ref=e1715] [cursor=pointer]:
+                        - img [ref=e1716]
+                    - button "Saint Helena Pound" [ref=e1718] [cursor=pointer]:
+                      - img "Saint Helena Pound" [ref=e1720]
+                      - img [ref=e1724]
+                  - generic [ref=e1727]: 031d7...7de33
+                - generic [ref=e1728]:
+                  - generic [ref=e1729]:
+                    - generic [ref=e1730]:
+                      - generic [ref=e1731]:
+                        - generic [ref=e1732]: Saint Helena Pound
+                        - generic [ref=e1733]: AWG
+                        - img [ref=e1734] [cursor=pointer]
+                      - generic [ref=e1737]:
+                        - generic [ref=e1738]: 4d
+                        - img [ref=e1739] [cursor=pointer]
+                        - img [ref=e1742] [cursor=pointer]
+                        - img [ref=e1745] [cursor=pointer]
+                        - img [ref=e1748] [cursor=pointer]
+                        - generic [ref=e1751]:
+                          - img [ref=e1752]
+                          - generic [ref=e1757]: 3.3K
+                        - generic [ref=e1758]:
+                          - img [ref=e1759]
+                          - generic [ref=e1762]: "0"
+                        - generic [ref=e1763]:
+                          - img [ref=e1764]
+                          - generic [ref=e1770]: "0"
+                    - generic [ref=e1772]:
+                      - generic [ref=e1773]:
+                        - generic [ref=e1774]: MC
+                        - generic [ref=e1775]: $2.3M
+                      - generic [ref=e1776]:
+                        - generic [ref=e1777]: V
+                        - generic [ref=e1778]: $3.6M
+                      - generic [ref=e1779]:
+                        - generic [ref=e1780]: F
+                        - img [ref=e1781]
+                        - generic [ref=e1783]: "97.71"
+                        - generic [ref=e1784]: TX
+                        - generic [ref=e1785]: 49.4K
+                  - generic [ref=e1789]:
+                    - generic [ref=e1790]:
+                      - generic [ref=e1791]:
+                        - img [ref=e1793]
+                        - generic [ref=e1796]: 44%
+                      - generic [ref=e1797]:
+                        - img [ref=e1799]
+                        - generic [ref=e1801]: 54%
+                      - generic [ref=e1802]:
+                        - img [ref=e1804]
+                        - generic [ref=e1807]: 4d
+                      - generic [ref=e1808]:
+                        - img [ref=e1810]
+                        - generic [ref=e1814]: 96%
+                      - generic [ref=e1815]:
+                        - img [ref=e1817]
+                        - generic [ref=e1822]: 0%
+                      - generic [ref=e1823]:
+                        - img [ref=e1825]
+                        - generic [ref=e1830]: 0%
+                    - button "0 SOL" [ref=e1832] [cursor=pointer]:
+                      - img [ref=e1833]
+                      - generic [ref=e1835]: 0 SOL
+            - generic [ref=e1836]:
+              - generic [ref=e1839]: "Bonding: 92.00%"
+              - generic [ref=e1840]:
+                - generic [ref=e1841]:
+                  - generic [ref=e1842]:
+                    - generic [ref=e1843]:
+                      - button [ref=e1844] [cursor=pointer]:
+                        - img [ref=e1845]
+                      - button [ref=e1850] [cursor=pointer]:
+                        - img [ref=e1851]
+                      - button [ref=e1854] [cursor=pointer]:
+                        - img [ref=e1855]
+                    - button "Boliviano boliviano" [ref=e1857] [cursor=pointer]:
+                      - img "Boliviano boliviano" [ref=e1859]
+                      - img [ref=e1863]
+                  - generic [ref=e1866]: a23be...5bf59
+                - generic [ref=e1867]:
+                  - generic [ref=e1868]:
+                    - generic [ref=e1869]:
+                      - generic [ref=e1870]:
+                        - generic [ref=e1871]: Boliviano boliviano
+                        - generic [ref=e1872]: SAR
+                        - img [ref=e1873] [cursor=pointer]
+                      - generic [ref=e1876]:
+                        - generic [ref=e1877]: 3d
+                        - img [ref=e1878] [cursor=pointer]
+                        - img [ref=e1881] [cursor=pointer]
+                        - img [ref=e1884] [cursor=pointer]
+                        - img [ref=e1887] [cursor=pointer]
+                        - generic [ref=e1890]:
+                          - img [ref=e1891]
+                          - generic [ref=e1896]: 3.0K
+                        - generic [ref=e1897]:
+                          - img [ref=e1898]
+                          - generic [ref=e1901]: "0"
+                        - generic [ref=e1902]:
+                          - img [ref=e1903]
+                          - generic [ref=e1909]: "0"
+                    - generic [ref=e1911]:
+                      - generic [ref=e1912]:
+                        - generic [ref=e1913]: MC
+                        - generic [ref=e1914]: $490.4K
+                      - generic [ref=e1915]:
+                        - generic [ref=e1916]: V
+                        - generic [ref=e1917]: $2.6M
+                      - generic [ref=e1918]:
+                        - generic [ref=e1919]: F
+                        - img [ref=e1920]
+                        - generic [ref=e1922]: "77.89"
+                        - generic [ref=e1923]: TX
+                        - generic [ref=e1924]: 1.4K
+                  - generic [ref=e1928]:
+                    - generic [ref=e1929]:
+                      - generic [ref=e1930]:
+                        - img [ref=e1932]
+                        - generic [ref=e1935]: 21%
+                      - generic [ref=e1936]:
+                        - img [ref=e1938]
+                        - generic [ref=e1940]: 71%
+                      - generic [ref=e1941]:
+                        - img [ref=e1943]
+                        - generic [ref=e1946]: 3d
+                      - generic [ref=e1947]:
+                        - img [ref=e1949]
+                        - generic [ref=e1953]: 92%
+                      - generic [ref=e1954]:
+                        - img [ref=e1956]
+                        - generic [ref=e1961]: 0%
+                      - generic [ref=e1962]:
+                        - img [ref=e1964]
+                        - generic [ref=e1969]: 0%
+                    - button "0 SOL" [ref=e1971] [cursor=pointer]:
+                      - img [ref=e1972]
+                      - generic [ref=e1974]: 0 SOL
+            - generic [ref=e1975]:
+              - generic [ref=e1978]: "Bonding: 92.00%"
+              - generic [ref=e1979]:
+                - generic [ref=e1980]:
+                  - generic [ref=e1981]:
+                    - generic [ref=e1982]:
+                      - button [ref=e1983] [cursor=pointer]:
+                        - img [ref=e1984]
+                      - button [ref=e1989] [cursor=pointer]:
+                        - img [ref=e1990]
+                      - button [ref=e1993] [cursor=pointer]:
+                        - img [ref=e1994]
+                    - button "UAE Dirham" [ref=e1996] [cursor=pointer]:
+                      - img "UAE Dirham" [ref=e1998]
+                      - img [ref=e2002]
+                  - generic [ref=e2005]: 8e761...6782a
+                - generic [ref=e2006]:
+                  - generic [ref=e2007]:
+                    - generic [ref=e2008]:
+                      - generic [ref=e2009]:
+                        - generic [ref=e2010]: UAE Dirham
+                        - generic [ref=e2011]: BOB
+                        - img [ref=e2012] [cursor=pointer]
+                      - generic [ref=e2015]:
+                        - generic [ref=e2016]: 6d
+                        - img [ref=e2017] [cursor=pointer]
+                        - img [ref=e2020] [cursor=pointer]
+                        - img [ref=e2023] [cursor=pointer]
+                        - img [ref=e2026] [cursor=pointer]
+                        - generic [ref=e2029]:
+                          - img [ref=e2030]
+                          - generic [ref=e2035]: "671"
+                        - generic [ref=e2036]:
+                          - img [ref=e2037]
+                          - generic [ref=e2040]: "0"
+                        - generic [ref=e2041]:
+                          - img [ref=e2042]
+                          - generic [ref=e2048]: "0"
+                    - generic [ref=e2050]:
+                      - generic [ref=e2051]:
+                        - generic [ref=e2052]: MC
+                        - generic [ref=e2053]: $8.0M
+                      - generic [ref=e2054]:
+                        - generic [ref=e2055]: V
+                        - generic [ref=e2056]: $76.0K
+                      - generic [ref=e2057]:
+                        - generic [ref=e2058]: F
+                        - img [ref=e2059]
+                        - generic [ref=e2061]: "27.04"
+                        - generic [ref=e2062]: TX
+                        - generic [ref=e2063]: 10.0K
+                  - generic [ref=e2067]:
+                    - generic [ref=e2068]:
+                      - generic [ref=e2069]:
+                        - img [ref=e2071]
+                        - generic [ref=e2074]: 100%
+                      - generic [ref=e2075]:
+                        - img [ref=e2077]
+                        - generic [ref=e2079]: 83%
+                      - generic [ref=e2080]:
+                        - img [ref=e2082]
+                        - generic [ref=e2085]: 6d
+                      - generic [ref=e2086]:
+                        - img [ref=e2088]
+                        - generic [ref=e2092]: 92%
+                      - generic [ref=e2093]:
+                        - img [ref=e2095]
+                        - generic [ref=e2100]: 0%
+                      - generic [ref=e2101]:
+                        - img [ref=e2103]
+                        - generic [ref=e2108]: 0%
+                    - button "0 SOL" [ref=e2110] [cursor=pointer]:
+                      - img [ref=e2111]
+                      - generic [ref=e2113]: 0 SOL
+            - generic [ref=e2114]:
+              - generic [ref=e2117]: "Bonding: 91.00%"
+              - generic [ref=e2118]:
+                - generic [ref=e2119]:
+                  - generic [ref=e2120]:
+                    - generic [ref=e2121]:
+                      - button [ref=e2122] [cursor=pointer]:
+                        - img [ref=e2123]
+                      - button [ref=e2128] [cursor=pointer]:
+                        - img [ref=e2129]
+                      - button [ref=e2132] [cursor=pointer]:
+                        - img [ref=e2133]
+                    - button "Rufiyaa" [ref=e2135] [cursor=pointer]:
+                      - img "Rufiyaa" [ref=e2137]
+                      - img [ref=e2141]
+                  - generic [ref=e2144]: 53d16...9dfb7
+                - generic [ref=e2145]:
+                  - generic [ref=e2146]:
+                    - generic [ref=e2147]:
+                      - generic [ref=e2148]:
+                        - generic [ref=e2149]: Rufiyaa
+                        - generic [ref=e2150]: VUV
+                        - img [ref=e2151] [cursor=pointer]
+                      - generic [ref=e2154]:
+                        - generic [ref=e2155]: 13h
+                        - img [ref=e2156] [cursor=pointer]
+                        - img [ref=e2159] [cursor=pointer]
+                        - img [ref=e2162] [cursor=pointer]
+                        - img [ref=e2165] [cursor=pointer]
+                        - generic [ref=e2168]:
+                          - img [ref=e2169]
+                          - generic [ref=e2174]: "649"
+                        - generic [ref=e2175]:
+                          - img [ref=e2176]
+                          - generic [ref=e2179]: "0"
+                        - generic [ref=e2180]:
+                          - img [ref=e2181]
+                          - generic [ref=e2187]: "0"
+                    - generic [ref=e2189]:
+                      - generic [ref=e2190]:
+                        - generic [ref=e2191]: MC
+                        - generic [ref=e2192]: $9.5M
+                      - generic [ref=e2193]:
+                        - generic [ref=e2194]: V
+                        - generic [ref=e2195]: $3.9M
+                      - generic [ref=e2196]:
+                        - generic [ref=e2197]: F
+                        - img [ref=e2198]
+                        - generic [ref=e2200]: "67.28"
+                        - generic [ref=e2201]: TX
+                        - generic [ref=e2202]: 9.5K
+                  - generic [ref=e2206]:
+                    - generic [ref=e2207]:
+                      - generic [ref=e2208]:
+                        - img [ref=e2210]
+                        - generic [ref=e2213]: 86%
+                      - generic [ref=e2214]:
+                        - img [ref=e2216]
+                        - generic [ref=e2218]: 36%
+                      - generic [ref=e2219]:
+                        - img [ref=e2221]
+                        - generic [ref=e2224]: 13h
+                      - generic [ref=e2225]:
+                        - img [ref=e2227]
+                        - generic [ref=e2231]: 91%
+                      - generic [ref=e2232]:
+                        - img [ref=e2234]
+                        - generic [ref=e2239]: 0%
+                      - generic [ref=e2240]:
+                        - img [ref=e2242]
+                        - generic [ref=e2247]: 0%
+                    - button "0 SOL" [ref=e2249] [cursor=pointer]:
+                      - img [ref=e2250]
+                      - generic [ref=e2252]: 0 SOL
+            - generic [ref=e2253]:
+              - generic [ref=e2256]: "Bonding: 91.00%"
+              - generic [ref=e2257]:
+                - generic [ref=e2258]:
+                  - generic [ref=e2259]:
+                    - generic [ref=e2260]:
+                      - button [ref=e2261] [cursor=pointer]:
+                        - img [ref=e2262]
+                      - button [ref=e2267] [cursor=pointer]:
+                        - img [ref=e2268]
+                      - button [ref=e2271] [cursor=pointer]:
+                        - img [ref=e2272]
+                    - button "Iraqi Dinar" [ref=e2274] [cursor=pointer]:
+                      - img "Iraqi Dinar" [ref=e2276]
+                      - img [ref=e2280]
+                  - generic [ref=e2283]: e1ab6...8be23
+                - generic [ref=e2284]:
+                  - generic [ref=e2285]:
+                    - generic [ref=e2286]:
+                      - generic [ref=e2287]:
+                        - generic [ref=e2288]: Iraqi Dinar
+                        - generic [ref=e2289]: XPF
+                        - img [ref=e2290] [cursor=pointer]
+                      - generic [ref=e2293]:
+                        - generic [ref=e2294]: 6d
+                        - img [ref=e2295] [cursor=pointer]
+                        - img [ref=e2298] [cursor=pointer]
+                        - img [ref=e2301] [cursor=pointer]
+                        - img [ref=e2304] [cursor=pointer]
+                        - generic [ref=e2307]:
+                          - img [ref=e2308]
+                          - generic [ref=e2313]: 5.3K
+                        - generic [ref=e2314]:
+                          - img [ref=e2315]
+                          - generic [ref=e2318]: "0"
+                        - generic [ref=e2319]:
+                          - img [ref=e2320]
+                          - generic [ref=e2326]: "0"
+                    - generic [ref=e2328]:
+                      - generic [ref=e2329]:
+                        - generic [ref=e2330]: MC
+                        - generic [ref=e2331]: $6.4M
+                      - generic [ref=e2332]:
+                        - generic [ref=e2333]: V
+                        - generic [ref=e2334]: $2.5M
+                      - generic [ref=e2335]:
+                        - generic [ref=e2336]: F
+                        - img [ref=e2337]
+                        - generic [ref=e2339]: "11.86"
+                        - generic [ref=e2340]: TX
+                        - generic [ref=e2341]: 40.3K
+                  - generic [ref=e2345]:
+                    - generic [ref=e2346]:
+                      - generic [ref=e2347]:
+                        - img [ref=e2349]
+                        - generic [ref=e2352]: 83%
+                      - generic [ref=e2353]:
+                        - img [ref=e2355]
+                        - generic [ref=e2357]: 37%
+                      - generic [ref=e2358]:
+                        - img [ref=e2360]
+                        - generic [ref=e2363]: 6d
+                      - generic [ref=e2364]:
+                        - img [ref=e2366]
+                        - generic [ref=e2370]: 91%
+                      - generic [ref=e2371]:
+                        - img [ref=e2373]
+                        - generic [ref=e2378]: 0%
+                      - generic [ref=e2379]:
+                        - img [ref=e2381]
+                        - generic [ref=e2386]: 0%
+                    - button "0 SOL" [ref=e2388] [cursor=pointer]:
+                      - img [ref=e2389]
+                      - generic [ref=e2391]: 0 SOL
+            - generic [ref=e2392]:
+              - generic [ref=e2395]: "Bonding: 90.00%"
+              - generic [ref=e2396]:
+                - generic [ref=e2397]:
+                  - generic [ref=e2398]:
+                    - generic [ref=e2399]:
+                      - button [ref=e2400] [cursor=pointer]:
+                        - img [ref=e2401]
+                      - button [ref=e2406] [cursor=pointer]:
+                        - img [ref=e2407]
+                      - button [ref=e2410] [cursor=pointer]:
+                        - img [ref=e2411]
+                    - button "Kyat" [ref=e2413] [cursor=pointer]:
+                      - img "Kyat" [ref=e2415]
+                      - img [ref=e2419]
+                  - generic [ref=e2422]: 51deb...aebaa
+                - generic [ref=e2423]:
+                  - generic [ref=e2424]:
+                    - generic [ref=e2425]:
+                      - generic [ref=e2426]:
+                        - generic [ref=e2427]: Kyat
+                        - generic [ref=e2428]: KPW
+                        - img [ref=e2429] [cursor=pointer]
+                      - generic [ref=e2432]:
+                        - generic [ref=e2433]: 3d
+                        - img [ref=e2434] [cursor=pointer]
+                        - img [ref=e2437] [cursor=pointer]
+                        - img [ref=e2440] [cursor=pointer]
+                        - img [ref=e2443] [cursor=pointer]
+                        - generic [ref=e2446]:
+                          - img [ref=e2447]
+                          - generic [ref=e2452]: 9.2K
+                        - generic [ref=e2453]:
+                          - img [ref=e2454]
+                          - generic [ref=e2457]: "0"
+                        - generic [ref=e2458]:
+                          - img [ref=e2459]
+                          - generic [ref=e2465]: "0"
+                    - generic [ref=e2467]:
+                      - generic [ref=e2468]:
+                        - generic [ref=e2469]: MC
+                        - generic [ref=e2470]: $5.4M
+                      - generic [ref=e2471]:
+                        - generic [ref=e2472]: V
+                        - generic [ref=e2473]: $4.7M
+                      - generic [ref=e2474]:
+                        - generic [ref=e2475]: F
+                        - img [ref=e2476]
+                        - generic [ref=e2478]: "28.35"
+                        - generic [ref=e2479]: TX
+                        - generic [ref=e2480]: 6.4K
+                  - generic [ref=e2484]:
+                    - generic [ref=e2485]:
+                      - generic [ref=e2486]:
+                        - img [ref=e2488]
+                        - generic [ref=e2491]: 89%
+                      - generic [ref=e2492]:
+                        - img [ref=e2494]
+                        - generic [ref=e2496]: 19%
+                      - generic [ref=e2497]:
+                        - img [ref=e2499]
+                        - generic [ref=e2502]: 3d
+                      - generic [ref=e2503]:
+                        - img [ref=e2505]
+                        - generic [ref=e2509]: 90%
+                      - generic [ref=e2510]:
+                        - img [ref=e2512]
+                        - generic [ref=e2517]: 0%
+                      - generic [ref=e2518]:
+                        - img [ref=e2520]
+                        - generic [ref=e2525]: 0%
+                    - button "0 SOL" [ref=e2527] [cursor=pointer]:
+                      - img [ref=e2528]
+                      - generic [ref=e2530]: 0 SOL
+            - generic [ref=e2531]:
+              - generic [ref=e2534]: "Bonding: 90.00%"
+              - generic [ref=e2535]:
+                - generic [ref=e2536]:
+                  - generic [ref=e2537]:
+                    - generic [ref=e2538]:
+                      - button [ref=e2539] [cursor=pointer]:
+                        - img [ref=e2540]
+                      - button [ref=e2545] [cursor=pointer]:
+                        - img [ref=e2546]
+                      - button [ref=e2549] [cursor=pointer]:
+                        - img [ref=e2550]
+                    - button "Falkland Islands Pound" [ref=e2552] [cursor=pointer]:
+                      - img "Falkland Islands Pound" [ref=e2554]
+                      - img [ref=e2558]
+                  - generic [ref=e2561]: 0cf1a...1149c
+                - generic [ref=e2562]:
+                  - generic [ref=e2563]:
+                    - generic [ref=e2564]:
+                      - generic [ref=e2565]:
+                        - generic [ref=e2566]: Falkland Islands Pound
+                        - generic [ref=e2567]: AFN
+                        - img [ref=e2568] [cursor=pointer]
+                      - generic [ref=e2571]:
+                        - generic [ref=e2572]: 5h
+                        - img [ref=e2573] [cursor=pointer]
+                        - img [ref=e2576] [cursor=pointer]
+                        - img [ref=e2579] [cursor=pointer]
+                        - img [ref=e2582] [cursor=pointer]
+                        - generic [ref=e2585]:
+                          - img [ref=e2586]
+                          - generic [ref=e2591]: "512"
+                        - generic [ref=e2592]:
+                          - img [ref=e2593]
+                          - generic [ref=e2596]: "0"
+                        - generic [ref=e2597]:
+                          - img [ref=e2598]
+                          - generic [ref=e2604]: "0"
+                    - generic [ref=e2606]:
+                      - generic [ref=e2607]:
+                        - generic [ref=e2608]: MC
+                        - generic [ref=e2609]: $2.5M
+                      - generic [ref=e2610]:
+                        - generic [ref=e2611]: V
+                        - generic [ref=e2612]: $3.7M
+                      - generic [ref=e2613]:
+                        - generic [ref=e2614]: F
+                        - img [ref=e2615]
+                        - generic [ref=e2617]: "78.46"
+                        - generic [ref=e2618]: TX
+                        - generic [ref=e2619]: 36.4K
+                  - generic [ref=e2623]:
+                    - generic [ref=e2624]:
+                      - generic [ref=e2625]:
+                        - img [ref=e2627]
+                        - generic [ref=e2630]: 93%
+                      - generic [ref=e2631]:
+                        - img [ref=e2633]
+                        - generic [ref=e2635]: 64%
+                      - generic [ref=e2636]:
+                        - img [ref=e2638]
+                        - generic [ref=e2641]: 5h
+                      - generic [ref=e2642]:
+                        - img [ref=e2644]
+                        - generic [ref=e2648]: 90%
+                      - generic [ref=e2649]:
+                        - img [ref=e2651]
+                        - generic [ref=e2656]: 0%
+                      - generic [ref=e2657]:
+                        - img [ref=e2659]
+                        - generic [ref=e2664]: 0%
+                    - button "0 SOL" [ref=e2666] [cursor=pointer]:
+                      - img [ref=e2667]
+                      - generic [ref=e2669]: 0 SOL
+            - generic [ref=e2670]:
+              - generic [ref=e2673]: "Bonding: 82.00%"
+              - generic [ref=e2674]:
+                - generic [ref=e2675]:
+                  - generic [ref=e2676]:
+                    - generic [ref=e2677]:
+                      - button [ref=e2678] [cursor=pointer]:
+                        - img [ref=e2679]
+                      - button [ref=e2684] [cursor=pointer]:
+                        - img [ref=e2685]
+                      - button [ref=e2688] [cursor=pointer]:
+                        - img [ref=e2689]
+                    - button "Syrian Pound" [ref=e2691] [cursor=pointer]:
+                      - img "Syrian Pound" [ref=e2693]
+                      - img [ref=e2697]
+                  - generic [ref=e2700]: f6659...b4f93
+                - generic [ref=e2701]:
+                  - generic [ref=e2702]:
+                    - generic [ref=e2703]:
+                      - generic [ref=e2704]:
+                        - generic [ref=e2705]: Syrian Pound
+                        - generic [ref=e2706]: KMF
+                        - img [ref=e2707] [cursor=pointer]
+                      - generic [ref=e2710]:
+                        - generic [ref=e2711]: 5d
+                        - img [ref=e2712] [cursor=pointer]
+                        - img [ref=e2715] [cursor=pointer]
+                        - img [ref=e2718] [cursor=pointer]
+                        - img [ref=e2721] [cursor=pointer]
+                        - generic [ref=e2724]:
+                          - img [ref=e2725]
+                          - generic [ref=e2730]: 4.3K
+                        - generic [ref=e2731]:
+                          - img [ref=e2732]
+                          - generic [ref=e2735]: "0"
+                        - generic [ref=e2736]:
+                          - img [ref=e2737]
+                          - generic [ref=e2743]: "0"
+                    - generic [ref=e2745]:
+                      - generic [ref=e2746]:
+                        - generic [ref=e2747]: MC
+                        - generic [ref=e2748]: $7.4M
+                      - generic [ref=e2749]:
+                        - generic [ref=e2750]: V
+                        - generic [ref=e2751]: $1.6M
+                      - generic [ref=e2752]:
+                        - generic [ref=e2753]: F
+                        - img [ref=e2754]
+                        - generic [ref=e2756]: "40.86"
+                        - generic [ref=e2757]: TX
+                        - generic [ref=e2758]: 34.0K
+                  - generic [ref=e2762]:
+                    - generic [ref=e2763]:
+                      - generic [ref=e2764]:
+                        - img [ref=e2766]
+                        - generic [ref=e2769]: 67%
+                      - generic [ref=e2770]:
+                        - img [ref=e2772]
+                        - generic [ref=e2774]: 86%
+                      - generic [ref=e2775]:
+                        - img [ref=e2777]
+                        - generic [ref=e2780]: 5d
+                      - generic [ref=e2781]:
+                        - img [ref=e2783]
+                        - generic [ref=e2787]: 82%
+                      - generic [ref=e2788]:
+                        - img [ref=e2790]
+                        - generic [ref=e2795]: 0%
+                      - generic [ref=e2796]:
+                        - img [ref=e2798]
+                        - generic [ref=e2803]: 0%
+                    - button "0 SOL" [ref=e2805] [cursor=pointer]:
+                      - img [ref=e2806]
+                      - generic [ref=e2808]: 0 SOL
+            - generic [ref=e2809]:
+              - generic [ref=e2812]: "Bonding: 81.00%"
+              - generic [ref=e2813]:
+                - generic [ref=e2814]:
+                  - generic [ref=e2815]:
+                    - generic [ref=e2816]:
+                      - button [ref=e2817] [cursor=pointer]:
+                        - img [ref=e2818]
+                      - button [ref=e2823] [cursor=pointer]:
+                        - img [ref=e2824]
+                      - button [ref=e2827] [cursor=pointer]:
+                        - img [ref=e2828]
+                    - button "Boliviano boliviano" [ref=e2830] [cursor=pointer]:
+                      - img "Boliviano boliviano" [ref=e2832]
+                      - img [ref=e2836]
+                  - generic [ref=e2839]: 58df0...314de
+                - generic [ref=e2840]:
+                  - generic [ref=e2841]:
+                    - generic [ref=e2842]:
+                      - generic [ref=e2843]:
+                        - generic [ref=e2844]: Boliviano boliviano
+                        - generic [ref=e2845]: KPW
+                        - img [ref=e2846] [cursor=pointer]
+                      - generic [ref=e2849]:
+                        - generic [ref=e2850]: 2d
+                        - img [ref=e2851] [cursor=pointer]
+                        - img [ref=e2854] [cursor=pointer]
+                        - img [ref=e2857] [cursor=pointer]
+                        - img [ref=e2860] [cursor=pointer]
+                        - generic [ref=e2863]:
+                          - img [ref=e2864]
+                          - generic [ref=e2869]: 7.8K
+                        - generic [ref=e2870]:
+                          - img [ref=e2871]
+                          - generic [ref=e2874]: "0"
+                        - generic [ref=e2875]:
+                          - img [ref=e2876]
+                          - generic [ref=e2882]: "0"
+                    - generic [ref=e2884]:
+                      - generic [ref=e2885]:
+                        - generic [ref=e2886]: MC
+                        - generic [ref=e2887]: $9.3M
+                      - generic [ref=e2888]:
+                        - generic [ref=e2889]: V
+                        - generic [ref=e2890]: $609.3K
+                      - generic [ref=e2891]:
+                        - generic [ref=e2892]: F
+                        - img [ref=e2893]
+                        - generic [ref=e2895]: "8.23"
+                        - generic [ref=e2896]: TX
+                        - generic [ref=e2897]: 2.2K
+                  - generic [ref=e2901]:
+                    - generic [ref=e2902]:
+                      - generic [ref=e2903]:
+                        - img [ref=e2905]
+                        - generic [ref=e2908]: 5%
+                      - generic [ref=e2909]:
+                        - img [ref=e2911]
+                        - generic [ref=e2913]: 52%
+                      - generic [ref=e2914]:
+                        - img [ref=e2916]
+                        - generic [ref=e2919]: 2d
+                      - generic [ref=e2920]:
+                        - img [ref=e2922]
+                        - generic [ref=e2926]: 81%
+                      - generic [ref=e2927]:
+                        - img [ref=e2929]
+                        - generic [ref=e2934]: 0%
+                      - generic [ref=e2935]:
+                        - img [ref=e2937]
+                        - generic [ref=e2942]: 0%
+                    - button "0 SOL" [ref=e2944] [cursor=pointer]:
+                      - img [ref=e2945]
+                      - generic [ref=e2947]: 0 SOL
+        - generic [ref=e2949]:
+          - generic [ref=e2950]:
+            - heading "Migrated" [level=2] [ref=e2951]
+            - generic [ref=e2952]:
+              - generic [ref=e2953]:
+                - generic [ref=e2954]:
+                  - img [ref=e2955]
+                  - generic [ref=e2957]: "10"
+                - img [ref=e2958]
+                - generic [ref=e2961]:
+                  - button "P1" [ref=e2962] [cursor=pointer]
+                  - button "P2" [ref=e2963] [cursor=pointer]
+                  - button "P3" [ref=e2964] [cursor=pointer]
+              - button [ref=e2965] [cursor=pointer]:
+                - img [ref=e2966]
+          - generic [ref=e2967]:
+            - generic [ref=e2968]:
+              - generic [ref=e2971]: "Bonding: 37.00%"
+              - generic [ref=e2972]:
+                - generic [ref=e2973]:
+                  - generic [ref=e2974]:
+                    - generic [ref=e2975]:
+                      - button [ref=e2976] [cursor=pointer]:
+                        - img [ref=e2977]
+                      - button [ref=e2982] [cursor=pointer]:
+                        - img [ref=e2983]
+                      - button [ref=e2986] [cursor=pointer]:
+                        - img [ref=e2987]
+                    - button "Philippine Peso" [ref=e2989] [cursor=pointer]:
+                      - img "Philippine Peso" [ref=e2991]
+                      - img [ref=e2995]
+                  - generic [ref=e2998]: b8076...8af42
+                - generic [ref=e2999]:
+                  - generic [ref=e3000]:
+                    - generic [ref=e3001]:
+                      - generic [ref=e3002]:
+                        - generic [ref=e3003]: Philippine Peso
+                        - generic [ref=e3004]: RWF
+                        - img [ref=e3005] [cursor=pointer]
+                      - generic [ref=e3008]:
+                        - generic [ref=e3009]: 6d
+                        - img [ref=e3010] [cursor=pointer]
+                        - img [ref=e3013] [cursor=pointer]
+                        - img [ref=e3016] [cursor=pointer]
+                        - img [ref=e3019] [cursor=pointer]
+                        - generic [ref=e3022]:
+                          - img [ref=e3023]
+                          - generic [ref=e3028]: 3.4K
+                        - generic [ref=e3029]:
+                          - img [ref=e3030]
+                          - generic [ref=e3033]: "0"
+                        - generic [ref=e3034]:
+                          - img [ref=e3035]
+                          - generic [ref=e3041]: "0"
+                    - generic [ref=e3043]:
+                      - generic [ref=e3044]:
+                        - generic [ref=e3045]: MC
+                        - generic [ref=e3046]: $2.0M
+                      - generic [ref=e3047]:
+                        - generic [ref=e3048]: V
+                        - generic [ref=e3049]: $2.9M
+                      - generic [ref=e3050]:
+                        - generic [ref=e3051]: F
+                        - img [ref=e3052]
+                        - generic [ref=e3054]: "76.08"
+                        - generic [ref=e3055]: TX
+                        - generic [ref=e3056]: 36.8K
+                  - generic [ref=e3060]:
+                    - generic [ref=e3061]:
+                      - generic [ref=e3062]:
+                        - img [ref=e3064]
+                        - generic [ref=e3067]: 41%
+                      - generic [ref=e3068]:
+                        - img [ref=e3070]
+                        - generic [ref=e3072]: 72%
+                      - generic [ref=e3073]:
+                        - img [ref=e3075]
+                        - generic [ref=e3078]: 6d
+                      - generic [ref=e3079]:
+                        - img [ref=e3081]
+                        - generic [ref=e3085]: 37%
+                      - generic [ref=e3086]:
+                        - img [ref=e3088]
+                        - generic [ref=e3093]: 0%
+                      - generic [ref=e3094]:
+                        - img [ref=e3096]
+                        - generic [ref=e3101]: 0%
+                    - button "0 SOL" [ref=e3103] [cursor=pointer]:
+                      - img [ref=e3104]
+                      - generic [ref=e3106]: 0 SOL
+            - generic [ref=e3107]:
+              - generic [ref=e3110]: "Bonding: 9.00%"
+              - generic [ref=e3111]:
+                - generic [ref=e3112]:
+                  - generic [ref=e3113]:
+                    - generic [ref=e3114]:
+                      - button [ref=e3115] [cursor=pointer]:
+                        - img [ref=e3116]
+                      - button [ref=e3121] [cursor=pointer]:
+                        - img [ref=e3122]
+                      - button [ref=e3125] [cursor=pointer]:
+                        - img [ref=e3126]
+                    - button "New Leu" [ref=e3128] [cursor=pointer]:
+                      - img "New Leu" [ref=e3130]
+                      - img [ref=e3134]
+                  - generic [ref=e3137]: 146b2...7e482
+                - generic [ref=e3138]:
+                  - generic [ref=e3139]:
+                    - generic [ref=e3140]:
+                      - generic [ref=e3141]:
+                        - generic [ref=e3142]: New Leu
+                        - generic [ref=e3143]: SZL
+                        - img [ref=e3144] [cursor=pointer]
+                      - generic [ref=e3147]:
+                        - generic [ref=e3148]: 4d
+                        - img [ref=e3149] [cursor=pointer]
+                        - img [ref=e3152] [cursor=pointer]
+                        - img [ref=e3155] [cursor=pointer]
+                        - img [ref=e3158] [cursor=pointer]
+                        - generic [ref=e3161]:
+                          - img [ref=e3162]
+                          - generic [ref=e3167]: 5.6K
+                        - generic [ref=e3168]:
+                          - img [ref=e3169]
+                          - generic [ref=e3172]: "0"
+                        - generic [ref=e3173]:
+                          - img [ref=e3174]
+                          - generic [ref=e3180]: "0"
+                    - generic [ref=e3182]:
+                      - generic [ref=e3183]:
+                        - generic [ref=e3184]: MC
+                        - generic [ref=e3185]: $35.9K
+                      - generic [ref=e3186]:
+                        - generic [ref=e3187]: V
+                        - generic [ref=e3188]: $3.7M
+                      - generic [ref=e3189]:
+                        - generic [ref=e3190]: F
+                        - img [ref=e3191]
+                        - generic [ref=e3193]: "95.68"
+                        - generic [ref=e3194]: TX
+                        - generic [ref=e3195]: 27.0K
+                  - generic [ref=e3199]:
+                    - generic [ref=e3200]:
+                      - generic [ref=e3201]:
+                        - img [ref=e3203]
+                        - generic [ref=e3206]: 37%
+                      - generic [ref=e3207]:
+                        - img [ref=e3209]
+                        - generic [ref=e3211]: 49%
+                      - generic [ref=e3212]:
+                        - img [ref=e3214]
+                        - generic [ref=e3217]: 4d
+                      - generic [ref=e3218]:
+                        - img [ref=e3220]
+                        - generic [ref=e3224]: 9%
+                      - generic [ref=e3225]:
+                        - img [ref=e3227]
+                        - generic [ref=e3232]: 0%
+                      - generic [ref=e3233]:
+                        - img [ref=e3235]
+                        - generic [ref=e3240]: 0%
+                    - button "0 SOL" [ref=e3242] [cursor=pointer]:
+                      - img [ref=e3243]
+                      - generic [ref=e3245]: 0 SOL
+            - generic [ref=e3246]:
+              - generic [ref=e3249]: "Bonding: 24.00%"
+              - generic [ref=e3250]:
+                - generic [ref=e3251]:
+                  - generic [ref=e3252]:
+                    - generic [ref=e3253]:
+                      - button [ref=e3254] [cursor=pointer]:
+                        - img [ref=e3255]
+                      - button [ref=e3260] [cursor=pointer]:
+                        - img [ref=e3261]
+                      - button [ref=e3264] [cursor=pointer]:
+                        - img [ref=e3265]
+                    - button "Liberian Dollar" [ref=e3267] [cursor=pointer]:
+                      - img "Liberian Dollar" [ref=e3269]
+                      - img [ref=e3273]
+                  - generic [ref=e3276]: 8a0f9...b2f93
+                - generic [ref=e3277]:
+                  - generic [ref=e3278]:
+                    - generic [ref=e3279]:
+                      - generic [ref=e3280]:
+                        - generic [ref=e3281]: Liberian Dollar
+                        - generic [ref=e3282]: ETB
+                        - img [ref=e3283] [cursor=pointer]
+                      - generic [ref=e3286]:
+                        - generic [ref=e3287]: 4d
+                        - img [ref=e3288] [cursor=pointer]
+                        - img [ref=e3291] [cursor=pointer]
+                        - img [ref=e3294] [cursor=pointer]
+                        - img [ref=e3297] [cursor=pointer]
+                        - generic [ref=e3300]:
+                          - img [ref=e3301]
+                          - generic [ref=e3306]: 5.9K
+                        - generic [ref=e3307]:
+                          - img [ref=e3308]
+                          - generic [ref=e3311]: "0"
+                        - generic [ref=e3312]:
+                          - img [ref=e3313]
+                          - generic [ref=e3319]: "0"
+                    - generic [ref=e3321]:
+                      - generic [ref=e3322]:
+                        - generic [ref=e3323]: MC
+                        - generic [ref=e3324]: $6.2M
+                      - generic [ref=e3325]:
+                        - generic [ref=e3326]: V
+                        - generic [ref=e3327]: $142.3K
+                      - generic [ref=e3328]:
+                        - generic [ref=e3329]: F
+                        - img [ref=e3330]
+                        - generic [ref=e3332]: "87.82"
+                        - generic [ref=e3333]: TX
+                        - generic [ref=e3334]: 4.0K
+                  - generic [ref=e3338]:
+                    - generic [ref=e3339]:
+                      - generic [ref=e3340]:
+                        - img [ref=e3342]
+                        - generic [ref=e3345]: 39%
+                      - generic [ref=e3346]:
+                        - img [ref=e3348]
+                        - generic [ref=e3350]: 16%
+                      - generic [ref=e3351]:
+                        - img [ref=e3353]
+                        - generic [ref=e3356]: 4d
+                      - generic [ref=e3357]:
+                        - img [ref=e3359]
+                        - generic [ref=e3363]: 24%
+                      - generic [ref=e3364]:
+                        - img [ref=e3366]
+                        - generic [ref=e3371]: 0%
+                      - generic [ref=e3372]:
+                        - img [ref=e3374]
+                        - generic [ref=e3379]: 0%
+                    - button "0 SOL" [ref=e3381] [cursor=pointer]:
+                      - img [ref=e3382]
+                      - generic [ref=e3384]: 0 SOL
+            - generic [ref=e3385]:
+              - generic [ref=e3388]: "Bonding: 1.00%"
+              - generic [ref=e3389]:
+                - generic [ref=e3390]:
+                  - generic [ref=e3391]:
+                    - generic [ref=e3392]:
+                      - button [ref=e3393] [cursor=pointer]:
+                        - img [ref=e3394]
+                      - button [ref=e3399] [cursor=pointer]:
+                        - img [ref=e3400]
+                      - button [ref=e3403] [cursor=pointer]:
+                        - img [ref=e3404]
+                    - button "Kyat" [ref=e3406] [cursor=pointer]:
+                      - img "Kyat" [ref=e3408]
+                      - img [ref=e3412]
+                  - generic [ref=e3415]: 1db14...2ecc0
+                - generic [ref=e3416]:
+                  - generic [ref=e3417]:
+                    - generic [ref=e3418]:
+                      - generic [ref=e3419]:
+                        - generic [ref=e3420]: Kyat
+                        - generic [ref=e3421]: AZN
+                        - img [ref=e3422] [cursor=pointer]
+                      - generic [ref=e3425]:
+                        - generic [ref=e3426]: 4d
+                        - img [ref=e3427] [cursor=pointer]
+                        - img [ref=e3430] [cursor=pointer]
+                        - img [ref=e3433] [cursor=pointer]
+                        - img [ref=e3436] [cursor=pointer]
+                        - generic [ref=e3439]:
+                          - img [ref=e3440]
+                          - generic [ref=e3445]: 2.5K
+                        - generic [ref=e3446]:
+                          - img [ref=e3447]
+                          - generic [ref=e3450]: "0"
+                        - generic [ref=e3451]:
+                          - img [ref=e3452]
+                          - generic [ref=e3458]: "0"
+                    - generic [ref=e3460]:
+                      - generic [ref=e3461]:
+                        - generic [ref=e3462]: MC
+                        - generic [ref=e3463]: $5.1M
+                      - generic [ref=e3464]:
+                        - generic [ref=e3465]: V
+                        - generic [ref=e3466]: $350.4K
+                      - generic [ref=e3467]:
+                        - generic [ref=e3468]: F
+                        - img [ref=e3469]
+                        - generic [ref=e3471]: "62.51"
+                        - generic [ref=e3472]: TX
+                        - generic [ref=e3473]: 13.7K
+                  - generic [ref=e3477]:
+                    - generic [ref=e3478]:
+                      - generic [ref=e3479]:
+                        - img [ref=e3481]
+                        - generic [ref=e3484]: 29%
+                      - generic [ref=e3485]:
+                        - img [ref=e3487]
+                        - generic [ref=e3489]: 56%
+                      - generic [ref=e3490]:
+                        - img [ref=e3492]
+                        - generic [ref=e3495]: 4d
+                      - generic [ref=e3496]:
+                        - img [ref=e3498]
+                        - generic [ref=e3502]: 1%
+                      - generic [ref=e3503]:
+                        - img [ref=e3505]
+                        - generic [ref=e3510]: 0%
+                      - generic [ref=e3511]:
+                        - img [ref=e3513]
+                        - generic [ref=e3518]: 0%
+                    - button "0 SOL" [ref=e3520] [cursor=pointer]:
+                      - img [ref=e3521]
+                      - generic [ref=e3523]: 0 SOL
+            - generic [ref=e3524]:
+              - generic [ref=e3527]: "Bonding: 61.00%"
+              - generic [ref=e3528]:
+                - generic [ref=e3529]:
+                  - generic [ref=e3530]:
+                    - generic [ref=e3531]:
+                      - button [ref=e3532] [cursor=pointer]:
+                        - img [ref=e3533]
+                      - button [ref=e3538] [cursor=pointer]:
+                        - img [ref=e3539]
+                      - button [ref=e3542] [cursor=pointer]:
+                        - img [ref=e3543]
+                    - button "Vatu" [ref=e3545] [cursor=pointer]:
+                      - img "Vatu" [ref=e3547]
+                      - img [ref=e3551]
+                  - generic [ref=e3554]: ecd41...e503e
+                - generic [ref=e3555]:
+                  - generic [ref=e3556]:
+                    - generic [ref=e3557]:
+                      - generic [ref=e3558]:
+                        - generic [ref=e3559]: Vatu
+                        - generic [ref=e3560]: TWD
+                        - img [ref=e3561] [cursor=pointer]
+                      - generic [ref=e3564]:
+                        - generic [ref=e3565]: 6d
+                        - img [ref=e3566] [cursor=pointer]
+                        - img [ref=e3569] [cursor=pointer]
+                        - img [ref=e3572] [cursor=pointer]
+                        - img [ref=e3575] [cursor=pointer]
+                        - generic [ref=e3578]:
+                          - img [ref=e3579]
+                          - generic [ref=e3584]: "412"
+                        - generic [ref=e3585]:
+                          - img [ref=e3586]
+                          - generic [ref=e3589]: "0"
+                        - generic [ref=e3590]:
+                          - img [ref=e3591]
+                          - generic [ref=e3597]: "0"
+                    - generic [ref=e3599]:
+                      - generic [ref=e3600]:
+                        - generic [ref=e3601]: MC
+                        - generic [ref=e3602]: $9.5M
+                      - generic [ref=e3603]:
+                        - generic [ref=e3604]: V
+                        - generic [ref=e3605]: $3.9M
+                      - generic [ref=e3606]:
+                        - generic [ref=e3607]: F
+                        - img [ref=e3608]
+                        - generic [ref=e3610]: "12.55"
+                        - generic [ref=e3611]: TX
+                        - generic [ref=e3612]: 18.7K
+                  - generic [ref=e3616]:
+                    - generic [ref=e3617]:
+                      - generic [ref=e3618]:
+                        - img [ref=e3620]
+                        - generic [ref=e3623]: 41%
+                      - generic [ref=e3624]:
+                        - img [ref=e3626]
+                        - generic [ref=e3628]: 58%
+                      - generic [ref=e3629]:
+                        - img [ref=e3631]
+                        - generic [ref=e3634]: 6d
+                      - generic [ref=e3635]:
+                        - img [ref=e3637]
+                        - generic [ref=e3641]: 61%
+                      - generic [ref=e3642]:
+                        - img [ref=e3644]
+                        - generic [ref=e3649]: 0%
+                      - generic [ref=e3650]:
+                        - img [ref=e3652]
+                        - generic [ref=e3657]: 0%
+                    - button "0 SOL" [ref=e3659] [cursor=pointer]:
+                      - img [ref=e3660]
+                      - generic [ref=e3662]: 0 SOL
+            - generic [ref=e3663]:
+              - generic [ref=e3666]: "Bonding: 67.00%"
+              - generic [ref=e3667]:
+                - generic [ref=e3668]:
+                  - generic [ref=e3669]:
+                    - generic [ref=e3670]:
+                      - button [ref=e3671] [cursor=pointer]:
+                        - img [ref=e3672]
+                      - button [ref=e3677] [cursor=pointer]:
+                        - img [ref=e3678]
+                      - button [ref=e3681] [cursor=pointer]:
+                        - img [ref=e3682]
+                    - button "Fiji Dollar" [ref=e3684] [cursor=pointer]:
+                      - img "Fiji Dollar" [ref=e3686]
+                      - img [ref=e3690]
+                  - generic [ref=e3693]: a40f6...da779
+                - generic [ref=e3694]:
+                  - generic [ref=e3695]:
+                    - generic [ref=e3696]:
+                      - generic [ref=e3697]:
+                        - generic [ref=e3698]: Fiji Dollar
+                        - generic [ref=e3699]: LBP
+                        - img [ref=e3700] [cursor=pointer]
+                      - generic [ref=e3703]:
+                        - generic [ref=e3704]: 2d
+                        - img [ref=e3705] [cursor=pointer]
+                        - img [ref=e3708] [cursor=pointer]
+                        - img [ref=e3711] [cursor=pointer]
+                        - img [ref=e3714] [cursor=pointer]
+                        - generic [ref=e3717]:
+                          - img [ref=e3718]
+                          - generic [ref=e3723]: 6.7K
+                        - generic [ref=e3724]:
+                          - img [ref=e3725]
+                          - generic [ref=e3728]: "0"
+                        - generic [ref=e3729]:
+                          - img [ref=e3730]
+                          - generic [ref=e3736]: "0"
+                    - generic [ref=e3738]:
+                      - generic [ref=e3739]:
+                        - generic [ref=e3740]: MC
+                        - generic [ref=e3741]: $9.9M
+                      - generic [ref=e3742]:
+                        - generic [ref=e3743]: V
+                        - generic [ref=e3744]: $3.3M
+                      - generic [ref=e3745]:
+                        - generic [ref=e3746]: F
+                        - img [ref=e3747]
+                        - generic [ref=e3749]: "44.52"
+                        - generic [ref=e3750]: TX
+                        - generic [ref=e3751]: 5.5K
+                  - generic [ref=e3755]:
+                    - generic [ref=e3756]:
+                      - generic [ref=e3757]:
+                        - img [ref=e3759]
+                        - generic [ref=e3762]: 98%
+                      - generic [ref=e3763]:
+                        - img [ref=e3765]
+                        - generic [ref=e3767]: 8%
+                      - generic [ref=e3768]:
+                        - img [ref=e3770]
+                        - generic [ref=e3773]: 2d
+                      - generic [ref=e3774]:
+                        - img [ref=e3776]
+                        - generic [ref=e3780]: 67%
+                      - generic [ref=e3781]:
+                        - img [ref=e3783]
+                        - generic [ref=e3788]: 0%
+                      - generic [ref=e3789]:
+                        - img [ref=e3791]
+                        - generic [ref=e3796]: 0%
+                    - button "0 SOL" [ref=e3798] [cursor=pointer]:
+                      - img [ref=e3799]
+                      - generic [ref=e3801]: 0 SOL
+            - generic [ref=e3802]:
+              - generic [ref=e3805]: "Bonding: 3.00%"
+              - generic [ref=e3806]:
+                - generic [ref=e3807]:
+                  - generic [ref=e3808]:
+                    - generic [ref=e3809]:
+                      - button [ref=e3810] [cursor=pointer]:
+                        - img [ref=e3811]
+                      - button [ref=e3816] [cursor=pointer]:
+                        - img [ref=e3817]
+                      - button [ref=e3820] [cursor=pointer]:
+                        - img [ref=e3821]
+                    - button "New Zealand Dollar" [ref=e3823] [cursor=pointer]:
+                      - img "New Zealand Dollar" [ref=e3825]
+                      - img [ref=e3829]
+                  - generic [ref=e3832]: da4ce...716c5
+                - generic [ref=e3833]:
+                  - generic [ref=e3834]:
+                    - generic [ref=e3835]:
+                      - generic [ref=e3836]:
+                        - generic [ref=e3837]: New Zealand Dollar
+                        - generic [ref=e3838]: MKD
+                        - img [ref=e3839] [cursor=pointer]
+                      - generic [ref=e3842]:
+                        - generic [ref=e3843]: 1d
+                        - img [ref=e3844] [cursor=pointer]
+                        - img [ref=e3847] [cursor=pointer]
+                        - img [ref=e3850] [cursor=pointer]
+                        - img [ref=e3853] [cursor=pointer]
+                        - generic [ref=e3856]:
+                          - img [ref=e3857]
+                          - generic [ref=e3862]: 7.4K
+                        - generic [ref=e3863]:
+                          - img [ref=e3864]
+                          - generic [ref=e3867]: "0"
+                        - generic [ref=e3868]:
+                          - img [ref=e3869]
+                          - generic [ref=e3875]: "0"
+                    - generic [ref=e3877]:
+                      - generic [ref=e3878]:
+                        - generic [ref=e3879]: MC
+                        - generic [ref=e3880]: $6.2M
+                      - generic [ref=e3881]:
+                        - generic [ref=e3882]: V
+                        - generic [ref=e3883]: $422.2K
+                      - generic [ref=e3884]:
+                        - generic [ref=e3885]: F
+                        - img [ref=e3886]
+                        - generic [ref=e3888]: "69.56"
+                        - generic [ref=e3889]: TX
+                        - generic [ref=e3890]: 25.4K
+                  - generic [ref=e3894]:
+                    - generic [ref=e3895]:
+                      - generic [ref=e3896]:
+                        - img [ref=e3898]
+                        - generic [ref=e3901]: 52%
+                      - generic [ref=e3902]:
+                        - img [ref=e3904]
+                        - generic [ref=e3906]: 69%
+                      - generic [ref=e3907]:
+                        - img [ref=e3909]
+                        - generic [ref=e3912]: 1d
+                      - generic [ref=e3913]:
+                        - img [ref=e3915]
+                        - generic [ref=e3919]: 3%
+                      - generic [ref=e3920]:
+                        - img [ref=e3922]
+                        - generic [ref=e3927]: 0%
+                      - generic [ref=e3928]:
+                        - img [ref=e3930]
+                        - generic [ref=e3935]: 0%
+                    - button "0 SOL" [ref=e3937] [cursor=pointer]:
+                      - img [ref=e3938]
+                      - generic [ref=e3940]: 0 SOL
+            - generic [ref=e3941]:
+              - generic [ref=e3944]: "Bonding: 50.00%"
+              - generic [ref=e3945]:
+                - generic [ref=e3946]:
+                  - generic [ref=e3947]:
+                    - generic [ref=e3948]:
+                      - button [ref=e3949] [cursor=pointer]:
+                        - img [ref=e3950]
+                      - button [ref=e3955] [cursor=pointer]:
+                        - img [ref=e3956]
+                      - button [ref=e3959] [cursor=pointer]:
+                        - img [ref=e3960]
+                    - button "New Zealand Dollar" [ref=e3962] [cursor=pointer]:
+                      - img "New Zealand Dollar" [ref=e3964]
+                      - img [ref=e3968]
+                  - generic [ref=e3971]: 4e76c...ed16b
+                - generic [ref=e3972]:
+                  - generic [ref=e3973]:
+                    - generic [ref=e3974]:
+                      - generic [ref=e3975]:
+                        - generic [ref=e3976]: New Zealand Dollar
+                        - generic [ref=e3977]: USD
+                        - img [ref=e3978] [cursor=pointer]
+                      - generic [ref=e3981]:
+                        - generic [ref=e3982]: 2d
+                        - img [ref=e3983] [cursor=pointer]
+                        - img [ref=e3986] [cursor=pointer]
+                        - img [ref=e3989] [cursor=pointer]
+                        - img [ref=e3992] [cursor=pointer]
+                        - generic [ref=e3995]:
+                          - img [ref=e3996]
+                          - generic [ref=e4001]: "793"
+                        - generic [ref=e4002]:
+                          - img [ref=e4003]
+                          - generic [ref=e4006]: "0"
+                        - generic [ref=e4007]:
+                          - img [ref=e4008]
+                          - generic [ref=e4014]: "0"
+                    - generic [ref=e4016]:
+                      - generic [ref=e4017]:
+                        - generic [ref=e4018]: MC
+                        - generic [ref=e4019]: $792.2K
+                      - generic [ref=e4020]:
+                        - generic [ref=e4021]: V
+                        - generic [ref=e4022]: $2.5M
+                      - generic [ref=e4023]:
+                        - generic [ref=e4024]: F
+                        - img [ref=e4025]
+                        - generic [ref=e4027]: "97.03"
+                        - generic [ref=e4028]: TX
+                        - generic [ref=e4029]: 10.2K
+                  - generic [ref=e4033]:
+                    - generic [ref=e4034]:
+                      - generic [ref=e4035]:
+                        - img [ref=e4037]
+                        - generic [ref=e4040]: 83%
+                      - generic [ref=e4041]:
+                        - img [ref=e4043]
+                        - generic [ref=e4045]: 61%
+                      - generic [ref=e4046]:
+                        - img [ref=e4048]
+                        - generic [ref=e4051]: 2d
+                      - generic [ref=e4052]:
+                        - img [ref=e4054]
+                        - generic [ref=e4058]: 50%
+                      - generic [ref=e4059]:
+                        - img [ref=e4061]
+                        - generic [ref=e4066]: 0%
+                      - generic [ref=e4067]:
+                        - img [ref=e4069]
+                        - generic [ref=e4074]: 0%
+                    - button "0 SOL" [ref=e4076] [cursor=pointer]:
+                      - img [ref=e4077]
+                      - generic [ref=e4079]: 0 SOL
+            - generic [ref=e4080]:
+              - generic [ref=e4083]: "Bonding: 77.00%"
+              - generic [ref=e4084]:
+                - generic [ref=e4085]:
+                  - generic [ref=e4086]:
+                    - generic [ref=e4087]:
+                      - button [ref=e4088] [cursor=pointer]:
+                        - img [ref=e4089]
+                      - button [ref=e4094] [cursor=pointer]:
+                        - img [ref=e4095]
+                      - button [ref=e4098] [cursor=pointer]:
+                        - img [ref=e4099]
+                    - button "Naira" [ref=e4101] [cursor=pointer]:
+                      - img "Naira" [ref=e4103]
+                      - img [ref=e4107]
+                  - generic [ref=e4110]: c8735...4d7b5
+                - generic [ref=e4111]:
+                  - generic [ref=e4112]:
+                    - generic [ref=e4113]:
+                      - generic [ref=e4114]:
+                        - generic [ref=e4115]: Naira
+                        - generic [ref=e4116]: PYG
+                        - img [ref=e4117] [cursor=pointer]
+                      - generic [ref=e4120]:
+                        - generic [ref=e4121]: 2d
+                        - img [ref=e4122] [cursor=pointer]
+                        - img [ref=e4125] [cursor=pointer]
+                        - img [ref=e4128] [cursor=pointer]
+                        - img [ref=e4131] [cursor=pointer]
+                        - generic [ref=e4134]:
+                          - img [ref=e4135]
+                          - generic [ref=e4140]: 7.0K
+                        - generic [ref=e4141]:
+                          - img [ref=e4142]
+                          - generic [ref=e4145]: "0"
+                        - generic [ref=e4146]:
+                          - img [ref=e4147]
+                          - generic [ref=e4153]: "0"
+                    - generic [ref=e4155]:
+                      - generic [ref=e4156]:
+                        - generic [ref=e4157]: MC
+                        - generic [ref=e4158]: $919.8K
+                      - generic [ref=e4159]:
+                        - generic [ref=e4160]: V
+                        - generic [ref=e4161]: $1.8M
+                      - generic [ref=e4162]:
+                        - generic [ref=e4163]: F
+                        - img [ref=e4164]
+                        - generic [ref=e4166]: "20.55"
+                        - generic [ref=e4167]: TX
+                        - generic [ref=e4168]: 8.8K
+                  - generic [ref=e4172]:
+                    - generic [ref=e4173]:
+                      - generic [ref=e4174]:
+                        - img [ref=e4176]
+                        - generic [ref=e4179]: 27%
+                      - generic [ref=e4180]:
+                        - img [ref=e4182]
+                        - generic [ref=e4184]: 33%
+                      - generic [ref=e4185]:
+                        - img [ref=e4187]
+                        - generic [ref=e4190]: 2d
+                      - generic [ref=e4191]:
+                        - img [ref=e4193]
+                        - generic [ref=e4197]: 77%
+                      - generic [ref=e4198]:
+                        - img [ref=e4200]
+                        - generic [ref=e4205]: 0%
+                      - generic [ref=e4206]:
+                        - img [ref=e4208]
+                        - generic [ref=e4213]: 0%
+                    - button "0 SOL" [ref=e4215] [cursor=pointer]:
+                      - img [ref=e4216]
+                      - generic [ref=e4218]: 0 SOL
+            - generic [ref=e4219]:
+              - generic [ref=e4222]: "Bonding: 44.00%"
+              - generic [ref=e4223]:
+                - generic [ref=e4224]:
+                  - generic [ref=e4225]:
+                    - generic [ref=e4226]:
+                      - button [ref=e4227] [cursor=pointer]:
+                        - img [ref=e4228]
+                      - button [ref=e4233] [cursor=pointer]:
+                        - img [ref=e4234]
+                      - button [ref=e4237] [cursor=pointer]:
+                        - img [ref=e4238]
+                    - button "Baht" [ref=e4240] [cursor=pointer]:
+                      - img "Baht" [ref=e4242]
+                      - img [ref=e4246]
+                  - generic [ref=e4249]: 8a39c...e1019
+                - generic [ref=e4250]:
+                  - generic [ref=e4251]:
+                    - generic [ref=e4252]:
+                      - generic [ref=e4253]:
+                        - generic [ref=e4254]: Baht
+                        - generic [ref=e4255]: DJF
+                        - img [ref=e4256] [cursor=pointer]
+                      - generic [ref=e4259]:
+                        - generic [ref=e4260]: 3d
+                        - img [ref=e4261] [cursor=pointer]
+                        - img [ref=e4264] [cursor=pointer]
+                        - img [ref=e4267] [cursor=pointer]
+                        - img [ref=e4270] [cursor=pointer]
+                        - generic [ref=e4273]:
+                          - img [ref=e4274]
+                          - generic [ref=e4279]: 9.4K
+                        - generic [ref=e4280]:
+                          - img [ref=e4281]
+                          - generic [ref=e4284]: "0"
+                        - generic [ref=e4285]:
+                          - img [ref=e4286]
+                          - generic [ref=e4292]: "0"
+                    - generic [ref=e4294]:
+                      - generic [ref=e4295]:
+                        - generic [ref=e4296]: MC
+                        - generic [ref=e4297]: $3.5M
+                      - generic [ref=e4298]:
+                        - generic [ref=e4299]: V
+                        - generic [ref=e4300]: $3.8M
+                      - generic [ref=e4301]:
+                        - generic [ref=e4302]: F
+                        - img [ref=e4303]
+                        - generic [ref=e4305]: "82.51"
+                        - generic [ref=e4306]: TX
+                        - generic [ref=e4307]: 6.7K
+                  - generic [ref=e4311]:
+                    - generic [ref=e4312]:
+                      - generic [ref=e4313]:
+                        - img [ref=e4315]
+                        - generic [ref=e4318]: 95%
+                      - generic [ref=e4319]:
+                        - img [ref=e4321]
+                        - generic [ref=e4323]: 82%
+                      - generic [ref=e4324]:
+                        - img [ref=e4326]
+                        - generic [ref=e4329]: 3d
+                      - generic [ref=e4330]:
+                        - img [ref=e4332]
+                        - generic [ref=e4336]: 44%
+                      - generic [ref=e4337]:
+                        - img [ref=e4339]
+                        - generic [ref=e4344]: 0%
+                      - generic [ref=e4345]:
+                        - img [ref=e4347]
+                        - generic [ref=e4352]: 0%
+                    - button "0 SOL" [ref=e4354] [cursor=pointer]:
+                      - img [ref=e4355]
+                      - generic [ref=e4357]: 0 SOL
+    - contentinfo [ref=e4358]:
+      - generic [ref=e4359]:
+        - button "PRESET 1" [ref=e4360] [cursor=pointer]:
+          - img [ref=e4361]
+          - generic [ref=e4367]: PRESET 1
+        - generic [ref=e4368]:
+          - img [ref=e4369]
+          - generic [ref=e4371]: "1"
+          - img [ref=e4372]
+          - generic [ref=e4374]: "0"
+          - img [ref=e4375]
+        - button [ref=e4378] [cursor=pointer]:
+          - img [ref=e4379]
+        - button "Wallet" [ref=e4382] [cursor=pointer]:
+          - img [ref=e4383]
+          - generic [ref=e4387]: Wallet
+        - button "Twitter" [ref=e4389] [cursor=pointer]:
+          - img [ref=e4390]
+          - generic [ref=e4392]: Twitter
+        - button "Discover" [ref=e4393] [cursor=pointer]:
+          - img [ref=e4394]
+          - generic [ref=e4397]: Discover
+        - button "Pulse" [ref=e4399] [cursor=pointer]:
+          - img [ref=e4400]
+          - generic [ref=e4402]: Pulse
+        - button "PnL" [ref=e4404] [cursor=pointer]:
+          - img [ref=e4405]
+          - generic [ref=e4407]: PnL
+        - generic [ref=e4412]:
+          - img [ref=e4413]
+          - img [ref=e4417]
+          - img [ref=e4427]:
+            - generic [ref=e4430]: R
+        - generic [ref=e4432]:
+          - img [ref=e4433]
+          - generic [ref=e4435]: $139.6
+        - generic [ref=e4440]: Connected
+        - button "GLOBAL" [ref=e4441] [cursor=pointer]:
+          - generic [ref=e4442]: GLOBAL
+          - img [ref=e4443]
+        - button [ref=e4446] [cursor=pointer]:
+          - img [ref=e4447]
+        - button [ref=e4449] [cursor=pointer]:
+          - img [ref=e4450]
+        - button [ref=e4453] [cursor=pointer]:
+          - img [ref=e4454]
+        - button [ref=e4461] [cursor=pointer]:
+          - img [ref=e4462]
+        - button [ref=e4464] [cursor=pointer]:
+          - img [ref=e4465]
+        - button "Docs" [ref=e4467] [cursor=pointer]:
+          - img [ref=e4468]
+          - generic [ref=e4471]: Docs
+  - alert [ref=e4472]
+```

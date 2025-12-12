@@ -44,7 +44,7 @@ function SolanaGradientIcon({ size = 'md' }: { size?: 'sm' | 'md' | 'lg' }) {
 
 function UserSettingsIcon() {
   return (
-    <button className="w-10 h-10 rounded-full bg-zinc-800 hover:bg-zinc-700 transition-colors flex flex-col items-center justify-center relative">
+    <button aria-label="User settings" className="w-10 h-10 rounded-full bg-zinc-800 hover:bg-zinc-700 transition-colors flex flex-col items-center justify-center relative">
       {/* User icon */}
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-5 h-5 text-gray-300">
         <circle cx="12" cy="7" r="4" />
@@ -65,7 +65,7 @@ export function Header() {
       <div className="h-full flex items-center justify-between px-2 lg:px-4 xl:px-6">
         {/* Left Section: Logo + Nav */}
         <div className="flex items-center gap-1 flex-shrink-0">
-          <a href="#" className="flex-shrink-0">
+          <a href="#" className="flex-shrink-0" aria-label="Axiom Home">
             <AxiomLogo />
           </a>
           <div className="relative flex-1 min-w-0 overflow-hidden">
@@ -93,7 +93,7 @@ export function Header() {
         {/* Right Section - never shrink */}
         <div className="flex items-center gap-1 lg:gap-2 xl:gap-3 flex-shrink-0">
           {/* Search Icon */}
-          <button className="p-2 text-white hover:text-gray-300 transition-colors rounded-2xl bg-[#06070B] border border-zinc-700">
+          <button aria-label="Search" className="p-2 text-white hover:text-gray-300 transition-colors rounded-2xl bg-[#06070B] border border-zinc-700">
             <Search className="w-5 h-5" />
           </button>
 
@@ -110,12 +110,12 @@ export function Header() {
           </button>
 
           {/* Star (Favorites) */}
-          <button className="p-2 text-gray-400 hover:text-yellow-400 transition-colors rounded-full bg-[#22242D]">
+          <button aria-label="Favorites" className="p-2 text-gray-400 hover:text-yellow-400 transition-colors rounded-full bg-[#22242D]">
             <Star className="w-4 h-4" />
           </button>
 
           {/* Bell (Notifications) */}
-          <button className="p-2 text-gray-400 hover:text-white transition-colors rounded-full bg-[#22242D]">
+          <button aria-label="Notifications" className="p-2 text-gray-400 hover:text-white transition-colors rounded-full bg-[#22242D]">
             <Bell className="w-4 h-4" />
           </button>
 

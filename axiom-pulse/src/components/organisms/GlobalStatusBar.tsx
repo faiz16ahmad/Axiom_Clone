@@ -143,7 +143,7 @@ export function GlobalStatusBar() {
                 <Divider />
 
                 {/* Settings Icon */}
-                <button className="text-[#777A8C] hover:text-white transition-colors flex-shrink-0">
+                <button aria-label="Settings" className="text-[#777A8C] hover:text-white transition-colors flex-shrink-0 p-1">
                     <Settings className="w-4 h-4" />
                 </button>
 
@@ -225,32 +225,32 @@ export function GlobalStatusBar() {
                 <Divider />
 
                 {/* Right side icons */}
-                <button className="text-[#F4F4F5] hover:text-white transition-colors px-0.5 flex-shrink-0">
+                <button aria-label="Window" className="text-[#F4F4F5] hover:text-white transition-colors p-1 flex-shrink-0">
                     <Square className="w-3.5 h-3.5" />
                 </button>
 
-                <button className="text-[#F4F4F5] hover:text-white transition-colors px-0.5 flex-shrink-0">
+                <button aria-label="Notifications" className="text-[#F4F4F5] hover:text-white transition-colors p-1 flex-shrink-0">
                     <Bell className="w-3.5 h-3.5" />
                 </button>
 
-                <button className="text-[#F4F4F5] hover:text-white transition-colors px-0.5 flex-shrink-0">
+                <button aria-label="Theme" className="text-[#F4F4F5] hover:text-white transition-colors p-1 flex-shrink-0">
                     <Palette className="w-3.5 h-3.5" />
                 </button>
 
                 <Divider />
 
                 {/* Discord */}
-                <button className="text-[#F4F4F5] hover:text-white transition-colors px-0.5 flex-shrink-0">
+                <button aria-label="Discord" className="text-[#F4F4F5] hover:text-white transition-colors p-1 flex-shrink-0">
                     <DiscordIcon className="w-3.5 h-3.5" />
                 </button>
 
                 {/* X/Twitter */}
-                <button className="text-[#F4F4F5] hover:text-white transition-colors px-0.5 flex-shrink-0">
+                <button aria-label="Twitter" className="text-[#F4F4F5] hover:text-white transition-colors p-1 flex-shrink-0">
                     <TwitterIcon className="w-3.5 h-3.5" />
                 </button>
 
                 {/* Docs */}
-                <button className="flex items-center gap-1 text-[#F4F4F5] hover:text-white transition-colors px-0.5 flex-shrink-0">
+                <button aria-label="Documentation" className="flex items-center gap-1 text-[#F4F4F5] hover:text-white transition-colors p-1 flex-shrink-0">
                     <FileText className="w-3.5 h-3.5" />
                     <span className="text-xs">Docs</span>
                 </button>
