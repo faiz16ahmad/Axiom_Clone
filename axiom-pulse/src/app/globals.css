@@ -6,7 +6,7 @@
   .text-balance {
     text-wrap: balance;
   }
-  
+
   /* Hide scrollbar for horizontal pill scroll */
   .scrollbar-hide {
     -ms-overflow-style: none;
@@ -16,8 +16,6 @@
     display: none;
   }
 }
-
-
 
 @layer base {
   :root {
@@ -74,8 +72,6 @@
     --chart-5: 340 75% 55%;
   }
 }
-
-
 
 @layer base {
   * {
@@ -213,10 +209,10 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #5B6075;
+  background: #5b6075;
   border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #6B7085;
+  background: #6b7085;
 }

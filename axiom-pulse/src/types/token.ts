@@ -17,6 +17,13 @@ export interface Token {
   migratedAt?: Date;
   category: TokenCategory;
   flashState?: FlashState;
+  // Twitter/Social profile data
+  twitterHandle?: string;
+  twitterBio?: string;
+  twitterFollowers?: number;
+  twitterFollowing?: number;
+  twitterJoinedDate?: string;
+  bannerUrl?: string;
 }
 
 export type TokenCategory = 'new-pairs' | 'final-stretch' | 'migrated';

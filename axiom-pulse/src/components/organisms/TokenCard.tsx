@@ -7,6 +7,7 @@ import { TokenAvatar, AvatarBorderColor } from '@/components/atoms/TokenAvatar';
 import { TokenHeader } from '@/components/molecules/TokenHeader';
 import { TokenMetricsGrid } from '@/components/molecules/TokenMetricsGrid';
 import { TokenFooterPills } from '@/components/molecules/TokenFooterPills';
+import { ProfileHoverCard } from '@/components/molecules/ProfileHoverCard';
 import { cn } from '@/lib/utils';
 
 interface TokenCardProps {
@@ -33,10 +34,26 @@ function TokenCardComponent({ token }: TokenCardProps) {
         token.flashState === 'red' && 'animate-bg-pulse-red'
       )}
     >
-      {/* Hover: Bonding Badge */}
+      {/* Hover: Bonding Badge - color matches profile border */}
       <div className="absolute -top-3 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-150 z-20">
-        <div className="px-3 py-1 bg-red-600 rounded-full shadow-lg">
-          <span className="text-xs font-semibold text-white whitespace-nowrap">
+        <div className={cn(
+          'px-4 py-1.5 rounded-lg shadow-lg border',
+          borderColor === 'green' && 'bg-zinc-900/95 border-emerald-500/30',
+          borderColor === 'red' && 'bg-zinc-900/95 border-red-500/30',
+          borderColor === 'pink' && 'bg-zinc-900/95 border-pink-500/30',
+          borderColor === 'yellow' && 'bg-zinc-900/95 border-yellow-500/30',
+          borderColor === 'blue' && 'bg-zinc-900/95 border-blue-500/30',
+          borderColor === 'purple' && 'bg-zinc-900/95 border-purple-500/30'
+        )}>
+          <span className={cn(
+            'text-sm font-semibold whitespace-nowrap',
+            borderColor === 'green' && 'text-emerald-400',
+            borderColor === 'red' && 'text-red-400',
+            borderColor === 'pink' && 'text-pink-400',
+            borderColor === 'yellow' && 'text-yellow-400',
+            borderColor === 'blue' && 'text-blue-400',
+            borderColor === 'purple' && 'text-purple-400'
+          )}>
             Bonding: {token.bondingCurve.toFixed(2)}%
           </span>
         </div>
@@ -59,12 +76,24 @@ function TokenCardComponent({ token }: TokenCardProps) {
                 <Flag className="w-3 h-3 text-gray-400" />
               </button>
             </div>
-            <TokenAvatar
-              src={token.avatarUrl}
-              alt={token.name}
-              showBadge={true}
-              borderColor={borderColor}
-            />
+            <ProfileHoverCard
+              name={token.name}
+              symbol={token.symbol}
+              avatarUrl={token.avatarUrl}
+              bannerUrl={token.bannerUrl}
+              twitterHandle={token.twitterHandle}
+              twitterBio={token.twitterBio}
+              twitterFollowers={token.twitterFollowers}
+              twitterFollowing={token.twitterFollowing}
+              twitterJoinedDate={token.twitterJoinedDate}
+            >
+              <TokenAvatar
+                src={token.avatarUrl}
+                alt={token.name}
+                showBadge={true}
+                borderColor={borderColor}
+              />
+            </ProfileHoverCard>
           </div>
           <span className="text-xs text-gray-400 mt-1.5 tracking-wide ml-5">
             {token.id.slice(0, 5)}...{token.id.slice(-5)}

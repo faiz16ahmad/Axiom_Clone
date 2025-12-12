@@ -32,10 +32,13 @@ export function generateToken(category: TokenCategory, isNew: boolean = false): 
     createdAt = faker.date.recent({ days: 7 });
   }
 
+  const tokenName = faker.finance.currencyName();
+  const symbol = faker.finance.currencyCode().slice(0, 4).toUpperCase();
+  
   return {
     id: faker.string.uuid(),
-    name: faker.finance.currencyName(),
-    symbol: faker.finance.currencyCode().slice(0, 4).toUpperCase(),
+    name: tokenName,
+    symbol,
     avatarUrl: faker.image.avatar(),
     price: faker.number.float({ min: 0.0001, max: 100, fractionDigits: 6 }),
     priceChange: faker.number.float({ min: -10, max: 10, fractionDigits: 2 }),
@@ -53,6 +56,13 @@ export function generateToken(category: TokenCategory, isNew: boolean = false): 
     migratedAt: isMigrated ? faker.date.recent({ days: 1 }) : undefined,
     category,
     flashState: null,
+    // Twitter/Social data
+    twitterHandle: `${symbol.toLowerCase()}${faker.number.int({ min: 1, max: 999 })}`,
+    twitterBio: faker.lorem.sentence({ min: 5, max: 12 }),
+    twitterFollowers: faker.number.int({ min: 100, max: 500000 }),
+    twitterFollowing: faker.number.int({ min: 10, max: 1000 }),
+    twitterJoinedDate: faker.date.past({ years: 3 }).toLocaleDateString('en-US', { month: 'short', year: 'numeric' }),
+    bannerUrl: `https://picsum.photos/seed/${faker.string.alphanumeric(8)}/400/150`,
   };
 }
 
