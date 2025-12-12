@@ -33,11 +33,11 @@ function BNBCubeIcon() {
 
 export function SubHeader() {
   return (
-    <div className="w-full h-14 bg-[#06070B] mt-1">
-      <div className="h-full flex items-center justify-between px-4">
+    <div className="w-full h-12 lg:h-14 xl:h-16 bg-[#06070B] mt-0.5 lg:mt-1">
+      <div className="h-full flex items-center justify-between px-2 lg:px-4 xl:px-6">
         {/* Left Side: Title + Chain Icons */}
-        <div className="flex items-center gap-3">
-          <h1 className="text-xl font-bold text-white">Pulse</h1>
+        <div className="flex items-center gap-2 lg:gap-3">
+          <h1 className="text-lg lg:text-xl xl:text-2xl font-bold text-white">Pulse</h1>
           <div className="flex items-center gap-2">
             <SolanaIconBadge />
             <BNBCubeIcon />
@@ -45,7 +45,7 @@ export function SubHeader() {
         </div>
 
         {/* Right Side: Global Controls */}
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-1 lg:gap-2 xl:gap-3">
           {/* Help Icon */}
           <button className="p-2 text-gray-500 hover:text-white transition-colors">
             <HelpCircle className="w-4 h-4" />

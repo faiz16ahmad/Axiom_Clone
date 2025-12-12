@@ -61,8 +61,8 @@ function UserSettingsIcon() {
 
 export function Header() {
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 w-full h-16 bg-[#06070B] border-b border-zinc-800/50">
-      <div className="h-full flex items-center justify-between px-4">
+    <header className="fixed top-0 left-0 right-0 z-50 w-full h-14 lg:h-16 xl:h-18 bg-[#06070B] border-b border-zinc-800/50 max-w-[1920px] mx-auto">
+      <div className="h-full flex items-center justify-between px-2 lg:px-4 xl:px-6">
         {/* Left Section: Logo + Nav */}
         <div className="flex items-center gap-1 flex-shrink-0">
           <a href="#" className="flex-shrink-0">
@@ -71,13 +71,13 @@ export function Header() {
           <div className="relative flex-1 min-w-0 overflow-hidden">
             {/* Fade gradient on left edge */}
             <div className="absolute left-0 top-0 bottom-0 w-8 bg-gradient-to-r from-[#06070B] via-[#06070B]/80 to-transparent pointer-events-none z-10" />
-            <nav className="flex items-center gap-4 overflow-x-auto whitespace-nowrap scrollbar-hide px-8 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
+            <nav className="flex items-center gap-2 lg:gap-4 xl:gap-6 overflow-x-auto whitespace-nowrap scrollbar-hide px-4 lg:px-8 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
               {navLinks.map((link) => (
                 <a
                   key={link.name}
                   href={link.href}
                   className={cn(
-                    'text-sm font-medium transition-colors whitespace-nowrap flex-shrink-0',
+                    'text-xs lg:text-sm xl:text-base font-medium transition-colors whitespace-nowrap flex-shrink-0',
                     link.active ? 'text-blue-400' : 'text-gray-400 hover:text-white'
                   )}
                 >
@@ -91,7 +91,7 @@ export function Header() {
         </div>
 
         {/* Right Section - never shrink */}
-        <div className="flex items-center gap-2 flex-shrink-0">
+        <div className="flex items-center gap-1 lg:gap-2 xl:gap-3 flex-shrink-0">
           {/* Search Icon */}
           <button className="p-2 text-white hover:text-gray-300 transition-colors rounded-2xl bg-[#06070B] border border-zinc-700">
             <Search className="w-5 h-5" />

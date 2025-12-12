@@ -16,9 +16,9 @@ export default function Home() {
   }, [tokens]);
 
   return (
-    <div className="min-h-screen flex flex-col overflow-x-hidden">
+    <div className="min-h-screen flex flex-col overflow-x-hidden max-w-[1920px] mx-auto w-full">
       <Header />
-      <main className="flex-1 pt-16 pb-12">
+      <main className="flex-1 pt-14 lg:pt-16 pb-10 lg:pb-12">
         <ToolbarRow />
         <SubHeader />
         <DashboardBoard tokens={tokens} />
