@@ -54,7 +54,7 @@ export function ColumnHeader({ title, count }: ColumnHeaderProps) {
                                     'text-sm font-medium px-2 py-1 rounded transition-colors',
                                     activePreset === preset
                                         ? 'text-blue-400'
-                                        : 'text-gray-500 hover:text-gray-300'
+                                        : 'text-gray-400 hover:text-gray-300'
                                 )}
                             >
                                 {preset}

@@ -31,7 +31,7 @@ export function TokenMetricsGrid({
     <div className="flex flex-col gap-0.5 items-end text-right">
       {/* Row 1: MC - Green value */}
       <div className="flex items-center gap-1.5">
-        <span className="text-xs text-gray-500">MC</span>
+        <span className="text-xs text-gray-400">MC</span>
         <span className={cn(
           'text-base font-semibold tabular-nums text-pulse-green',
           flashState === 'green' && 'animate-flash-green',
@@ -43,7 +43,7 @@ export function TokenMetricsGrid({
       
       {/* Row 2: Volume - Blue/Indigo value */}
       <div className="flex items-center gap-1.5">
-        <span className="text-xs text-gray-500">V</span>
+        <span className="text-xs text-gray-400">V</span>
         <span className="text-base font-bold tabular-nums text-indigo-400">
           ${formatCompactNumber(volume)}
         </span>
@@ -52,7 +52,7 @@ export function TokenMetricsGrid({
       {/* Row 3: F + Solana + Price + TX + Progress Bar */}
       <div className="flex items-center justify-end gap-2 text-xs whitespace-nowrap">
         {/* F label */}
-        <span className="text-gray-500">F</span>
+        <span className="text-gray-400">F</span>
         
         {/* Solana Icon */}
         <SolanaIcon size="sm" className="w-4 h-4" />
@@ -63,7 +63,7 @@ export function TokenMetricsGrid({
         </span>
         
         {/* TX label + value */}
-        <span className="text-gray-500">TX</span>
+        <span className="text-gray-400">TX</span>
         <span className="text-white tabular-nums">
           {formatCompactNumber(transactions)}
         </span>

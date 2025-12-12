@@ -45,7 +45,7 @@ export function ColumnSection({ title, tokens, category }: ColumnSectionProps) {
         ))}
         
         {sortedTokens.length === 0 && (
-          <div className="flex items-center justify-center h-32 text-gray-500 text-xs">
+          <div className="flex items-center justify-center h-32 text-gray-400 text-xs">
             No tokens
           </div>
         )}

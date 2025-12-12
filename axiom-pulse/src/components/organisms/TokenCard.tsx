@@ -48,13 +48,13 @@ function TokenCardComponent({ token }: TokenCardProps) {
             {/* Hover: Quick Actions */}
             <div className="flex flex-col gap-0 opacity-0 group-hover:opacity-100 transition-opacity duration-150 z-10">
               <button className="w-5 h-6 bg-zinc-900 border border-zinc-700 border-r-0 rounded-tl flex items-center justify-center hover:bg-zinc-800">
-                <EyeOff className="w-3 h-3 text-gray-500" />
+                <EyeOff className="w-3 h-3 text-gray-400" />
               </button>
               <button className="w-5 h-6 bg-zinc-900 border border-zinc-700 border-r-0 border-t-0 flex items-center justify-center hover:bg-zinc-800">
-                <Ban className="w-3 h-3 text-gray-500" />
+                <Ban className="w-3 h-3 text-gray-400" />
               </button>
               <button className="w-5 h-6 bg-zinc-900 border border-zinc-700 border-r-0 border-t-0 rounded-bl flex items-center justify-center hover:bg-zinc-800">
-                <Flag className="w-3 h-3 text-gray-500" />
+                <Flag className="w-3 h-3 text-gray-400" />
               </button>
             </div>
             <TokenAvatar
@@ -64,7 +64,7 @@ function TokenCardComponent({ token }: TokenCardProps) {
               borderColor={borderColor}
             />
           </div>
-          <span className="text-xs text-gray-500 mt-1.5 tracking-wide ml-5">
+          <span className="text-xs text-gray-400 mt-1.5 tracking-wide ml-5">
             {token.id.slice(0, 5)}...{token.id.slice(-5)}
           </span>
         </div>

@@ -26,14 +26,14 @@ export function TokenHeader({ token }: TokenHeaderProps) {
         <span className="text-lg font-bold text-white truncate max-w-[140px]">
           {token.name}
         </span>
-        <span className="text-base text-gray-500 font-normal flex-shrink-0">
+        <span className="text-base text-gray-400 font-normal flex-shrink-0">
           {token.symbol}
         </span>
-        <CopyIcon className="w-4 h-4 text-gray-500 cursor-pointer hover:text-white flex-shrink-0" />
+        <CopyIcon className="w-4 h-4 text-gray-400 cursor-pointer hover:text-white flex-shrink-0" />
       </div>
       
       {/* Row 2: Info row - more spread out like LUNA */}
-      <div className="flex items-center gap-2.5 text-gray-500">
+      <div className="flex items-center gap-2.5 text-gray-400">
         {/* Green Time */}
         <LiveTimer startTime={token.createdAt} className="text-sm" />
         
