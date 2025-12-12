@@ -16,14 +16,14 @@ export default function Home() {
   }, [tokens]);
 
   return (
-    <>
+    <div className="min-h-screen flex flex-col">
       <Header />
-      <main className="pt-24 pb-16">
+      <main className="flex-1 pt-24 pb-16">
         <ToolbarRow />
         <SubHeader />
         <DashboardBoard tokens={tokens} />
       </main>
       <GlobalStatusBar />
-    </>
+    </div>
   );
 }
