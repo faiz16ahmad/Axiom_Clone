@@ -55,6 +55,8 @@ export function TokenAvatar({ src, alt, showBadge = true, borderColor = 'pink' }
               height={100}
               className="object-cover w-full h-full"
               onError={() => setImgError(true)}
+              loading="lazy"
+              placeholder="empty"
             />
           </div>
           

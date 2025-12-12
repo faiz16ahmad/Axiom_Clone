@@ -74,12 +74,16 @@ export function generateFreshNewPair(): Token {
 }
 
 /**
- * Generate initial set of tokens (10 per category)
+ * Generate initial set of tokens (fewer on mobile for faster LCP)
  */
 export function generateInitialTokens(): Token[] {
-  const newPairs = Array.from({ length: 10 }, () => generateToken('new-pairs'));
-  const finalStretch = Array.from({ length: 10 }, () => generateToken('final-stretch'));
-  const migrated = Array.from({ length: 10 }, () => generateToken('migrated'));
+  // Detect mobile - start with fewer tokens for faster initial paint
+  const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
+  const count = isMobile ? 5 : 8; // 5 per category on mobile, 8 on desktop
+  
+  const newPairs = Array.from({ length: count }, () => generateToken('new-pairs'));
+  const finalStretch = Array.from({ length: count }, () => generateToken('final-stretch'));
+  const migrated = Array.from({ length: count }, () => generateToken('migrated'));
 
   return [...newPairs, ...finalStretch, ...migrated];
 }

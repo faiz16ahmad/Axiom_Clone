@@ -58,28 +58,34 @@ export function ProfileHoverCard({
       >
         {/* Banner + Avatar Container */}
         <div className="relative">
-          {/* Banner */}
-          <div className="h-28 w-full relative overflow-hidden">
-            <Image
-              src={bannerError ? defaultBanner : (bannerUrl || defaultBanner)}
-              alt="Profile banner"
-              fill
-              className="object-cover"
-              onError={() => setBannerError(true)}
-            />
+          {/* Banner - only load when hovered */}
+          <div className="h-28 w-full relative overflow-hidden bg-zinc-800">
+            {isHovered && (
+              <Image
+                src={bannerError ? defaultBanner : (bannerUrl || defaultBanner)}
+                alt="Profile banner"
+                fill
+                className="object-cover"
+                onError={() => setBannerError(true)}
+                loading="lazy"
+              />
+            )}
           </div>
           
           {/* Avatar - positioned to overlap banner */}
           <div className="absolute left-4 bottom-0 translate-y-1/2 z-10">
             <div className="w-16 h-16 rounded-full border-4 border-[#15202b] overflow-hidden bg-zinc-800 shadow-lg">
-              <Image
-                src={imgError ? fallbackAvatar : avatarUrl}
-                alt={name}
-                width={64}
-                height={64}
-                className="object-cover w-full h-full"
-                onError={() => setImgError(true)}
-              />
+              {isHovered && (
+                <Image
+                  src={imgError ? fallbackAvatar : avatarUrl}
+                  alt={name}
+                  width={64}
+                  height={64}
+                  className="object-cover w-full h-full"
+                  onError={() => setImgError(true)}
+                  loading="lazy"
+                />
+              )}
             </div>
           </div>
           
