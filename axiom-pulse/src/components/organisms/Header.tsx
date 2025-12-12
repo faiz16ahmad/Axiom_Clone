@@ -61,14 +61,16 @@ function UserSettingsIcon() {
 
 export function Header() {
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 w-full h-24 bg-[#06070B] border-b border-zinc-800/50">
-      <div className="h-full flex items-center justify-between px-8">
+    <header className="fixed top-0 left-0 right-0 z-50 w-full h-24 bg-[#06070B] border-b border-zinc-800/50 overflow-x-auto scrollbar-hide">
+      <div className="h-full flex items-center justify-between px-8 min-w-max">
         {/* Left Section: Logo + Nav */}
-        <div className="flex items-center gap-2 min-w-0">
+        <div className="flex items-center gap-2 flex-shrink-0">
           <a href="#" className="flex-shrink-0">
             <AxiomLogo />
           </a>
-          <div className="relative max-w-[980px]">
+          {/* Spacer to prevent nav from hitting right section */}
+          <div className="min-w-[16px]" />
+          <div className="relative flex-shrink-0">
             {/* Fade gradient on left edge */}
             <div className="absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-[#06070B] via-[#06070B]/80 to-transparent pointer-events-none z-10" />
             <nav className="flex items-center gap-10 overflow-x-auto whitespace-nowrap scrollbar-hide px-16 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
@@ -90,7 +92,10 @@ export function Header() {
           </div>
         </div>
 
-        {/* Right Section */}
+        {/* Spacer */}
+        <div className="min-w-[24px] flex-shrink-0" />
+
+        {/* Right Section - never shrink */}
         <div className="flex items-center gap-4 flex-shrink-0">
           {/* Search Icon */}
           <button className="p-3 text-white hover:text-gray-300 transition-colors rounded-3xl bg-[#06070B] border border-zinc-700">

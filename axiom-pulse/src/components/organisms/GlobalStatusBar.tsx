@@ -123,8 +123,8 @@ function Divider() {
 
 export function GlobalStatusBar() {
     return (
-        <footer className="fixed bottom-0 left-0 w-full z-50 h-[54px] bg-black border-t border-gray-800">
-            <div className="h-full flex items-center px-9 text-sm font-medium gap-3">
+        <footer className="fixed bottom-0 left-0 w-full z-50 h-[54px] bg-black border-t border-gray-800 overflow-x-auto scrollbar-hide">
+            <div className="h-full flex items-center px-9 text-sm font-medium gap-3 min-w-max">
                 {/* PRESET 1 */}
                 <button className="flex items-center gap-2 bg-[#151C3C] text-[#526FFF] rounded px-3 py-1 hover:bg-[#1a2248] transition-colors">
                     <PresetIcon className="w-7 h-7" />
