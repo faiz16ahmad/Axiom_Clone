@@ -7,7 +7,6 @@ import { formatCompactNumber } from '@/lib/formatters';
 import {
   DevIcon,
   GlobeIcon,
-  TelegramIcon,
   SearchIcon,
   HoldersIcon,
   BuysIcon,

@@ -1,6 +1,6 @@
 'use client';
 
-import { User, ChefHat, Clock, Target, Users, Coins } from 'lucide-react';
+import { User, ChefHat, Target, Users, Coins } from 'lucide-react';
 import {
   Tooltip,
   TooltipContent,
