@@ -61,9 +61,196 @@ function Divider({ className }: { className?: string }) {
     return <div className={`w-[1px] h-[20px] bg-zinc-700 flex-shrink-0 ${className || ''}`} />;
 }
 
+// Market Lighthouse Tooltip
+function MarketLighthouseTooltip({ isOpen, buttonRef }: {
+    isOpen: boolean;
+    buttonRef: React.RefObject<HTMLButtonElement | null>;
+}) {
+    const [mounted, setMounted] = useState(false);
+    const [position, setPosition] = useState({ bottom: 0, left: 0 });
+    const [activeTimeframe, setActiveTimeframe] = useState<'5m' | '1h' | '6h' | '24h'>('24h');
+
+    useEffect(() => {
+        setMounted(true);
+    }, []);
+
+    useEffect(() => {
+        if (buttonRef.current && isOpen) {
+            const rect = buttonRef.current.getBoundingClientRect();
+            setPosition({
+                bottom: window.innerHeight - rect.top + 8,
+                left: rect.left,
+            });
+        }
+    }, [buttonRef, isOpen]);
+
+    if (!mounted || !isOpen) return null;
+
+    const timeframes: ('5m' | '1h' | '6h' | '24h')[] = ['5m', '1h', '6h', '24h'];
+
+    return createPortal(
+        <div
+            className="fixed z-[9999] bg-[#0d0d0d] border border-zinc-800 rounded-xl w-[440px] shadow-2xl p-4"
+            style={{ bottom: position.bottom, left: position.left }}
+        >
+            {/* Header */}
+            <div className="flex items-center justify-between mb-4">
+                <div className="flex items-center gap-2">
+                    <div className="w-3 h-3 bg-emerald-400 rounded-full" />
+                    <span className="text-white font-semibold">Market Lighthouse</span>
+                </div>
+                <div className="flex gap-2">
+                    {timeframes.map(tf => (
+                        <button
+                            key={tf}
+                            onClick={() => setActiveTimeframe(tf)}
+                            className={cn(
+                                'px-2 py-1 text-sm font-medium transition-colors',
+                                activeTimeframe === tf ? 'text-[#526FFF]' : 'text-gray-500 hover:text-gray-300'
+                            )}
+                        >
+                            {tf}
+                        </button>
+                    ))}
+                </div>
+            </div>
+
+            {/* Stats Row */}
+            <div className="grid grid-cols-2 gap-3 mb-4">
+                <div className="bg-zinc-900 border border-zinc-800 rounded-lg p-3">
+                    <div className="text-gray-400 text-xs mb-1">Total Trades</div>
+                    <div className="flex items-center justify-between">
+                        <div className="flex items-center gap-1">
+                            <span className="text-lg">📊</span>
+                            <span className="text-white font-semibold">9.6M</span>
+                        </div>
+                        <span className="text-red-400 text-sm">-7.106%</span>
+                    </div>
+                </div>
+                <div className="bg-zinc-900 border border-zinc-800 rounded-lg p-3">
+                    <div className="text-gray-400 text-xs mb-1">Traders</div>
+                    <div className="flex items-center justify-between">
+                        <div className="flex items-center gap-1">
+                            <span className="text-lg">👥</span>
+                            <span className="text-white font-semibold">370K</span>
+                        </div>
+                        <span className="text-emerald-400 text-sm">+1.035%</span>
+                    </div>
+                </div>
+            </div>
+
+            {/* 24h Volume */}
+            <div className="mb-4">
+                <div className="flex items-center justify-between mb-2">
+                    <span className="text-gray-400 text-sm">24h Vol</span>
+                    <div className="flex items-center gap-2">
+                        <span className="text-white font-semibold">$1.69B</span>
+                        <span className="text-red-400 text-sm">-14.80%</span>
+                    </div>
+                </div>
+                <div className="flex h-2 rounded-full overflow-hidden">
+                    <div className="bg-emerald-400 h-full" style={{ width: '40%' }} />
+                    <div className="bg-red-400 h-full" style={{ width: '60%' }} />
+                </div>
+                <div className="flex justify-between mt-1">
+                    <span className="text-emerald-400 text-xs">5.67M / $864M</span>
+                    <span className="text-red-400 text-xs">3.93M / $829M</span>
+                </div>
+            </div>
+
+            {/* Token Stats */}
+            <div className="mb-4">
+                <div className="flex items-center gap-2 mb-3">
+                    <span className="text-lg">🪙</span>
+                    <span className="text-white font-medium">Token Stats</span>
+                </div>
+                <div className="grid grid-cols-2 gap-3">
+                    <div className="bg-zinc-900 border border-zinc-800 rounded-lg p-3">
+                        <div className="text-gray-400 text-xs mb-1">Created</div>
+                        <div className="flex items-center justify-between">
+                            <div className="flex items-center gap-1">
+                                <span>✦</span>
+                                <span className="text-white font-semibold">31.1K</span>
+                            </div>
+                            <span className="text-red-400 text-sm">-10.21%</span>
+                        </div>
+                    </div>
+                    <div className="bg-zinc-900 border border-zinc-800 rounded-lg p-3">
+                        <div className="text-gray-400 text-xs mb-1">Migrations</div>
+                        <div className="flex items-center justify-between">
+                            <div className="flex items-center gap-1">
+                                <span>🔗</span>
+                                <span className="text-white font-semibold">158</span>
+                            </div>
+                            <span className="text-red-400 text-sm">-11.24%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {/* Top Launchpads */}
+            <div className="mb-4">
+                <div className="text-gray-400 text-sm mb-2">Top Launchpads</div>
+                <div className="flex gap-2">
+                    <div className="flex-1 bg-zinc-900 border border-zinc-800 rounded-full px-3 py-2 flex items-center gap-2">
+                        <img src="/images/pump.svg" alt="Pump" width="20" height="20" />
+                        <div>
+                            <div className="text-white text-sm font-medium">$189M</div>
+                            <div className="text-red-400 text-xs">-21.2%</div>
+                        </div>
+                    </div>
+                    <div className="flex-1 bg-zinc-900 border border-zinc-800 rounded-full px-3 py-2 flex items-center gap-2">
+                        <img src="/images/bonk.svg" alt="Bonk" width="20" height="20" />
+                        <div>
+                            <div className="text-white text-sm font-medium">$19.4M</div>
+                            <div className="text-red-400 text-xs">-3.76%</div>
+                        </div>
+                    </div>
+                    <div className="flex-1 bg-zinc-900 border border-zinc-800 rounded-full px-3 py-2 flex items-center gap-2">
+                        <img src="/images/launchlab.svg" alt="LaunchLab" width="20" height="20" />
+                        <div>
+                            <div className="text-white text-sm font-medium">$5.92M</div>
+                            <div className="text-red-400 text-xs">-5.98%</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {/* Top Protocols */}
+            <div>
+                <div className="text-gray-400 text-sm mb-2">Top Protocols</div>
+                <div className="flex gap-2">
+                    <div className="flex-1 bg-zinc-900 border border-zinc-800 rounded-full px-3 py-2 flex items-center gap-2">
+                        <div className="w-5 h-5 bg-gradient-to-r from-orange-500 to-red-500 rounded-full" />
+                        <div>
+                            <div className="text-white text-sm font-medium">$547M</div>
+                            <div className="text-red-400 text-xs">-9.85%</div>
+                        </div>
+                    </div>
+                    <div className="flex-1 bg-zinc-900 border border-zinc-800 rounded-full px-3 py-2 flex items-center gap-2">
+                        <div className="w-5 h-5 bg-gradient-to-r from-orange-500 to-red-500 rounded-full" />
+                        <div>
+                            <div className="text-white text-sm font-medium">$127M</div>
+                            <div className="text-red-400 text-xs">-19.8%</div>
+                        </div>
+                    </div>
+                    <div className="flex-1 bg-zinc-900 border border-zinc-800 rounded-full px-3 py-2 flex items-center gap-2">
+                        <img src="/images/launchlab.svg" alt="Protocol" width="20" height="20" />
+                        <div>
+                            <div className="text-white text-sm font-medium">$69M</div>
+                            <div className="text-red-400 text-xs">-29.8%</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>,
+        document.body
+    );
+}
+
 // Display Settings Modal
-function DisplaySettingsModal({ isOpen, onClose, buttonRef }: { 
-    isOpen: boolean; 
+function DisplaySettingsModal({ isOpen, onClose, buttonRef }: {
+    isOpen: boolean;
     onClose: () => void;
     buttonRef: React.RefObject<HTMLButtonElement | null>;
 }) {
@@ -109,8 +296,8 @@ function DisplaySettingsModal({ isOpen, onClose, buttonRef }: {
                             onClick={() => setMetricsSize('Small')}
                             className={cn(
                                 'flex-1 flex flex-col items-center justify-center py-4 rounded-lg border transition-colors',
-                                metricsSize === 'Small' 
-                                    ? 'border-zinc-600 bg-zinc-900' 
+                                metricsSize === 'Small'
+                                    ? 'border-zinc-600 bg-zinc-900'
                                     : 'border-zinc-800 hover:border-zinc-700'
                             )}
                         >
@@ -121,8 +308,8 @@ function DisplaySettingsModal({ isOpen, onClose, buttonRef }: {
                             onClick={() => setMetricsSize('Large')}
                             className={cn(
                                 'flex-1 flex flex-col items-center justify-center py-4 rounded-lg border transition-colors',
-                                metricsSize === 'Large' 
-                                    ? 'border-zinc-600 bg-zinc-800' 
+                                metricsSize === 'Large'
+                                    ? 'border-zinc-600 bg-zinc-800'
                                     : 'border-zinc-800 hover:border-zinc-700'
                             )}
                         >
@@ -142,8 +329,8 @@ function DisplaySettingsModal({ isOpen, onClose, buttonRef }: {
                                 onClick={() => setQuickBuySize(size)}
                                 className={cn(
                                     'flex-1 flex flex-col items-center justify-center py-3 rounded-lg border transition-colors',
-                                    quickBuySize === size 
-                                        ? 'border-[#526FFF] bg-[#526FFF]/20' 
+                                    quickBuySize === size
+                                        ? 'border-[#526FFF] bg-[#526FFF]/20'
                                         : 'border-zinc-800 hover:border-zinc-700'
                                 )}
                             >
@@ -179,8 +366,8 @@ function DisplaySettingsModal({ isOpen, onClose, buttonRef }: {
                                 onClick={() => setActiveTab(tab)}
                                 className={cn(
                                     'px-4 py-2 rounded-full text-sm font-medium transition-colors',
-                                    activeTab === tab 
-                                        ? 'bg-zinc-700 text-white' 
+                                    activeTab === tab
+                                        ? 'bg-zinc-700 text-white'
                                         : 'text-gray-400 hover:text-white'
                                 )}
                             >
@@ -209,7 +396,9 @@ function DisplaySettingsModal({ isOpen, onClose, buttonRef }: {
 
 export function GlobalStatusBar() {
     const [showDisplaySettings, setShowDisplaySettings] = useState(false);
+    const [showMarketLighthouse, setShowMarketLighthouse] = useState(false);
     const displayButtonRef = useRef<HTMLButtonElement>(null);
+    const marketLighthouseRef = useRef<HTMLButtonElement>(null);
     return (
         <footer className="fixed bottom-0 left-0 w-full z-50 h-[35px] bg-[#101114] border-t border-zinc-800">
             <div className="flex overflow-x-auto overflow-y-hidden [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] flex-row justify-between w-full h-full px-[24px] gap-[16px] items-center min-w-0">
@@ -280,16 +469,27 @@ export function GlobalStatusBar() {
                     <Divider className="hidden lg:flex" />
 
                     {/* Platform Icons Pill */}
-                    <button type="button" className="hidden lg:flex flex-row h-[24px] px-[0px] gap-[4px] justify-start items-center hover:brightness-110 transition-all duration-125 ease-in-out">
-                        <div className="relative">
-                            <div className="relative flex flex-row h-[20px] px-[4px] gap-[4px] justify-start items-center rounded-full opacity-30" style={{ background: 'linear-gradient(to right, rgb(83, 211, 142) 0%, rgb(231, 140, 25) 50%, rgb(75, 188, 207) 100%)', width: '40px' }}></div>
-                            <div className="absolute inset-[2px] bg-[#101114] rounded-full flex gap-[0px] justify-center items-center">
-                                <img alt="Pump" width="11" height="11" src="/images/pump.svg" />
-                                <img alt="Bonk" width="11" height="11" src="/images/bonk.svg" />
-                                <img alt="LaunchLab" width="11" height="11" src="/images/launchlab.svg" />
+                    <div
+                        className="relative hidden lg:block"
+                        onMouseEnter={() => setShowMarketLighthouse(true)}
+                        onMouseLeave={() => setShowMarketLighthouse(false)}
+                    >
+                        <button
+                            ref={marketLighthouseRef}
+                            type="button"
+                            className="flex flex-row h-[24px] px-[0px] gap-[4px] justify-start items-center hover:brightness-110 transition-all duration-125 ease-in-out"
+                        >
+                            <div className="relative">
+                                <div className="relative flex flex-row h-[20px] px-[4px] gap-[4px] justify-start items-center rounded-full opacity-30" style={{ background: 'linear-gradient(to right, rgb(83, 211, 142) 0%, rgb(231, 140, 25) 50%, rgb(75, 188, 207) 100%)', width: '40px' }}></div>
+                                <div className="absolute inset-[2px] bg-[#101114] rounded-full flex gap-[0px] justify-center items-center">
+                                    <img alt="Pump" width="11" height="11" src="/images/pump.svg" />
+                                    <img alt="Bonk" width="11" height="11" src="/images/bonk.svg" />
+                                    <img alt="LaunchLab" width="11" height="11" src="/images/launchlab.svg" />
+                                </div>
                             </div>
-                        </div>
-                    </button>
+                        </button>
+                        <MarketLighthouseTooltip isOpen={showMarketLighthouse} buttonRef={marketLighthouseRef} />
+                    </div>
 
                     <Divider className="hidden lg:flex" />
 
@@ -366,16 +566,16 @@ export function GlobalStatusBar() {
                         <button className="text-[12px] hover:bg-zinc-700/40 flex items-center gap-1 justify-center w-[24px] h-[24px] rounded-[4px] transition-colors duration-150 ease-in-out">
                             <Bell className="w-[16px] h-[16px]" />
                         </button>
-                        <button 
+                        <button
                             ref={displayButtonRef}
                             onClick={() => setShowDisplaySettings(!showDisplaySettings)}
                             className="text-[12px] hover:bg-zinc-700/40 flex items-center gap-1 justify-center w-[24px] h-[24px] rounded-[4px] transition-colors duration-150 ease-in-out"
                         >
                             <Palette className="w-[16px] h-[16px]" />
                         </button>
-                        <DisplaySettingsModal 
-                            isOpen={showDisplaySettings} 
-                            onClose={() => setShowDisplaySettings(false)} 
+                        <DisplaySettingsModal
+                            isOpen={showDisplaySettings}
+                            onClose={() => setShowDisplaySettings(false)}
                             buttonRef={displayButtonRef}
                         />
 
