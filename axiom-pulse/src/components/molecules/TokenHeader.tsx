@@ -13,6 +13,7 @@ import {
   TrophyIcon,
 } from '@/components/atoms/TokenIcons';
 import { Crown } from 'lucide-react';
+import { ProfileHoverCard } from '@/components/molecules/ProfileHoverCard';
 
 interface TokenHeaderProps {
   token: Token;
@@ -49,7 +50,19 @@ export function TokenHeader({ token }: TokenHeaderProps) {
         
         {/* Social icons */}
         <div className="flex flex-row flex-shrink-0 gap-[8px] justify-start items-center">
-          <DevIcon className="w-[16px] h-[16px] text-blue-400 cursor-pointer hover:text-blue-300 transition-colors duration-[125ms]" />
+          <ProfileHoverCard
+            name={token.name}
+            symbol={token.symbol}
+            avatarUrl={token.avatarUrl}
+            bannerUrl={token.bannerUrl}
+            twitterHandle={token.twitterHandle}
+            twitterBio={token.twitterBio}
+            twitterFollowers={token.twitterFollowers}
+            twitterFollowing={token.twitterFollowing}
+            twitterJoinedDate={token.twitterJoinedDate}
+          >
+            <DevIcon className="w-[16px] h-[16px] text-blue-400 cursor-pointer hover:text-blue-300 transition-colors duration-[125ms]" />
+          </ProfileHoverCard>
           <GlobeIcon className="w-[16px] h-[16px] text-gray-400 cursor-pointer hover:text-blue-400 transition-colors duration-[125ms]" />
           <SearchIcon className="w-[16px] h-[16px] text-gray-400 cursor-pointer hover:text-blue-400 transition-colors duration-[125ms]" />
         </div>

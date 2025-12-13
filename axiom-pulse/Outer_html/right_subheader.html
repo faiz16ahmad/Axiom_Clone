@@ -1,0 +1,166 @@
+<div class="flex flex-row gap-4 items-center">
+  <span class="contents"
+    ><button
+      type="button"
+      class="flex flex-row w-[24px] h-[24px] justify-center items-center"
+    >
+      <i
+        class="ri-question-line text-[20px] text-textTertiary hover:text-textSecondary transition-all duration-150 ease-in-out"
+      ></i></button
+  ></span>
+  <div class="relative flex">
+    <div data-state="closed" class="w-full">
+      <button
+        class="bg-primaryStroke flex flex-row h-[32px] px-[12px] gap-[8px] justify-center items-center rounded-full hover:bg-secondaryStroke/80 transition-color duration-[150ms] ease-in-out"
+      >
+        <div class="relative">
+          <i class="ri-list-check text-[18px] text-textPrimary"></i>
+        </div>
+        <div
+          class="whitespace-nowrap flex flex-row gap-[4px] justify-start items-center"
+        >
+          <span class="text-[14px] font-bold text-textPrimary">Display</span>
+        </div>
+        <i class="ri-arrow-down-s-line text-[18px] text-textPrimary"></i>
+      </button>
+    </div>
+  </div>
+  <span class="contents"
+    ><button
+      type="button"
+      class="-mr-[5px] group flex items-center justify-center w-8 h-8 bg-background hover:bg-primaryStroke/60 transition-colors relative rounded-full"
+    >
+      <i
+        class="icon-bookmark-x text-textSecondary group-hover:text-textPrimary"
+        style="font-size: 16px"
+      ></i></button></span
+  ><span class="contents"
+    ><button
+      type="button"
+      class="-mr-[5px] group flex items-center justify-center w-8 h-8 relative rounded-full hover:bg-primaryStroke/60 bg-transparent transition-all duration-[150ms] ease-[cubic-bezier(0.4,0,0.2,1)]"
+    >
+      <i
+        class="ri-keyboard-box-line text-[16px] text-textSecondary group-hover:text-textPrimary"
+      ></i></button></span
+  ><span class="contents"
+    ><button
+      type="button"
+      class="-mr-[5px] group flex items-center justify-center w-8 h-8 bg-background hover:bg-primaryStroke/60 transition-colors relative rounded-full"
+    >
+      <i
+        class="ri-volume-up-line text-[16px] text-textSecondary group-hover:text-textPrimary transition-colors duration-150 ease-in-out"
+      ></i></button></span
+  ><span class="contents"
+    ><button
+      type="button"
+      class="group flex items-center justify-center w-8 h-8 bg-background hover:bg-primaryStroke/60 transition-colors relative rounded-full"
+    >
+      <i
+        class="ri-crosshair-2-line text-textSecondary group-hover:text-textPrimary text-[16px]"
+      ></i
+      ><i
+        class="ri-settings-3-line text-[12px] text-textSecondary group-hover:text-textPrimary absolute bottom-0 right-0"
+      ></i></button
+  ></span>
+  <div class="relative flex">
+    <div data-state="closed" class="w-full">
+      <span class="contents"
+        ><button
+          type="button"
+          class="flex border border-primaryStroke group flex-row p-[4px] pr-[12px] pl-[12px] h-[32px] gap-[8px] justify-center items-center hover:bg-primaryStroke/35 transition-colors duration-125 cursor-pointer rounded-full rounded-full"
+        >
+          <div class="flex flex-row gap-[4px] justify-center items-center">
+            <i
+              class="ri-wallet-line text-[18px] text-textSecondary group-hover:text-textPrimary transition-colors duration-150 ease-in-out cursor-pointer"
+            ></i
+            ><span
+              class="text-[14px] text-textSecondary font-medium group-hover:text-textPrimary transition-colors duration-150 ease-in-out cursor-pointer"
+              >1</span
+            >
+          </div>
+          <div class="flex flex-row gap-[4px] justify-center items-center">
+            <img
+              alt="SOL"
+              loading="lazy"
+              width="16"
+              height="16"
+              decoding="async"
+              data-nimg="1"
+              src="/images/sol-fill.svg"
+              style="color: transparent"
+            /><span
+              class="text-[14px] text-textPrimary font-medium group-hover:text-textPrimary transition-colors duration-150 ease-in-out cursor-pointer"
+              ><span>0</span></span
+            >
+          </div>
+          <i
+            class="ri-arrow-down-s-line text-[18px] text-textSecondary group-hover:text-textPrimary transition-colors duration-150 ease-in-out cursor-pointer"
+          ></i></button
+      ></span>
+    </div>
+  </div>
+  <div class="hidden sm:block lg:hidden">
+    <div class="flex flex-row h-full gap-[8px] items-center justify-start">
+      <div
+        class="overflow-hidden whitespace-nowrap border-primaryStroke font-normal border-[1px] flex flex-row min-w-[216px] h-[32px] pl-[12px] gap-[8px] justify-start items-center rounded-full hover:bg-primaryStroke/35 transition-colors duration-125 cursor-pointer"
+      >
+        <span class="flex text-[14px] text-textTertiary font-medium"
+          ><i class="ri-flashlight-fill"></i
+        ></span>
+        <div class="flex flex-1 sm:max-w-[60px] min-w-[0px]">
+          <input
+            placeholder="0.0"
+            class="text-[14px] w-full text-textPrimary placeholder:text-textTertiary font-medium outline-none bg-transparent text-left"
+            type="text"
+            value="0"
+          />
+        </div>
+        <img
+          alt="SOL"
+          loading="lazy"
+          width="16"
+          height="16"
+          decoding="async"
+          data-nimg="1"
+          src="/images/sol-fill.svg"
+          style="color: transparent"
+        />
+        <div
+          class="border-primaryStroke border-l-[1px] flex h-full pr-[3px] pl-[3px] gap-[6px] justify-center items-center cursor-pointer"
+        >
+          <span class="contents"
+            ><button
+              type="button"
+              class="group w-[24px] h-[24px] flex flex-row gap-[4px] rounded-[4px] justify-center items-center transition-colors ease-in-out duration-125 hover:bg-primaryStroke/60"
+            >
+              <span
+                class="text-[13px] gap-[4px] flex flex-row justify-center items-center font-medium transition-colors ease-in-out duration-125 text-textSecondary"
+                >P1</span
+              >
+            </button></span
+          ><span class="contents"
+            ><button
+              type="button"
+              class="group w-[24px] h-[24px] flex flex-row gap-[4px] rounded-[4px] justify-center items-center transition-colors ease-in-out duration-125 hover:bg-primaryStroke/60"
+            >
+              <span
+                class="text-[13px] gap-[4px] flex flex-row justify-center items-center font-medium transition-colors ease-in-out duration-125 text-textSecondary"
+                >P2</span
+              >
+            </button></span
+          ><span class="contents"
+            ><button
+              type="button"
+              class="group w-[24px] h-[24px] flex flex-row gap-[4px] rounded-r-full rounded-l-[4px] justify-center items-center transition-colors ease-in-out duration-125 hover:bg-primaryBlueHover/10"
+            >
+              <span
+                class="text-[13px] gap-[4px] flex flex-row justify-center items-center font-medium transition-colors ease-in-out duration-125 text-primaryBlue hover:text-primaryBlueHover"
+                >P3</span
+              >
+            </button></span
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

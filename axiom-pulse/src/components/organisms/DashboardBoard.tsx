@@ -12,7 +12,7 @@ function DashboardBoardComponent({ tokens }: DashboardBoardProps) {
   return (
     <div className="bg-[#06070B] px-1 lg:px-[1%] xl:px-[2%]">
       {/* Unified terminal container - flexible height, scrollable columns */}
-      <div className="h-[calc(100vh-120px)] lg:h-[calc(100vh-140px)] bg-[#101114] rounded-sm border border-zinc-800 overflow-hidden">
+      <div className="h-[calc(92vh-120px)] lg:h-[calc(92vh-140px)] bg-[#101114] rounded-sm border border-zinc-800 overflow-hidden">
         {/* Desktop: 3-column flex with equal distribution, Mobile: vertical stack */}
         <div className="h-full flex flex-col md:flex-row gap-0">
           {/* New Pairs - flex-1 with min-width for squishing */}

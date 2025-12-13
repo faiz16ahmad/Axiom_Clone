@@ -7,7 +7,6 @@ import { TokenAvatar, AvatarBorderColor } from '@/components/atoms/TokenAvatar';
 import { TokenHeader } from '@/components/molecules/TokenHeader';
 import { TokenMetricsGrid } from '@/components/molecules/TokenMetricsGrid';
 import { TokenFooterPills } from '@/components/molecules/TokenFooterPills';
-import { ProfileHoverCard } from '@/components/molecules/ProfileHoverCard';
 import { cn } from '@/lib/utils';
 
 interface TokenCardProps {
@@ -27,7 +26,7 @@ function TokenCardComponent({ token }: TokenCardProps) {
     <div
       className={cn(
         'group relative cursor-pointer',
-        'bg-[#101114] border-b border-zinc-700/50 overflow-hidden',
+        'bg-[#101114] border-b border-zinc-700/50 overflow-visible',
         'h-[142px] min-h-[142px] sm:h-[116px] sm:min-h-[116px] md:h-[142px] md:min-h-[142px] lg:h-[142px] lg:min-h-[142px] xl:h-[116px] xl:min-h-[116px]',
         'hover:bg-zinc-800/50 transition-colors duration-200',
         'flex flex-col w-full justify-start items-center',
@@ -78,24 +77,12 @@ function TokenCardComponent({ token }: TokenCardProps) {
         {/* LEFT: Avatar + Contract */}
         <div className="flex flex-col items-center gap-[4px]">
           <div className="relative w-[74px] h-[74px] justify-center items-center">
-            <ProfileHoverCard
-              name={token.name}
-              symbol={token.symbol}
-              avatarUrl={token.avatarUrl}
-              bannerUrl={token.bannerUrl}
-              twitterHandle={token.twitterHandle}
-              twitterBio={token.twitterBio}
-              twitterFollowers={token.twitterFollowers}
-              twitterFollowing={token.twitterFollowing}
-              twitterJoinedDate={token.twitterJoinedDate}
-            >
-              <TokenAvatar
-                src={token.avatarUrl}
-                alt={token.name}
-                showBadge={true}
-                borderColor={borderColor}
-              />
-            </ProfileHoverCard>
+            <TokenAvatar
+              src={token.avatarUrl}
+              alt={token.name}
+              showBadge={true}
+              borderColor={borderColor}
+            />
           </div>
           <span className="text-[12px] text-gray-400 font-medium text-center max-w-[74px]">
             <button className="text-gray-400 hover:text-blue-400 transition-colors duration-[125ms] flex items-center gap-[4px]">

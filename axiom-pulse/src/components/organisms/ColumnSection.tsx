@@ -50,7 +50,7 @@ function ColumnSectionComponent({ title, tokens, category }: ColumnSectionProps)
       <ColumnHeader title={title} count={sortedTokens.length} />
       
       {/* Token List - use content-visibility for better paint performance */}
-      <div className="flex-1 overflow-y-auto p-1 space-y-1" style={{ contentVisibility: 'auto' }}>
+      <div className="flex-1 overflow-y-auto p-1 space-y-1" style={{ contentVisibility: 'auto', overflow: 'visible auto' }}>
         {visibleTokens.map((token) => (
           <TokenCard key={token.id} token={token} />
         ))}

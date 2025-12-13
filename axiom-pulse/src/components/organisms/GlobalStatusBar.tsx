@@ -2,21 +2,23 @@
 
 import {
     Settings,
-    FolderOpen,
     ChevronDown,
     FileText,
     Compass,
     Activity,
     BarChart3,
-    Square,
     Bell,
     Palette,
+    Wallet,
+    Layout,
+    Fuel,
+    Coins,
 } from 'lucide-react';
-import { SolanaIcon } from '@/components/atoms/SolanaIcon';
+// Using images from /images folder
 
 function NotificationDot() {
     return (
-        <span className="absolute -top-0.5 -right-0.5 w-1.5 h-1.5 bg-pink-500 rounded-full" />
+        <div className="border border-[#101114] absolute -top-[1px] -right-[3px] w-[7px] h-[7px] bg-red-500 rounded-full" />
     );
 }
 
@@ -36,224 +38,203 @@ function DiscordIcon({ className }: { className?: string }) {
     );
 }
 
-// Custom Wallet Icon
-function WalletIcon({ className }: { className?: string }) {
-    return (
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className={className}>
-            {/* Outer wallet rectangle */}
-            <rect x="2" y="4" width="18" height="16" rx="2" />
-            {/* Card slot on right side */}
-            <path d="M22 10V14" strokeLinecap="round" />
-            {/* Inner card/pocket with rounded left side */}
-            <path d="M14 10H18V14H14C12.9 14 12 13.1 12 12C12 10.9 12.9 10 14 10Z" />
-            {/* Small rectangle inside pocket */}
-            <rect x="15" y="11" width="2" height="2" fill="currentColor" stroke="none" />
-        </svg>
-    );
-}
-
-// Capsule/Pill Icon (green and white, tilted)
-function CapsuleIcon({ className }: { className?: string }) {
-    return (
-        <svg viewBox="0 0 24 24" className={className}>
-            <g transform="rotate(30 12 12)">
-                {/* Green bottom half */}
-                <ellipse cx="12" cy="12" rx="5" ry="9" fill="#10B981" />
-                {/* White top half */}
-                <path d="M7 12 A5 9 0 0 1 17 12 L7 12" fill="#fff" />
-            </g>
-        </svg>
-    );
-}
-
-// Shiba Dog Icon
-function ShibaIcon({ className }: { className?: string }) {
-    return (
-        <svg viewBox="0 0 24 24" className={className}>
-            {/* Ears */}
-            <path d="M6 8L4 3L9 6Z" fill="#F97316" />
-            <path d="M18 8L20 3L15 6Z" fill="#F97316" />
-            {/* Alert marks */}
-            <path d="M10 2L10.5 4M12 1L12 3.5M14 2L13.5 4" stroke="#EF4444" strokeWidth="1.5" strokeLinecap="round" />
-            {/* Face */}
-            <ellipse cx="12" cy="13" rx="8" ry="7" fill="#F97316" />
-            {/* White face area */}
-            <ellipse cx="12" cy="15" rx="5" ry="5" fill="#fff" />
-            {/* Eyes */}
-            <circle cx="9" cy="12" r="1" fill="#000" />
-            <circle cx="15" cy="12" r="1" fill="#000" />
-            {/* Nose */}
-            <ellipse cx="12" cy="14" rx="1.5" ry="1" fill="#000" />
-            {/* Mouth */}
-            <path d="M10 16Q12 18 14 16" stroke="#000" strokeWidth="0.5" fill="none" />
-        </svg>
-    );
-}
-
-// Hexagon R Icon (Raydium style)
-function HexagonRIcon({ className }: { className?: string }) {
-    return (
-        <svg viewBox="0 0 24 24" className={className}>
-            <path d="M12 2L3 7v10l9 5 9-5V7l-9-5z" stroke="#06B6D4" strokeWidth="1.5" fill="none" />
-            <circle cx="18" cy="6" r="2" fill="#06B6D4" />
-            <text x="12" y="15" textAnchor="middle" fill="#06B6D4" fontSize="9" fontWeight="bold" fontFamily="Arial">R</text>
-        </svg>
-    );
-}
-
-// Preset Icon (lines with gear)
 function PresetIcon({ className }: { className?: string }) {
     return (
         <svg viewBox="0 0 24 24" fill="currentColor" className={className}>
-            {/* Horizontal lines */}
-            <rect x="1" y="3" width="13" height="2.5" rx="1" />
-            <rect x="1" y="9" width="8" height="2.5" rx="1" />
-            <rect x="1" y="15" width="5" height="2.5" rx="1" />
-            {/* Gear cog - using standard Material Design gear icon path */}
-            <g transform="translate(11, 9) scale(0.55)">
-                <path d="M19.14 12.94c.04-.31.06-.63.06-.94 0-.31-.02-.63-.06-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.04.31-.06.63-.06.94s.02.63.06.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z" />
-            </g>
+            <rect x="3" y="4" width="18" height="2" rx="1" />
+            <rect x="3" y="11" width="18" height="2" rx="1" />
+            <rect x="3" y="18" width="18" height="2" rx="1" />
+            <circle cx="8" cy="5" r="3" fill="currentColor" stroke="#101114" strokeWidth="1" />
+            <circle cx="16" cy="12" r="3" fill="currentColor" stroke="#101114" strokeWidth="1" />
+            <circle cx="10" cy="19" r="3" fill="currentColor" stroke="#101114" strokeWidth="1" />
         </svg>
     );
 }
 
-function Divider() {
-    return <div className="h-5 w-[1px] bg-gray-700 mx-1 flex-shrink-0" />;
+function Divider({ className }: { className?: string }) {
+    return <div className={`w-[1px] h-[20px] bg-zinc-700 flex-shrink-0 ${className || ''}`} />;
 }
 
 export function GlobalStatusBar() {
     return (
-        <footer className="fixed bottom-0 left-0 w-full z-50 h-[38px] lg:h-[42px] xl:h-[48px] bg-black border-t border-gray-800 overflow-x-auto scrollbar-hide max-w-[1920px] mx-auto">
-            <div className="h-full flex items-center px-2 lg:px-4 xl:px-6 text-xs font-medium gap-1 lg:gap-2 xl:gap-3">
-                {/* PRESET 1 */}
-                <button className="flex items-center gap-1.5 bg-[#151C3C] text-[#526FFF] rounded px-2 py-0.5 hover:bg-[#1a2248] transition-colors flex-shrink-0">
-                    <PresetIcon className="w-5 h-5" />
-                    <span className="text-sm font-semibold">PRESET 1</span>
-                </button>
+        <footer className="fixed bottom-0 left-0 w-full z-50 h-[35px] bg-[#101114] border-t border-zinc-800">
+            <div className="flex overflow-x-auto overflow-y-hidden [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] flex-row justify-between w-full h-full px-[24px] gap-[16px] items-center min-w-0">
+                {/* LEFT SECTION */}
+                <div className="flex flex-row flex-shrink-0 gap-[8px] justify-start items-center">
+                    {/* PRESET 1 */}
+                    <button className="text-[#526FFF] bg-[#526FFF]/20 flex flex-row h-[24px] px-[8px] gap-[4px] justify-start items-center rounded-[4px] hover:bg-[#526FFF]/25 transition-colors duration-150 ease-in-out cursor-pointer">
+                        <PresetIcon className="w-[16px] h-[16px]" />
+                        <span className="text-[12px] font-semibold">PRESET 1</span>
+                    </button>
 
-                {/* Layout 1=0 */}
-                <div className="flex items-center gap-1 text-gray-300 rounded-full border border-[#22242D] bg-transparent px-2 py-0.5 flex-shrink-0">
-                    <FolderOpen className="w-4 h-4" />
-                    <span className="text-xs">1</span>
-                    <SolanaIcon size="sm" />
-                    <span className="text-xs">0</span>
-                    <ChevronDown className="w-4 h-4" />
-                </div>
+                    {/* Wallet Selector */}
+                    <button className="group/wallets border border-zinc-700 flex flex-row h-[24px] pl-[8px] pr-[5px] gap-[6px] justify-start items-center rounded-full hover:bg-zinc-700/60 transition-colors duration-125 ease-in-out cursor-pointer">
+                        <div className="flex flex-row gap-[4px] justify-start items-center">
+                            <Wallet className="w-[14px] h-[14px] text-gray-500 group-hover/wallets:text-gray-400 transition-colors duration-125 ease-in-out" />
+                            <span className="text-[12px] group-hover/wallets:text-gray-300 font-medium text-gray-400 transition-colors duration-125 ease-in-out">1</span>
+                        </div>
+                        <div className="flex flex-row gap-[4px] justify-start items-center">
+                            <img alt="SOL" width="14" height="14" src="/images/sol-fill.svg" />
+                            <span className="text-[12px] font-medium text-gray-400">0</span>
+                        </div>
+                        <ChevronDown className="w-[14px] h-[14px] text-gray-400 group-hover:text-white transition-colors duration-150 ease-in-out cursor-pointer" />
+                    </button>
 
-                <Divider />
+                    <Divider />
 
-                {/* Settings Icon */}
-                <button aria-label="Settings" className="text-[#777A8C] hover:text-white transition-colors flex-shrink-0 p-1">
-                    <Settings className="w-4 h-4" />
-                </button>
+                    {/* Settings + Nav Items */}
+                    <div className="flex flex-row gap-[8px] justify-start items-center">
+                        <button className="-mr-[4px] min-w-[24px] min-h-[24px] flex items-center justify-center text-gray-500 hover:text-gray-400 hover:bg-zinc-700/40 transition-colors duration-125 ease-in-out rounded-[4px]">
+                            <Settings className="w-[14px] h-[14px]" />
+                        </button>
 
-                {/* Wallet */}
-                <button className="relative flex items-center gap-1 hover:text-white transition-colors px-1 flex-shrink-0">
-                    <WalletIcon className="w-4 h-4 text-[#777A8C]" />
-                    <span className="text-[#C8C9D1] text-xs">Wallet</span>
-                    <NotificationDot />
-                </button>
+                        {/* Wallet Nav */}
+                        <button className="group relative flex flex-row gap-[4px] h-[24px] px-[4px] justify-start items-center rounded-[4px] cursor-pointer hover:bg-zinc-700/60">
+                            <NotificationDot />
+                            <Wallet className="w-[16px] h-[16px] text-gray-500 hover:text-gray-400 transition-colors group-hover:text-gray-400" />
+                            <span className="text-gray-400 text-[12px] leading-[16px] font-medium text-nowrap">Wallet</span>
+                        </button>
 
-                {/* Twitter */}
-                <button className="flex items-center gap-1 hover:text-white transition-colors px-1 flex-shrink-0">
-                    <TwitterIcon className="w-4 h-4 text-[#777A8C]" />
-                    <span className="text-[#C8C9D1] text-xs">Twitter</span>
-                </button>
+                        {/* Twitter Nav */}
+                        <button className="group relative flex flex-row gap-[4px] h-[24px] px-[4px] justify-start items-center rounded-[4px] cursor-pointer hover:bg-zinc-700/60">
+                            <NotificationDot />
+                            <TwitterIcon className="w-[16px] h-[16px] text-gray-500 hover:text-gray-400 transition-colors group-hover:text-gray-400" />
+                            <span className="text-gray-400 text-[12px] leading-[16px] font-medium text-nowrap">Twitter</span>
+                        </button>
 
-                {/* Discover */}
-                <button className="relative flex items-center gap-1 hover:text-white transition-colors px-1 flex-shrink-0">
-                    <Compass className="w-4 h-4 text-[#777A8C]" />
-                    <span className="text-[#C8C9D1] text-xs">Discover</span>
-                    <NotificationDot />
-                </button>
+                        {/* Discover Nav */}
+                        <button className="group relative flex flex-row gap-[4px] h-[24px] px-[4px] justify-start items-center rounded-[4px] cursor-pointer hover:bg-zinc-700/60">
+                            <NotificationDot />
+                            <Compass className="w-[16px] h-[16px] text-gray-500 hover:text-gray-400 transition-colors group-hover:text-gray-400" />
+                            <span className="text-gray-400 text-[12px] leading-[16px] font-medium text-nowrap">Discover</span>
+                        </button>
 
-                {/* Pulse */}
-                <button className="relative flex items-center gap-1 hover:text-white transition-colors px-1 flex-shrink-0">
-                    <Activity className="w-4 h-4 text-[#777A8C]" />
-                    <span className="text-[#C8C9D1] text-xs">Pulse</span>
-                    <NotificationDot />
-                </button>
+                        {/* Pulse Nav */}
+                        <button className="group relative flex flex-row gap-[4px] h-[24px] px-[4px] justify-start items-center rounded-[4px] cursor-pointer hover:bg-zinc-700/60">
+                            <NotificationDot />
+                            <Activity className="w-[16px] h-[16px] text-gray-500 hover:text-gray-400 transition-colors group-hover:text-gray-400" />
+                            <span className="text-gray-400 text-[12px] leading-[16px] font-medium text-nowrap">Pulse</span>
+                        </button>
 
-                {/* PnL */}
-                <button className="flex items-center gap-1 hover:text-white transition-colors px-1 flex-shrink-0">
-                    <BarChart3 className="w-4 h-4 text-[#777A8C]" />
-                    <span className="text-[#C8C9D1] text-xs">PnL</span>
-                </button>
-
-                <Divider />
-
-                {/* Spacer */}
-                {/* <div className="flex-1" /> */}
-
-                {/* 3-Icon Pill with gradient border */}
-                <div className="relative flex items-center rounded-full px-2 py-0.5 flex-shrink-0">
-                    {/* Gradient border */}
-                    <div className="absolute inset-0 rounded-full bg-gradient-to-r from-[#1E4431] via-[#473011] to-[#1E3D42] p-[1px]">
-                        <div className="w-full h-full rounded-full bg-[#18181B]" />
+                        {/* PnL Nav */}
+                        <button className="group relative flex flex-row gap-[4px] h-[24px] px-[4px] justify-start items-center rounded-[4px] cursor-pointer hover:bg-zinc-700/60">
+                            <BarChart3 className="w-[16px] h-[16px] text-gray-500 hover:text-gray-400 transition-colors group-hover:text-gray-400" />
+                            <span className="text-gray-400 text-[12px] leading-[16px] font-medium text-nowrap">PnL</span>
+                        </button>
                     </div>
-                    {/* Icons */}
-                    <div className="relative flex items-center gap-0">
-                        <CapsuleIcon className="w-4 h-4" />
-                        <ShibaIcon className="w-4 h-4" />
-                        <HexagonRIcon className="w-4 h-4" />
+
+                    <Divider className="hidden lg:flex" />
+
+                    {/* Platform Icons Pill */}
+                    <button type="button" className="hidden lg:flex flex-row h-[24px] px-[0px] gap-[4px] justify-start items-center hover:brightness-110 transition-all duration-125 ease-in-out">
+                        <div className="relative">
+                            <div className="relative flex flex-row h-[20px] px-[4px] gap-[4px] justify-start items-center rounded-full opacity-30" style={{ background: 'linear-gradient(to right, rgb(83, 211, 142) 0%, rgb(231, 140, 25) 50%, rgb(75, 188, 207) 100%)', width: '40px' }}></div>
+                            <div className="absolute inset-[2px] bg-[#101114] rounded-full flex gap-[0px] justify-center items-center">
+                                <img alt="Pump" width="11" height="11" src="/images/pump.svg" />
+                                <img alt="Bonk" width="11" height="11" src="/images/bonk.svg" />
+                                <img alt="LaunchLab" width="11" height="11" src="/images/launchlab.svg" />
+                            </div>
+                        </div>
+                    </button>
+
+                    <Divider className="hidden lg:flex" />
+
+                    {/* Crypto Prices */}
+                    <div className="flex flex-1 flex-row w-full gap-[8px] justify-start items-center">
+                        <button className="text-[#F7931A] hidden 2xl:flex flex-row flex-shrink-0 h-[24px] px-[0px] gap-[4px] justify-start items-center hover:brightness-110 transition-all duration-125 ease-in-out">
+                            <img alt="BTC" width="16" height="16" src="/images/btc-fill.svg" />
+                            <span className="text-[12px] font-normal">$90.6K</span>
+                        </button>
+                        <button className="text-[#497493] hidden 2xl:flex flex-row flex-shrink-0 h-[24px] px-[0px] gap-[2px] justify-start items-center hover:brightness-110 transition-all duration-125 ease-in-out">
+                            <img alt="ETH" width="16" height="16" src="/images/eth-fill.svg" />
+                            <span className="text-[12px] font-normal">$3133</span>
+                        </button>
+                        <button className="text-[#14F195] hidden lg:flex flex-row flex-shrink-0 h-[24px] px-[0px] gap-[4px] justify-start items-center hover:brightness-110 transition-all duration-125 ease-in-out">
+                            <img alt="SOL" width="16" height="16" src="/images/sol-fill.svg" />
+                            <span className="text-[12px] font-normal">$134.12</span>
+                        </button>
                     </div>
                 </div>
 
-                <Divider />
-
-                {/* Solana + Price */}
-                <div className="flex items-center gap-1 flex-shrink-0">
-                    <SolanaIcon size="sm" />
-                    <span className="text-emerald-400 text-xs">$139.6</span>
-                </div>
-
-                {/* Connection Status */}
-                <div className="flex items-center gap-1.5 bg-[#092923] rounded-md px-2 py-0.5 flex-shrink-0">
-                    <div className="relative">
-                        <span className="w-3 h-3 bg-[#12AF80] rounded-full block" />
-                        <span className="absolute inset-0 w-3 h-3 rounded-full border border-[#0B4436]" />
+                {/* RIGHT SECTION */}
+                <div className="flex flex-row flex-shrink-0 gap-[8px] justify-end items-center">
+                    {/* Pump Price */}
+                    <div className="hidden 2xl:flex">
+                        <button className="-mr-[8px] group flex items-center gap-[4px] h-[24px] px-2 text-[12px] font-medium rounded hover:bg-zinc-700/40 text-gray-500 transition-colors duration-150 ease-in-out">
+                            <img alt="Pump" width="14" height="14" src="/images/pump.svg" />
+                            <span className="text-gray-500 text-[12px] font-normal group-hover:text-gray-400 transition-colors duration-150 ease-in-out">$55.1K</span>
+                        </button>
                     </div>
-                    <span className="text-[#12AF80] text-xs">Connected</span>
+
+                    {/* Gas */}
+                    <div className="hidden 2xl:flex flex-row gap-[4px] justify-start items-center">
+                        <div className="flex flex-row gap-[4px] h-[24px] min-h-[24px] justify-start items-center">
+                            <Fuel className="w-[16px] h-[16px] text-gray-500" />
+                            <span className="text-gray-500 text-[12px] font-normal">0.0<sub>2</sub>33</span>
+                        </div>
+                    </div>
+
+                    {/* Coin */}
+                    <div className="hidden 2xl:flex flex-row gap-[4px] justify-start items-center">
+                        <div className="flex flex-row gap-[4px] h-[24px] min-h-[24px] justify-start items-center">
+                            <Coins className="w-[16px] h-[16px] text-gray-500" />
+                            <span className="text-gray-500 text-[12px] font-normal">0.003</span>
+                        </div>
+                    </div>
+
+                    <Divider className="hidden 2xl:flex" />
+
+                    {/* Connection Status */}
+                    <div className="flex flex-row h-[24px] xl:px-[8px] gap-[4px] justify-start items-center rounded-[4px] text-emerald-400 xl:bg-emerald-400/20">
+                        <div className="flex flex-row gap-[4px] justify-start items-center">
+                            <div className="bg-emerald-400/20 w-[12px] h-[12px] rounded-full flex flex-row gap-[4px] justify-center items-center">
+                                <div className="bg-emerald-400 w-[8px] h-[8px] rounded-full"></div>
+                            </div>
+                        </div>
+                        <span className="hidden xl:flex text-[12px] font-medium">Connection is stable</span>
+                    </div>
+
+                    {/* GLOBAL Dropdown */}
+                    <div className="relative flex">
+                        <button className="flex items-center gap-1 px-2 h-[24px] text-[12px] font-medium rounded hover:bg-zinc-700/40 text-gray-400 transition-colors duration-150">
+                            <span>GLOBAL</span>
+                            <ChevronDown className="w-[14px] h-[14px]" />
+                        </button>
+                    </div>
+
+                    <Divider />
+
+                    {/* Right Icons */}
+                    <div className="text-gray-400 flex flex-row gap-[8px] justify-start items-center">
+                        <button className="flex items-center justify-center w-[24px] h-[24px] rounded-[4px] transition-colors duration-150 ease-in-out text-gray-400 hover:bg-zinc-700/40">
+                            <Layout className="w-[16px] h-[16px]" />
+                        </button>
+                        <button className="text-[12px] hover:bg-zinc-700/40 flex items-center gap-1 justify-center w-[24px] h-[24px] rounded-[4px] transition-colors duration-150 ease-in-out">
+                            <Bell className="w-[16px] h-[16px]" />
+                        </button>
+                        <button className="text-[12px] hover:bg-zinc-700/40 flex items-center gap-1 justify-center w-[24px] h-[24px] rounded-[4px] transition-colors duration-150 ease-in-out">
+                            <Palette className="w-[16px] h-[16px]" />
+                        </button>
+
+                        <Divider className="hidden md:flex" />
+
+                        {/* Social Links */}
+                        <div className="hidden md:flex flex-row gap-[16px] justify-start items-center">
+                            <a href="https://discord.gg/axiomtrade" target="_blank" rel="noopener noreferrer" className="hover:opacity-80">
+                                <DiscordIcon className="w-[16px] h-[16px]" />
+                            </a>
+                            <a href="https://x.com/axiomexchange" target="_blank" rel="noopener noreferrer" className="hover:opacity-80">
+                                <TwitterIcon className="w-[16px] h-[16px]" />
+                            </a>
+                        </div>
+
+                        {/* Docs */}
+                        <a href="https://docs.axiom.trade/" target="_blank" rel="noopener noreferrer" className="hidden md:flex flex-row gap-[2px] h-[24px] px-[8px] justify-start items-center rounded-[4px] hover:bg-zinc-700/40">
+                            <FileText className="w-[16px] h-[16px]" />
+                            <span className="hidden lg:flex text-[12px] font-normal">Docs</span>
+                        </a>
+                    </div>
                 </div>
-
-                {/* GLOBAL */}
-                <button className="flex items-center gap-1 text-[#C8C9D1] hover:text-white transition-colors px-1 flex-shrink-0">
-                    <span className="text-[#F4F4F5] text-xs">GLOBAL</span>
-                    <ChevronDown className="w-3 h-3" />
-                </button>
-
-                <Divider />
-
-                {/* Right side icons */}
-                <button aria-label="Window" className="text-[#F4F4F5] hover:text-white transition-colors p-1 flex-shrink-0">
-                    <Square className="w-3.5 h-3.5" />
-                </button>
-
-                <button aria-label="Notifications" className="text-[#F4F4F5] hover:text-white transition-colors p-1 flex-shrink-0">
-                    <Bell className="w-3.5 h-3.5" />
-                </button>
-
-                <button aria-label="Theme" className="text-[#F4F4F5] hover:text-white transition-colors p-1 flex-shrink-0">
-                    <Palette className="w-3.5 h-3.5" />
-                </button>
-
-                <Divider />
-
-                {/* Discord */}
-                <button aria-label="Discord" className="text-[#F4F4F5] hover:text-white transition-colors p-1 flex-shrink-0">
-                    <DiscordIcon className="w-3.5 h-3.5" />
-                </button>
-
-                {/* X/Twitter */}
-                <button aria-label="Twitter" className="text-[#F4F4F5] hover:text-white transition-colors p-1 flex-shrink-0">
-                    <TwitterIcon className="w-3.5 h-3.5" />
-                </button>
-
-                {/* Docs */}
-                <button aria-label="Documentation" className="flex items-center gap-1 text-[#F4F4F5] hover:text-white transition-colors p-1 flex-shrink-0">
-                    <FileText className="w-3.5 h-3.5" />
-                    <span className="text-xs">Docs</span>
-                </button>
             </div>
         </footer>
     );
