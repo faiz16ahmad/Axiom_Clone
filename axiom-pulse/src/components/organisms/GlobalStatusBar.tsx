@@ -366,9 +366,18 @@ export function GlobalStatusBar() {
                         <button className="text-[12px] hover:bg-zinc-700/40 flex items-center gap-1 justify-center w-[24px] h-[24px] rounded-[4px] transition-colors duration-150 ease-in-out">
                             <Bell className="w-[16px] h-[16px]" />
                         </button>
-                        <button className="text-[12px] hover:bg-zinc-700/40 flex items-center gap-1 justify-center w-[24px] h-[24px] rounded-[4px] transition-colors duration-150 ease-in-out">
+                        <button 
+                            ref={displayButtonRef}
+                            onClick={() => setShowDisplaySettings(!showDisplaySettings)}
+                            className="text-[12px] hover:bg-zinc-700/40 flex items-center gap-1 justify-center w-[24px] h-[24px] rounded-[4px] transition-colors duration-150 ease-in-out"
+                        >
                             <Palette className="w-[16px] h-[16px]" />
                         </button>
+                        <DisplaySettingsModal 
+                            isOpen={showDisplaySettings} 
+                            onClose={() => setShowDisplaySettings(false)} 
+                            buttonRef={displayButtonRef}
+                        />
 
                         <Divider className="hidden md:flex" />
 
