@@ -61,7 +61,7 @@ function TokenCardComponent({ token }: TokenCardProps) {
       </div>
 
       {/* Main Row */}
-      <div className="flex gap-[12px] pl-[12px] pr-[12px] sm:pr-[16px] pt-[12px] pb-[2px]">
+      <div className="flex gap-[12px] pl-[12px] pr-[12px] sm:pr-[16px] pt-[12px] h-full">
         {/* LEFT: Avatar + Contract */}
         <div className="flex flex-col items-center gap-[4px]">
           <div className="flex items-start gap-0">
@@ -102,7 +102,7 @@ function TokenCardComponent({ token }: TokenCardProps) {
         </div>
 
         {/* RIGHT: Content + Footer Pills */}
-        <div className="flex-1 min-w-0 flex flex-col gap-[20px] pt-0 pb-[12px] overflow-hidden">
+        <div className="flex-1 min-w-0 flex flex-col justify-between h-full overflow-hidden">
           {/* Top row: Header + Metrics */}
           <div className="flex justify-between">
             <TokenHeader token={token} />
@@ -120,18 +120,18 @@ function TokenCardComponent({ token }: TokenCardProps) {
             </div>
           </div>
 
-          {/* Footer Pills - aligned with content, not avatar */}
-          <div className="relative flex items-center">
+          {/* Footer Pills - at bottom of cell */}
+          <div className="relative flex items-end pb-[8px]">
             <TokenFooterPills
               userPercentage={token.userPercentage}
               chefPercentage={token.chefPercentage}
               bondingCurve={token.bondingCurve}
               createdAt={token.createdAt}
             />
-            <div className="absolute right-0 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-150 z-10">
-              <button className="flex items-center gap-1 px-3 py-1 bg-blue-500 hover:bg-blue-400 rounded-full transition-colors shadow-lg">
-                <Zap className="w-3.5 h-3.5 text-white fill-white" />
-                <span className="text-xs font-bold text-white">0 SOL</span>
+            <div className="absolute right-0 bottom-[8px] opacity-0 group-hover:opacity-100 transition-opacity duration-150 z-10">
+              <button className="flex items-center gap-[4px] h-[24px] px-[6px] bg-blue-500 hover:bg-blue-400 rounded-full transition-colors shadow-lg">
+                <Zap className="w-[16px] h-[16px] text-[#090909] fill-[#090909]" />
+                <span className="text-[12px] font-bold text-[#090909]">0 SOL</span>
               </button>
             </div>
           </div>
