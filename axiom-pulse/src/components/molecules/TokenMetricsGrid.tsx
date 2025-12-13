@@ -72,7 +72,7 @@ function TokenMetricsGridComponent({
         </span>
         
         {/* Progress bar - Green + Red split with smooth transition */}
-        <div className="w-12 h-2 rounded-full overflow-hidden flex flex-shrink-0">
+        <div className="w-12 h-[4px] rounded-full overflow-hidden flex flex-shrink-0">
           {/* Green portion (left) */}
           <div 
             className="h-full bg-emerald-500 transition-all duration-300" 

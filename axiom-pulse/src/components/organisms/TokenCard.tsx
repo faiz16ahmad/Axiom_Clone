@@ -105,7 +105,7 @@ function TokenCardComponent({ token }: TokenCardProps) {
         </div>
 
         {/* RIGHT: Content + Footer Pills - minimal gap */}
-        <div className="flex-1 min-w-0 flex flex-col h-full gap-[2px] justify-start overflow-hidden">
+        <div className="flex-1 min-w-0 flex flex-col h-full gap-[4px] justify-start overflow-hidden">
           {/* Top section: Header + Metrics */}
           <div className="flex flex-col w-full gap-[2px] justify-start items-start min-w-0">
             <div className="flex justify-between w-full">
