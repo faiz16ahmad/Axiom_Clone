@@ -19,13 +19,17 @@ interface PillProps {
   value: string;
   iconColor: string;
   tooltip?: string;
+  extra?: string;
 }
 
-function Pill({ icon, value, iconColor, tooltip }: PillProps) {
+function Pill({ icon, value, iconColor, tooltip, extra }: PillProps) {
   const pill = (
-    <div className="flex items-center gap-1 px-2 py-1 rounded-full bg-zinc-900 border border-zinc-800 text-[10px] flex-shrink-0">
-      <span className={iconColor}>{icon}</span>
-      <span className="text-white tabular-nums font-medium">{value}</span>
+    <div className="flex items-center gap-[4px] h-[24px] px-[5px] rounded-full bg-zinc-900/80 border border-zinc-700/50 flex-shrink-0">
+      <div className="w-[16px] h-[16px] flex items-center justify-center">
+        <span className={iconColor}>{icon}</span>
+      </div>
+      <span className={`tabular-nums font-medium text-[12px] ${iconColor}`}>{value}</span>
+      {extra && <span className="text-gray-500 text-[11px] leading-[16px] font-medium whitespace-nowrap">{extra}</span>}
     </div>
   );
 
@@ -57,37 +61,66 @@ export function TokenFooterPills({
   const getBondingColor = (val: number) => val >= 80 ? 'text-emerald-400' : val >= 50 ? 'text-yellow-400' : 'text-emerald-400';
 
   return (
-    <div className="flex items-center gap-1.5 overflow-x-auto scrollbar-hide pr-16">
-      <Pill
-        icon={<User className="w-3 h-3" />}
-        value={`${userPercentage}%`}
-        iconColor={getUserColor(userPercentage)}
-      />
-      <Pill
-        icon={<ChefHat className="w-3 h-3" />}
-        value={`${chefPercentage}%`}
-        iconColor={getChefColor(chefPercentage)}
-      />
-      <Pill
-        icon={<Clock className="w-3 h-3" />}
-        value={timeStr}
-        iconColor="text-gray-400"
-      />
-      <Pill
-        icon={<Target className="w-3 h-3" />}
-        value={`${bondingCurve}%`}
-        iconColor={getBondingColor(bondingCurve)}
-      />
-      <Pill
-        icon={<Users className="w-3 h-3" />}
-        value="0%"
-        iconColor="text-red-400"
-      />
-      <Pill
-        icon={<Coins className="w-3 h-3" />}
-        value="0%"
-        iconColor="text-gray-400"
-      />
-    </div>
+    <>
+      {/* Footer pills - visible on sm and xl (compact layout) */}
+      <div className="hidden sm:flex md:hidden lg:hidden xl:flex flex-row w-full h-[24px] gap-[4px] justify-start items-end">
+        <Pill
+          icon={<User className="w-[14px] h-[14px]" />}
+          value={`${userPercentage}%`}
+          iconColor={getUserColor(userPercentage)}
+        />
+        <Pill
+          icon={<ChefHat className="w-[14px] h-[14px]" />}
+          value={`${chefPercentage}%`}
+          iconColor={getChefColor(chefPercentage)}
+          extra={timeStr}
+        />
+        <Pill
+          icon={<Target className="w-[14px] h-[14px]" />}
+          value={`${bondingCurve}%`}
+          iconColor={getBondingColor(bondingCurve)}
+        />
+        <Pill
+          icon={<Users className="w-[14px] h-[14px]" />}
+          value="0%"
+          iconColor="text-emerald-400"
+        />
+        <Pill
+          icon={<Coins className="w-[14px] h-[14px]" />}
+          value="0%"
+          iconColor="text-emerald-400"
+        />
+      </div>
+      
+      {/* Footer pills - visible on mobile, md, lg (expanded layout) */}
+      <div className="flex sm:hidden md:flex lg:flex xl:hidden flex-row w-full h-[24px] gap-[4px] px-[12px] justify-start items-end">
+        <Pill
+          icon={<User className="w-[14px] h-[14px]" />}
+          value={`${userPercentage}%`}
+          iconColor={getUserColor(userPercentage)}
+        />
+        <Pill
+          icon={<ChefHat className="w-[14px] h-[14px]" />}
+          value={`${chefPercentage}%`}
+          iconColor={getChefColor(chefPercentage)}
+          extra={timeStr}
+        />
+        <Pill
+          icon={<Target className="w-[14px] h-[14px]" />}
+          value={`${bondingCurve}%`}
+          iconColor={getBondingColor(bondingCurve)}
+        />
+        <Pill
+          icon={<Users className="w-[14px] h-[14px]" />}
+          value="0%"
+          iconColor="text-emerald-400"
+        />
+        <Pill
+          icon={<Coins className="w-[14px] h-[14px]" />}
+          value="0%"
+          iconColor="text-emerald-400"
+        />
+      </div>
+    </>
   );
 }

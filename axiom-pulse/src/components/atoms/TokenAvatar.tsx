@@ -40,19 +40,19 @@ export function TokenAvatar({ src, alt, showBadge = true, borderColor = 'pink' }
       <DialogTrigger asChild>
         <button
           className={cn(
-            'relative w-[100px] h-[100px] flex-shrink-0 cursor-pointer rounded-lg',
+            'relative w-[74px] h-[74px] flex-shrink-0 cursor-pointer rounded-[4px]',
             'ring-2',
             borderColorClasses[borderColor]
           )}
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
         >
-          <div className="w-full h-full rounded-lg overflow-hidden bg-zinc-900">
+          <div className="w-[68px] h-[68px] m-[2px] rounded-[3px] overflow-hidden bg-zinc-900">
             <Image
               src={imgError ? fallbackSrc : src}
               alt={alt}
-              width={100}
-              height={100}
+              width={68}
+              height={68}
               className="object-cover w-full h-full"
               onError={() => setImgError(true)}
               loading="lazy"
@@ -61,18 +61,18 @@ export function TokenAvatar({ src, alt, showBadge = true, borderColor = 'pink' }
           </div>
           
           {showBadge && (
-            <div className="absolute -bottom-1 -right-1 w-4 h-4 rounded-full bg-zinc-800 border-2 border-zinc-900 flex items-center justify-center">
-              <div className="w-2.5 h-2.5 rounded-full bg-gradient-to-br from-pink-400 to-pink-600" />
+            <div className="absolute -bottom-[4px] -right-[4px] w-[16px] h-[16px] rounded-full bg-zinc-800 border-[1px] border-zinc-900 flex items-center justify-center z-30">
+              <div className="w-[10px] h-[10px] rounded-full bg-gradient-to-br from-pink-400 to-pink-600" />
             </div>
           )}
           
           <div
             className={cn(
-              'absolute inset-0 rounded-lg bg-black/60 flex items-center justify-center transition-opacity duration-200',
+              'absolute inset-0 rounded-[4px] bg-black/50 flex items-center justify-center transition-opacity duration-200',
               isHovered ? 'opacity-100' : 'opacity-0'
             )}
           >
-            <Camera className="w-4 h-4 text-white" />
+            <Camera className="w-[24px] h-[24px] text-white" />
           </div>
         </button>
       </DialogTrigger>
