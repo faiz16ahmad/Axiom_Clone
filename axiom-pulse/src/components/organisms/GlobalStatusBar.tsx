@@ -1,5 +1,7 @@
 'use client';
 
+import { useState, useEffect, useRef } from 'react';
+import { createPortal } from 'react-dom';
 import {
     Settings,
     ChevronDown,
@@ -13,7 +15,11 @@ import {
     Layout,
     Fuel,
     Coins,
+    Search,
+    Hash,
+    Sun,
 } from 'lucide-react';
+import { cn } from '@/lib/utils';
 // Using images from /images folder
 
 function NotificationDot() {
@@ -55,7 +61,155 @@ function Divider({ className }: { className?: string }) {
     return <div className={`w-[1px] h-[20px] bg-zinc-700 flex-shrink-0 ${className || ''}`} />;
 }
 
+// Display Settings Modal
+function DisplaySettingsModal({ isOpen, onClose, buttonRef }: { 
+    isOpen: boolean; 
+    onClose: () => void;
+    buttonRef: React.RefObject<HTMLButtonElement | null>;
+}) {
+    const [mounted, setMounted] = useState(false);
+    const [position, setPosition] = useState({ bottom: 0, right: 0 });
+    const [metricsSize, setMetricsSize] = useState<'Small' | 'Large'>('Large');
+    const [quickBuySize, setQuickBuySize] = useState<'Small' | 'Large' | 'Mega' | 'Ultra'>('Small');
+    const [activeTab, setActiveTab] = useState<'Layout' | 'Metrics' | 'Row' | 'Extras'>('Layout');
+
+    useEffect(() => {
+        setMounted(true);
+    }, []);
+
+    useEffect(() => {
+        if (buttonRef.current && isOpen) {
+            const rect = buttonRef.current.getBoundingClientRect();
+            setPosition({
+                bottom: window.innerHeight - rect.top + 8,
+                right: window.innerWidth - rect.right,
+            });
+        }
+    }, [buttonRef, isOpen]);
+
+    if (!mounted || !isOpen) return null;
+
+    const tabs: ('Layout' | 'Metrics' | 'Row' | 'Extras')[] = ['Layout', 'Metrics', 'Row', 'Extras'];
+    const quickBuySizes: ('Small' | 'Large' | 'Mega' | 'Ultra')[] = ['Small', 'Large', 'Mega', 'Ultra'];
+
+    return createPortal(
+        <>
+            {/* Backdrop */}
+            <div className="fixed inset-0 z-[9998]" onClick={onClose} />
+            {/* Modal */}
+            <div
+                className="fixed z-[9999] bg-[#0d0d0d] border border-zinc-800 rounded-xl w-[420px] shadow-2xl"
+                style={{ bottom: position.bottom, right: position.right }}
+            >
+                {/* Metrics Section */}
+                <div className="p-4 border-b border-zinc-800">
+                    <h3 className="text-white text-base font-medium mb-3">Metrics</h3>
+                    <div className="flex gap-3">
+                        <button
+                            onClick={() => setMetricsSize('Small')}
+                            className={cn(
+                                'flex-1 flex flex-col items-center justify-center py-4 rounded-lg border transition-colors',
+                                metricsSize === 'Small' 
+                                    ? 'border-zinc-600 bg-zinc-900' 
+                                    : 'border-zinc-800 hover:border-zinc-700'
+                            )}
+                        >
+                            <span className="text-white text-sm">MC 77K</span>
+                            <span className="text-gray-400 text-xs mt-1">Small</span>
+                        </button>
+                        <button
+                            onClick={() => setMetricsSize('Large')}
+                            className={cn(
+                                'flex-1 flex flex-col items-center justify-center py-4 rounded-lg border transition-colors',
+                                metricsSize === 'Large' 
+                                    ? 'border-zinc-600 bg-zinc-800' 
+                                    : 'border-zinc-800 hover:border-zinc-700'
+                            )}
+                        >
+                            <span className="text-white text-lg font-medium">MC 77K</span>
+                            <span className="text-gray-400 text-xs mt-1">Large</span>
+                        </button>
+                    </div>
+                </div>
+
+                {/* Quick Buy Section */}
+                <div className="p-4 border-b border-zinc-800">
+                    <h3 className="text-white text-base font-medium mb-3">Quick Buy</h3>
+                    <div className="flex gap-2">
+                        {quickBuySizes.map((size) => (
+                            <button
+                                key={size}
+                                onClick={() => setQuickBuySize(size)}
+                                className={cn(
+                                    'flex-1 flex flex-col items-center justify-center py-3 rounded-lg border transition-colors',
+                                    quickBuySize === size 
+                                        ? 'border-[#526FFF] bg-[#526FFF]/20' 
+                                        : 'border-zinc-800 hover:border-zinc-700'
+                                )}
+                            >
+                                <div className={cn(
+                                    'flex items-center justify-center px-2 py-1 rounded text-xs font-medium mb-1',
+                                    quickBuySize === size ? 'bg-[#526FFF] text-white' : 'bg-zinc-700 text-gray-400'
+                                )}>
+                                    ⚡7
+                                </div>
+                                <span className={cn(
+                                    'text-xs',
+                                    quickBuySize === size ? 'text-white' : 'text-gray-400'
+                                )}>{size}</span>
+                            </button>
+                        ))}
+                    </div>
+                </div>
+
+                {/* Theme */}
+                <div className="p-4 border-b border-zinc-800">
+                    <div className="flex items-center gap-2">
+                        <Sun className="w-5 h-5 text-gray-400" />
+                        <span className="text-white font-medium">Grey</span>
+                    </div>
+                </div>
+
+                {/* Tabs */}
+                <div className="p-4 border-b border-zinc-800">
+                    <div className="flex gap-2">
+                        {tabs.map(tab => (
+                            <button
+                                key={tab}
+                                onClick={() => setActiveTab(tab)}
+                                className={cn(
+                                    'px-4 py-2 rounded-full text-sm font-medium transition-colors',
+                                    activeTab === tab 
+                                        ? 'bg-zinc-700 text-white' 
+                                        : 'text-gray-400 hover:text-white'
+                                )}
+                            >
+                                {tab}
+                            </button>
+                        ))}
+                    </div>
+                </div>
+
+                {/* Options */}
+                <div className="p-4">
+                    <button className="w-full flex items-center gap-3 py-3 text-white hover:bg-zinc-800/50 rounded-lg transition-colors">
+                        <Search className="w-5 h-5 text-gray-400" />
+                        <span className="font-medium">Show Search Bar</span>
+                    </button>
+                    <button className="w-full flex items-center gap-3 py-3 text-white hover:bg-zinc-800/50 rounded-lg transition-colors">
+                        <Hash className="w-5 h-5 text-gray-400" />
+                        <span className="font-medium">No Decimals</span>
+                    </button>
+                </div>
+            </div>
+        </>,
+        document.body
+    );
+}
+
 export function GlobalStatusBar() {
+    const [showDisplaySettings, setShowDisplaySettings] = useState(false);
+    const displayButtonRef = useRef<HTMLButtonElement>(null);
     return (
         <footer className="fixed bottom-0 left-0 w-full z-50 h-[35px] bg-[#101114] border-t border-zinc-800">
             <div className="flex overflow-x-auto overflow-y-hidden [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] flex-row justify-between w-full h-full px-[24px] gap-[16px] items-center min-w-0">
