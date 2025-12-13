@@ -31,12 +31,12 @@ function TokenMetricsGridComponent({
   }, []);
 
   return (
-    <div className="flex flex-col gap-0.5 items-end text-right">
+    <div className="flex flex-col gap-[2px] items-end text-right">
       {/* Row 1: MC - Green value with smooth flash */}
-      <div className="flex items-center gap-1.5">
-        <span className="text-xs text-gray-400">MC</span>
+      <div className="flex items-center gap-[4px] h-[18px]">
+        <span className="text-[12px] text-gray-400 font-medium">MC</span>
         <span className={cn(
-          'text-base font-semibold tabular-nums text-pulse-green price-transition',
+          'text-[16px] font-medium tabular-nums text-emerald-400 price-transition',
           flashState === 'green' && 'animate-flash-green',
           flashState === 'red' && 'animate-flash-red'
         )}>
@@ -44,10 +44,10 @@ function TokenMetricsGridComponent({
         </span>
       </div>
       
-      {/* Row 2: Volume - Blue/Indigo value */}
-      <div className="flex items-center gap-1.5">
-        <span className="text-xs text-gray-400">V</span>
-        <span className="text-base font-bold tabular-nums text-indigo-400">
+      {/* Row 2: Volume - White value */}
+      <div className="flex items-center gap-[4px] h-[18px]">
+        <span className="text-[12px] text-gray-400 font-medium">V</span>
+        <span className="text-[16px] font-medium tabular-nums text-white">
           ${formatCompactNumber(volume)}
         </span>
       </div>

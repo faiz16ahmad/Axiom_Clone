@@ -36,7 +36,7 @@ export default function RootLayout({
       >
         <Providers>{children}</Providers>
         <div className="fixed bottom-2 right-2 text-[10px] text-zinc-600 font-mono opacity-50 hover:opacity-100 transition-opacity z-50">
-          v1.1.4
+          v1.1.5
         </div>
       </body>
     </html>
