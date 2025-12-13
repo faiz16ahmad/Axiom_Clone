@@ -35,9 +35,6 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[#06070B] text-zinc-100 text-[11px] lg:text-xs xl:text-sm 2xl:text-base`}
       >
         <Providers>{children}</Providers>
-        <div className="fixed bottom-2 right-2 text-[10px] text-zinc-600 font-mono opacity-50 hover:opacity-100 transition-opacity z-50">
-          v1.2.0
-        </div>
       </body>
     </html>
   );
