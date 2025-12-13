@@ -15,9 +15,6 @@ import {
     Layout,
     Fuel,
     Coins,
-    Search,
-    Hash,
-    Sun,
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 // Using images from /images folder
@@ -59,6 +56,276 @@ function PresetIcon({ className }: { className?: string }) {
 
 function Divider({ className }: { className?: string }) {
     return <div className={`w-[1px] h-[20px] bg-zinc-700 flex-shrink-0 ${className || ''}`} />;
+}
+
+// Customize Theme Modal
+function CustomizeThemeModal({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) {
+    const [mounted, setMounted] = useState(false);
+    const [selectedTheme, setSelectedTheme] = useState('Dark');
+
+    useEffect(() => {
+        setMounted(true);
+    }, []);
+
+    if (!mounted || !isOpen) return null;
+
+    const themes = [
+        { name: 'Dark', headerColor: '#526FFF', bgColor: '#0a0a0a', cardColor: '#1a1a1a' },
+        { name: 'Light', headerColor: '#526FFF', bgColor: '#ffffff', cardColor: '#f5f5f5' },
+        { name: 'Dusk', headerColor: '#526FFF', bgColor: '#1a1a2e', cardColor: '#16213e' },
+        { name: 'Astro', headerColor: '#8b5cf6', bgColor: '#1a1a2e', cardColor: '#2d2d44' },
+        { name: 'Neo', headerColor: '#22c55e', bgColor: '#0a0a0a', cardColor: '#1a1a1a' },
+        { name: 'Crimson', headerColor: '#ef4444', bgColor: '#0a0a0a', cardColor: '#1a1a1a' },
+        { name: 'Stealth Blue', headerColor: '#06b6d4', bgColor: '#0a0a0a', cardColor: '#1a1a1a' },
+        { name: 'Orange', headerColor: '#f97316', bgColor: '#0a0a0a', cardColor: '#1a1a1a' },
+        { name: 'Custom', headerColor: '#526FFF', bgColor: '#0f172a', cardColor: '#1e293b' },
+    ];
+
+    return createPortal(
+        <>
+            <div className="fixed inset-0 z-[9998] bg-black/60" onClick={onClose} />
+            <div className="fixed z-[9999] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#0d0d0d] border border-zinc-800 rounded-xl w-[520px] shadow-2xl">
+                <div className="flex items-center justify-between p-4 border-b border-zinc-800">
+                    <h3 className="text-white text-lg font-semibold">Customize Theme</h3>
+                    <button onClick={onClose} className="text-gray-400 hover:text-white transition-colors">
+                        <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                            <path d="M18 6L6 18M6 6l12 12" strokeLinecap="round" strokeLinejoin="round" />
+                        </svg>
+                    </button>
+                </div>
+                <div className="p-4 max-h-[400px] overflow-y-auto">
+                    <div className="grid grid-cols-3 gap-4">
+                        {themes.map((theme) => (
+                            <button
+                                key={theme.name}
+                                onClick={() => setSelectedTheme(theme.name)}
+                                className={cn(
+                                    'flex flex-col items-center transition-all',
+                                    selectedTheme === theme.name && 'scale-105'
+                                )}
+                            >
+                                <div className={cn(
+                                    'w-full aspect-[4/3] rounded-lg overflow-hidden border-2 mb-2',
+                                    selectedTheme === theme.name ? 'border-[#526FFF]' : 'border-zinc-700'
+                                )}>
+                                    <div className="w-full h-1/3" style={{ backgroundColor: theme.headerColor }} />
+                                    <div className="w-full h-2/3 p-2" style={{ backgroundColor: theme.bgColor }}>
+                                        <div className="w-full h-full rounded flex items-center justify-end gap-1 px-2" style={{ backgroundColor: theme.cardColor }}>
+                                            <div className="w-2 h-2 rounded-full" style={{ backgroundColor: theme.headerColor, opacity: 0.6 }} />
+                                            <div className="w-2 h-2 rounded-full" style={{ backgroundColor: theme.headerColor }} />
+                                        </div>
+                                    </div>
+                                </div>
+                                <span className={cn(
+                                    'text-sm font-medium',
+                                    selectedTheme === theme.name ? 'text-white' : 'text-gray-400'
+                                )}>{theme.name}</span>
+                            </button>
+                        ))}
+                    </div>
+                </div>
+                <div className="flex items-center justify-between p-4 border-t border-zinc-800">
+                    <div className="flex gap-2">
+                        <button className="px-4 py-2 bg-zinc-800 text-white rounded-full text-sm font-medium hover:bg-zinc-700">Export</button>
+                        <button className="px-4 py-2 bg-zinc-800 text-white rounded-full text-sm font-medium hover:bg-zinc-700">Import</button>
+                    </div>
+                    <button onClick={onClose} className="px-6 py-2 bg-[#526FFF] text-white rounded-full text-sm font-medium hover:bg-[#6580FF]">Done</button>
+                </div>
+            </div>
+        </>,
+        document.body
+    );
+}
+
+// Trading Settings Modal
+function TradingSettingsModal({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) {
+    const [mounted, setMounted] = useState(false);
+    const [activePreset, setActivePreset] = useState<1 | 2 | 3>(1);
+    const [activeSettingsTab, setActiveSettingsTab] = useState<'Buy' | 'Sell'>('Buy');
+    const [mevMode, setMevMode] = useState<'Off' | 'Reduced' | 'Secure'>('Off');
+    const [slippage, setSlippage] = useState('20');
+    const [priority, setPriority] = useState('0.001');
+    const [bribe, setBribe] = useState('0.01');
+    const [autoFee, setAutoFee] = useState(false);
+    const [maxFee, setMaxFee] = useState('0.1');
+
+    useEffect(() => {
+        setMounted(true);
+    }, []);
+
+    if (!mounted || !isOpen) return null;
+
+    return createPortal(
+        <>
+            {/* Backdrop */}
+            <div className="fixed inset-0 z-[9998] bg-black/60" onClick={onClose} />
+            {/* Modal */}
+            <div className="fixed z-[9999] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#0d0d0d] border border-zinc-800 rounded-xl w-[420px] shadow-2xl">
+                {/* Header */}
+                <div className="flex items-center justify-between p-4 border-b border-zinc-800">
+                    <h3 className="text-white text-lg font-semibold">Trading Settings</h3>
+                    <button onClick={onClose} className="text-gray-400 hover:text-white transition-colors">
+                        <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                            <path d="M18 6L6 18M6 6l12 12" strokeLinecap="round" strokeLinejoin="round" />
+                        </svg>
+                    </button>
+                </div>
+
+                {/* Preset Tabs */}
+                <div className="p-4">
+                    <div className="flex bg-zinc-900 rounded-full p-1 mb-4">
+                        {[1, 2, 3].map((preset) => (
+                            <button
+                                key={preset}
+                                onClick={() => setActivePreset(preset as 1 | 2 | 3)}
+                                className={cn(
+                                    'flex-1 py-2 px-4 rounded-full text-sm font-semibold transition-colors',
+                                    activePreset === preset
+                                        ? 'bg-[#526FFF] text-white'
+                                        : 'text-gray-400 hover:text-white'
+                                )}
+                            >
+                                PRESET {preset}
+                            </button>
+                        ))}
+                    </div>
+
+                    {/* Buy/Sell Toggle */}
+                    <div className="flex bg-zinc-900 rounded-full p-1 mb-6">
+                        <button
+                            onClick={() => setActiveSettingsTab('Buy')}
+                            className={cn(
+                                'flex-1 py-2 px-4 rounded-full text-sm font-semibold transition-colors',
+                                activeSettingsTab === 'Buy'
+                                    ? 'bg-emerald-500/20 text-emerald-400'
+                                    : 'text-gray-400 hover:text-white'
+                            )}
+                        >
+                            Buy Settings
+                        </button>
+                        <button
+                            onClick={() => setActiveSettingsTab('Sell')}
+                            className={cn(
+                                'flex-1 py-2 px-4 rounded-full text-sm font-semibold transition-colors',
+                                activeSettingsTab === 'Sell'
+                                    ? 'bg-zinc-700 text-white'
+                                    : 'text-gray-400 hover:text-white'
+                            )}
+                        >
+                            Sell Settings
+                        </button>
+                    </div>
+
+                    {/* Settings Grid */}
+                    <div className="grid grid-cols-3 gap-3 mb-4">
+                        <div className="bg-zinc-900 border border-zinc-700 rounded-lg p-3 text-center">
+                            <input
+                                type="text"
+                                value={slippage}
+                                onChange={(e) => setSlippage(e.target.value)}
+                                className="w-full bg-transparent text-white text-xl font-semibold text-center outline-none"
+                            />
+                            <div className="flex items-center justify-center gap-1 text-gray-400 text-xs mt-1">
+                                <span>⚡</span>
+                                <span>SLIPPAGE</span>
+                                <span className="text-gray-500">%</span>
+                            </div>
+                        </div>
+                        <div className="bg-zinc-900 border border-zinc-700 rounded-lg p-3 text-center">
+                            <input
+                                type="text"
+                                value={priority}
+                                onChange={(e) => setPriority(e.target.value)}
+                                className="w-full bg-transparent text-white text-xl font-semibold text-center outline-none"
+                            />
+                            <div className="flex items-center justify-center gap-1 text-gray-400 text-xs mt-1">
+                                <span>📊</span>
+                                <span>PRIORITY</span>
+                            </div>
+                        </div>
+                        <div className="bg-zinc-900 border border-zinc-700 rounded-lg p-3 text-center">
+                            <input
+                                type="text"
+                                value={bribe}
+                                onChange={(e) => setBribe(e.target.value)}
+                                className="w-full bg-transparent text-white text-xl font-semibold text-center outline-none"
+                            />
+                            <div className="flex items-center justify-center gap-1 text-gray-400 text-xs mt-1">
+                                <span>🪙</span>
+                                <span>BRIBE</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Auto Fee */}
+                    <div className="flex items-center gap-4 mb-4">
+                        <label className="flex items-center gap-2 cursor-pointer">
+                            <input
+                                type="checkbox"
+                                checked={autoFee}
+                                onChange={(e) => setAutoFee(e.target.checked)}
+                                className="w-4 h-4 rounded border-zinc-600 bg-zinc-800"
+                            />
+                            <span className="text-white text-sm">Auto Fee</span>
+                        </label>
+                        <div className="flex-1 bg-zinc-900 border border-zinc-700 rounded-lg px-3 py-2 flex items-center gap-2">
+                            <span className="text-gray-400 text-sm">MAX FEE</span>
+                            <input
+                                type="text"
+                                value={maxFee}
+                                onChange={(e) => setMaxFee(e.target.value)}
+                                className="flex-1 bg-transparent text-white text-sm outline-none"
+                            />
+                        </div>
+                    </div>
+
+                    {/* MEV Mode */}
+                    <div className="flex items-center gap-4 mb-4">
+                        <div className="flex items-center gap-1">
+                            <span className="text-white text-sm font-medium">MEV Mode</span>
+                            <span className="text-gray-500 text-xs">ⓘ</span>
+                        </div>
+                        <div className="flex bg-zinc-900 rounded-full p-1">
+                            {(['Off', 'Reduced', 'Secure'] as const).map((mode) => (
+                                <button
+                                    key={mode}
+                                    onClick={() => setMevMode(mode)}
+                                    className={cn(
+                                        'px-3 py-1 rounded-full text-xs font-medium transition-colors flex items-center gap-1',
+                                        mevMode === mode
+                                            ? 'bg-[#526FFF] text-white'
+                                            : 'text-gray-400 hover:text-white'
+                                    )}
+                                >
+                                    {mode === 'Off' && '⊘'}
+                                    {mode === 'Reduced' && '◐'}
+                                    {mode === 'Secure' && '◉'}
+                                    {mode}
+                                </button>
+                            ))}
+                        </div>
+                    </div>
+
+                    {/* RPC */}
+                    <div className="bg-zinc-900 border border-zinc-700 rounded-lg px-3 py-2 mb-4">
+                        <span className="text-gray-400 text-sm">RPC</span>
+                        <span className="text-white text-sm ml-2">https://a...e.com</span>
+                    </div>
+                </div>
+
+                {/* Footer */}
+                <div className="p-4 border-t border-zinc-800">
+                    <button
+                        onClick={onClose}
+                        className="w-full bg-[#526FFF] text-white font-semibold py-3 rounded-full hover:bg-[#6580FF] transition-colors"
+                    >
+                        Continue
+                    </button>
+                </div>
+            </div>
+        </>,
+        document.body
+    );
 }
 
 // Market Lighthouse Tooltip
@@ -248,156 +515,10 @@ function MarketLighthouseTooltip({ isOpen, buttonRef }: {
     );
 }
 
-// Display Settings Modal
-function DisplaySettingsModal({ isOpen, onClose, buttonRef }: {
-    isOpen: boolean;
-    onClose: () => void;
-    buttonRef: React.RefObject<HTMLButtonElement | null>;
-}) {
-    const [mounted, setMounted] = useState(false);
-    const [position, setPosition] = useState({ bottom: 0, right: 0 });
-    const [metricsSize, setMetricsSize] = useState<'Small' | 'Large'>('Large');
-    const [quickBuySize, setQuickBuySize] = useState<'Small' | 'Large' | 'Mega' | 'Ultra'>('Small');
-    const [activeTab, setActiveTab] = useState<'Layout' | 'Metrics' | 'Row' | 'Extras'>('Layout');
-
-    useEffect(() => {
-        setMounted(true);
-    }, []);
-
-    useEffect(() => {
-        if (buttonRef.current && isOpen) {
-            const rect = buttonRef.current.getBoundingClientRect();
-            setPosition({
-                bottom: window.innerHeight - rect.top + 8,
-                right: window.innerWidth - rect.right,
-            });
-        }
-    }, [buttonRef, isOpen]);
-
-    if (!mounted || !isOpen) return null;
-
-    const tabs: ('Layout' | 'Metrics' | 'Row' | 'Extras')[] = ['Layout', 'Metrics', 'Row', 'Extras'];
-    const quickBuySizes: ('Small' | 'Large' | 'Mega' | 'Ultra')[] = ['Small', 'Large', 'Mega', 'Ultra'];
-
-    return createPortal(
-        <>
-            {/* Backdrop */}
-            <div className="fixed inset-0 z-[9998]" onClick={onClose} />
-            {/* Modal */}
-            <div
-                className="fixed z-[9999] bg-[#0d0d0d] border border-zinc-800 rounded-xl w-[420px] shadow-2xl"
-                style={{ bottom: position.bottom, right: position.right }}
-            >
-                {/* Metrics Section */}
-                <div className="p-4 border-b border-zinc-800">
-                    <h3 className="text-white text-base font-medium mb-3">Metrics</h3>
-                    <div className="flex gap-3">
-                        <button
-                            onClick={() => setMetricsSize('Small')}
-                            className={cn(
-                                'flex-1 flex flex-col items-center justify-center py-4 rounded-lg border transition-colors',
-                                metricsSize === 'Small'
-                                    ? 'border-zinc-600 bg-zinc-900'
-                                    : 'border-zinc-800 hover:border-zinc-700'
-                            )}
-                        >
-                            <span className="text-white text-sm">MC 77K</span>
-                            <span className="text-gray-400 text-xs mt-1">Small</span>
-                        </button>
-                        <button
-                            onClick={() => setMetricsSize('Large')}
-                            className={cn(
-                                'flex-1 flex flex-col items-center justify-center py-4 rounded-lg border transition-colors',
-                                metricsSize === 'Large'
-                                    ? 'border-zinc-600 bg-zinc-800'
-                                    : 'border-zinc-800 hover:border-zinc-700'
-                            )}
-                        >
-                            <span className="text-white text-lg font-medium">MC 77K</span>
-                            <span className="text-gray-400 text-xs mt-1">Large</span>
-                        </button>
-                    </div>
-                </div>
-
-                {/* Quick Buy Section */}
-                <div className="p-4 border-b border-zinc-800">
-                    <h3 className="text-white text-base font-medium mb-3">Quick Buy</h3>
-                    <div className="flex gap-2">
-                        {quickBuySizes.map((size) => (
-                            <button
-                                key={size}
-                                onClick={() => setQuickBuySize(size)}
-                                className={cn(
-                                    'flex-1 flex flex-col items-center justify-center py-3 rounded-lg border transition-colors',
-                                    quickBuySize === size
-                                        ? 'border-[#526FFF] bg-[#526FFF]/20'
-                                        : 'border-zinc-800 hover:border-zinc-700'
-                                )}
-                            >
-                                <div className={cn(
-                                    'flex items-center justify-center px-2 py-1 rounded text-xs font-medium mb-1',
-                                    quickBuySize === size ? 'bg-[#526FFF] text-white' : 'bg-zinc-700 text-gray-400'
-                                )}>
-                                    ⚡7
-                                </div>
-                                <span className={cn(
-                                    'text-xs',
-                                    quickBuySize === size ? 'text-white' : 'text-gray-400'
-                                )}>{size}</span>
-                            </button>
-                        ))}
-                    </div>
-                </div>
-
-                {/* Theme */}
-                <div className="p-4 border-b border-zinc-800">
-                    <div className="flex items-center gap-2">
-                        <Sun className="w-5 h-5 text-gray-400" />
-                        <span className="text-white font-medium">Grey</span>
-                    </div>
-                </div>
-
-                {/* Tabs */}
-                <div className="p-4 border-b border-zinc-800">
-                    <div className="flex gap-2">
-                        {tabs.map(tab => (
-                            <button
-                                key={tab}
-                                onClick={() => setActiveTab(tab)}
-                                className={cn(
-                                    'px-4 py-2 rounded-full text-sm font-medium transition-colors',
-                                    activeTab === tab
-                                        ? 'bg-zinc-700 text-white'
-                                        : 'text-gray-400 hover:text-white'
-                                )}
-                            >
-                                {tab}
-                            </button>
-                        ))}
-                    </div>
-                </div>
-
-                {/* Options */}
-                <div className="p-4">
-                    <button className="w-full flex items-center gap-3 py-3 text-white hover:bg-zinc-800/50 rounded-lg transition-colors">
-                        <Search className="w-5 h-5 text-gray-400" />
-                        <span className="font-medium">Show Search Bar</span>
-                    </button>
-                    <button className="w-full flex items-center gap-3 py-3 text-white hover:bg-zinc-800/50 rounded-lg transition-colors">
-                        <Hash className="w-5 h-5 text-gray-400" />
-                        <span className="font-medium">No Decimals</span>
-                    </button>
-                </div>
-            </div>
-        </>,
-        document.body
-    );
-}
-
 export function GlobalStatusBar() {
-    const [showDisplaySettings, setShowDisplaySettings] = useState(false);
     const [showMarketLighthouse, setShowMarketLighthouse] = useState(false);
-    const displayButtonRef = useRef<HTMLButtonElement>(null);
+    const [showTradingSettings, setShowTradingSettings] = useState(false);
+    const [showCustomizeTheme, setShowCustomizeTheme] = useState(false);
     const marketLighthouseRef = useRef<HTMLButtonElement>(null);
     return (
         <footer className="fixed bottom-0 left-0 w-full z-50 h-[35px] bg-[#101114] border-t border-zinc-800">
@@ -405,10 +526,14 @@ export function GlobalStatusBar() {
                 {/* LEFT SECTION */}
                 <div className="flex flex-row flex-shrink-0 gap-[8px] justify-start items-center">
                     {/* PRESET 1 */}
-                    <button className="text-[#526FFF] bg-[#526FFF]/20 flex flex-row h-[24px] px-[8px] gap-[4px] justify-start items-center rounded-[4px] hover:bg-[#526FFF]/25 transition-colors duration-150 ease-in-out cursor-pointer">
+                    <button
+                        onClick={() => setShowTradingSettings(true)}
+                        className="text-[#526FFF] bg-[#526FFF]/20 flex flex-row h-[24px] px-[8px] gap-[4px] justify-start items-center rounded-[4px] hover:bg-[#526FFF]/25 transition-colors duration-150 ease-in-out cursor-pointer"
+                    >
                         <PresetIcon className="w-[16px] h-[16px]" />
                         <span className="text-[12px] font-semibold">PRESET 1</span>
                     </button>
+                    <TradingSettingsModal isOpen={showTradingSettings} onClose={() => setShowTradingSettings(false)} />
 
                     {/* Wallet Selector */}
                     <button className="group/wallets border border-zinc-700 flex flex-row h-[24px] pl-[8px] pr-[5px] gap-[6px] justify-start items-center rounded-full hover:bg-zinc-700/60 transition-colors duration-125 ease-in-out cursor-pointer">
@@ -566,18 +691,14 @@ export function GlobalStatusBar() {
                         <button className="text-[12px] hover:bg-zinc-700/40 flex items-center gap-1 justify-center w-[24px] h-[24px] rounded-[4px] transition-colors duration-150 ease-in-out">
                             <Bell className="w-[16px] h-[16px]" />
                         </button>
+                        {/* Palette - Customize Theme */}
                         <button
-                            ref={displayButtonRef}
-                            onClick={() => setShowDisplaySettings(!showDisplaySettings)}
+                            onClick={() => setShowCustomizeTheme(true)}
                             className="text-[12px] hover:bg-zinc-700/40 flex items-center gap-1 justify-center w-[24px] h-[24px] rounded-[4px] transition-colors duration-150 ease-in-out"
                         >
                             <Palette className="w-[16px] h-[16px]" />
                         </button>
-                        <DisplaySettingsModal
-                            isOpen={showDisplaySettings}
-                            onClose={() => setShowDisplaySettings(false)}
-                            buttonRef={displayButtonRef}
-                        />
+                        <CustomizeThemeModal isOpen={showCustomizeTheme} onClose={() => setShowCustomizeTheme(false)} />
 
                         <Divider className="hidden md:flex" />
 
